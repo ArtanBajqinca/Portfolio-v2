@@ -1,7 +1,9 @@
+import { ProjectCard } from "@/components/ProjectCard";
+
 export default function Home() {
   return (
-   <h1 className="font-bold text-white text-2xl">
-    Hello World
-   </h1>
+    <div className="flex w-screen h-screen justify-center items-center">
+      <ProjectCard />
+    </div>
   );
 }
