@@ -3,7 +3,7 @@ import { MdArrowOutward } from "react-icons/md";
 import { Label } from "@/components/Label";
 import Link from "next/link";
 
-// TODO: optimize mobile view
+// TODO: optimize mobile view (image has some wierd right green line)
 
 export const ProjectCard = ({
   title = "Coinnect Four",
@@ -24,7 +24,7 @@ export const ProjectCard = ({
             alt={`${title} project screenshot`}
           />
         </div>
-        <div className="w-full ml-3 mr-3 mb-3 lg:my-3 lg:mr-3">
+        <div className="w-full ml-3 lg:ml-1 mr-3 mb-3 lg:mt-3 lg:my-3 lg:mr-3">
           {/* Title and arrow */}
           <div className="w-full flex justify-between">
             <div className="text-white text-[20px] font-avenir-heavy">
@@ -45,7 +45,7 @@ export const ProjectCard = ({
             </div>
           </div>
           {/* Labels */}
-          <div className="w-full h-[30%]">
+          <div className="w-full h-[30%] pr-6 lg:pr-0">
             <div className="flex flex-wrap gap-1.5">
               {labels.map((label, index) => (
                 <Label key={index} text={label} />
