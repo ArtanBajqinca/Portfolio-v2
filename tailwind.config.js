@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      translate: ['group-hover'],
+      translate: ["group-hover"],
       fontFamily: {
         avenir: ["Avenir", "sans-serif"],
         "avenir-light": ["Avenir-Light"],
@@ -30,6 +30,7 @@ module.exports = {
           30: "#7B7B7B",
           50: "#585858",
           90: "#141414",
+          600: "#494949",
           700: "#232323",
           800: "#1E1E1E",
         },

@@ -1,44 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Avenir-Light";
-  src: local("Avenir-Light"),
-    url("../public/fonts/Avenir-Light.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Avenir-Book";
-  src: local("Avenir-Book"),
-    url("../public/fonts/Avenir-Roman.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Avenir-Roman";
-  src: local("Avenir-Roman"),
-    url("../public/fonts/Avenir-Roman.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Avenir-Medium";
-  src: local("Avenir-Medium"),
-    url("../public/fonts/Avenir-Medium.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Avenir-Heavy";
-  src: local("Avenir-Heavy"),
-    url("../public/fonts/Avenir-Heavy.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Avenir-Black";
-  src: local("Avenir-Black"),
-    url("../public/fonts/Avenir-Black.ttf") format("truetype");
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("../public/fonts.css");
 
 * {
   margin: 0;
