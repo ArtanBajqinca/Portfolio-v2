@@ -7,10 +7,22 @@ module.exports = {
   ],
   theme: {
     extend: {
+      translate: ['group-hover'],
+      fontFamily: {
+        avenir: ["Avenir", "sans-serif"],
+        "avenir-light": ["Avenir-Light"],
+        "avenir-book": ["Avenir-Book"],
+        "avenir-roman": ["Avenir-Roman"],
+        "avenir-medium": ["Avenir-Medium"],
+        "avenir-heavy": ["Avenir-Heavy"],
+        "avenir-black": ["Avenir-Black"],
+      },
       colors: {
         green: {
           50: "#30AF5B",
           90: "#292C27",
+          600: "#A4FF9C",
+          900: "#476045",
         },
         gray: {
           10: "#EEEEEE",

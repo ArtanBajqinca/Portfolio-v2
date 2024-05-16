@@ -2,7 +2,8 @@ import "./globals.css";
 
 export const metadata = {
   title: "Artan Bajqinca - Developer & Designer",
-  description: "Developer and designer based in Sweden. I have a passion for creating beautiful and functional websites and applications.",
+  description:
+    "Developer and designer based in Sweden. I have a passion for creating beautiful and functional websites and applications.",
 };
 
 export default function RootLayout({ children }) {
