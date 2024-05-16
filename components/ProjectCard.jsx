@@ -17,7 +17,7 @@ export const ProjectCard = ({
       <div className="flex flex-col lg:flex-row bg-gray-700 w-[350px] lg:w-[550px] rounded-[10px] group duration-200 transform transition-transform hover:scale-[102%] cursor-pointer">
         {" "}
         {/* Image */}
-        <div className="bg-lime-700  lg:w-full m-3 rounded-[10px] flex">
+        <div className="bg-gray-800  lg:w-full m-3 rounded-[10px] flex">
           <img
             className="rounded-[10px] border-2 border-gray-600 object-cover w-full"
             src={imageSrc}
@@ -39,7 +39,7 @@ export const ProjectCard = ({
             </div>
           </div>
           {/* Description */}
-          <div className="w-full flex items-end mt-2 mb-3 pr-4">
+          <div className="w-full flex items-end mt-2 lg:mt-1  mb-4 lg:mb-3 pr-4">
             <div className="text-white text-[14px] font-avenir-light leading-[16px]">
               {description}
             </div>
