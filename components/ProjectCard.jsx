@@ -1,9 +1,8 @@
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { Label } from "@/components/Label";
+import { LabelIcon } from "./LabelIcon";
 import Link from "next/link";
-
-// TODO: optimize mobile view (image has some wierd right green line)
 
 export const ProjectCard = ({
   title = "Coinnect Four",
@@ -14,23 +13,22 @@ export const ProjectCard = ({
 }) => {
   return (
     <Link href={link} passHref>
-      <div className="flex flex-col lg:flex-row bg-gray-700 w-[350px] lg:w-[550px] rounded-[10px] group duration-200 transform transition-transform hover:scale-[102%] cursor-pointer">
-        {" "}
+      <div className="flex flex-col lg:flex-row bg-gray-700 w-[300px] lg:w-[600px] max-w-[600px] rounded-[10px] group duration-200 transform transition-transform hover:scale-[102%] cursor-pointer">
         {/* Image */}
-        <div className="bg-gray-800  lg:w-full m-3 rounded-[10px] flex">
+        <div className="m-3 rounded-[10px]">
           <img
-            className="rounded-[10px] border-2 border-gray-600 object-cover w-full"
+            className="rounded-[10px] border-2 border-gray-600 w-[800px] object-cover"
             src={imageSrc}
             alt={`${title} project screenshot`}
           />
         </div>
-        <div className="w-full ml-3 lg:ml-1 mr-3 mb-3 lg:mt-3 lg:my-3 lg:mr-3">
+        <div className="mx-4 lg:mr-5 lg:my-5 lg:ml-2 flex flex-col justify-between">
           {/* Title and arrow */}
-          <div className="w-full flex justify-between">
-            <div className="text-white text-[20px] font-avenir-heavy">
+          <div className=" flex justify-between">
+            <div className="text-white text-[21px] lg:text-[23px] font-avenir-heavy w-full">
               {title}
             </div>
-            <div className="hidden lg:block group-hover:translate-x-[7.5px] group-hover:-translate-y-1 transition-transform duration-200">
+            <div className="lg:group-hover:translate-x-[8px] lg:group-hover:-translate-y-2 lg:transition-transform duration-200">
               <MdArrowOutward
                 className="text-white"
                 size={20}
@@ -39,17 +37,16 @@ export const ProjectCard = ({
             </div>
           </div>
           {/* Description */}
-          <div className="w-full flex items-end mt-2 lg:mt-1  mb-4 lg:mb-3 pr-4">
-            <div className="text-white text-[14px] font-avenir-light leading-[16px]">
-              {description}
-            </div>
+          <div className=" text-white text-[14px] mt-1 mb-3 lg:mt-1 lg:text-[15px] font-avenir-light leading-[18px] lg:mb-4">
+            {description}
           </div>
           {/* Labels */}
-          <div className="w-full h-[30%] pr-6 lg:pr-0">
-            <div className="flex flex-wrap gap-1.5">
+          <div className="">
+            <div className="flex flex-wrap gap-1.5 mb-4 lg:mb-0">
               {labels.map((label, index) => (
                 <Label key={index} text={label} />
               ))}
+              <LabelIcon />
             </div>
           </div>
         </div>

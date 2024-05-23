@@ -8,10 +8,10 @@
       "Kotlin",
       "Jetpack Compose",
       "Firebase",
-      "Multiplayer",
-      "App development"
+      "Multiplayer"
     ],
-    "link": "/"
+    "link": "/",
+    "type": "app"
   },
   {
     "title": "Coinnect Four",
@@ -22,10 +22,10 @@
       "Kotlin",
       "Jetpack Compose",
       "Firebase",
-      "Multiplayer",
-      "App development"
+      "Multiplayer"
     ],
-    "link": "/"
+    "link": "/",
+    "type": "app"
   },
   {
     "title": "Coinnect Four",
@@ -36,10 +36,10 @@
       "Kotlin",
       "Jetpack Compose",
       "Firebase",
-      "Multiplayer",
-      "App development"
+      "Multiplayer"
     ],
-    "link": "/"
+    "link": "/",
+    "type": "app"
   },
   {
     "title": "Coinnect Four",
@@ -50,9 +50,9 @@
       "Kotlin",
       "Jetpack Compose",
       "Firebase",
-      "Multiplayer",
-      "App development"
+      "Multiplayer"
     ],
-    "link": "/"
+    "link": "/",
+    "type": "app"
   }
 ]
