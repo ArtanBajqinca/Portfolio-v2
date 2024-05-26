@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
+import Button from "@/components/Button";
+import SwedenMap from "@/components/assets/SwedenMap";
 
 // move to file?
 const NameComponent = ({ text, additionalStyles = "" }) => (
@@ -18,30 +20,32 @@ const NameComponent = ({ text, additionalStyles = "" }) => (
 export default function Home() {
   return (
     <div>
-      <div className="mx-20">
+      <div className="mx-20 bg-red-100 ">
         {/* Navbar Section */}
         <div className="w-full flex justify-center mt-10">
-          <div className="w-full mx-20">
+          <div className="w-full">
             <Navbar />
           </div>
         </div>
         {/* Hero Section */}
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-row flex-wrap bg-red-200 ">
           {/* Left Section */}
-          <div className=" w-full h-[500px] flex">
-            <div className=" ml-20 mt-16 z-10">
+          <div className="h-[500px] flex bg-red-300 max-w-[50%]">
+            <div className="mt-16 z-10">
               <NameComponent text="Artan" />
               <NameComponent
                 text="Bajqinca."
                 additionalStyles="mt-[-40px] ml-[-4px]"
               />
               <div className="w-[60px] h-[8px] bg-green-800"></div>
+              {/* Linkedin Github icons */}
               <div className="flex flex-row gap-4 mt-16 ml-[-1.5px]">
                 <FaLinkedin color="white" size={26} />
                 <FaGithub color="white" size={26} />
               </div>
             </div>
-            <div className="flex flex-col justify-end w-[500px] ml-[-220px] z-0">
+            {/* Portrait */}
+            <div className="flex flex-col justify-end ml-[-200px] z-0">
               <Image
                 src="/_next/static/media/Portrait.png"
                 alt="Artan Bajqinca"
@@ -52,8 +56,33 @@ export default function Home() {
               />
             </div>
           </div>
-          {/* Right Section */}
-          <div className=" w-full h-[500px]"></div>
+          <div className="flex flex-row bg-red-400">
+            {/* Right Section */}
+            <div className="flex flex-col justify-center h-full  ml-20 bg-red-500">
+              <div className="text-white font-avenir-heavy text-[38px] leading-[2.5rem]">
+                Programmer and
+                <br />
+                Graphic designer
+                <br />
+                based in Sweden
+              </div>
+              <div className="text-white font-avenir-book text-[18px] my-6 leading-tight">
+                Designing by day, coding by night.
+                <br />
+                Let's bring ideas to life.
+              </div>
+              <div className="flex">
+                <Button
+                  text="GET IN TOUCH"
+                  bgColor="bg-green-800"
+                  className="lg:text-[13px] lg:py-2 "
+                />
+              </div>
+            </div>
+            <div className=" flex w-[150px] ml-[-90px]">
+              <SwedenMap />
+            </div>
+          </div>
         </div>
       </div>
       {/* Projects Section */}
