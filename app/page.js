@@ -7,11 +7,12 @@ import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
 import Button from "@/components/Button";
 import SwedenMap from "@/components/assets/SwedenMap";
+import Link from "next/link";
 
 // move to file?
 const NameComponent = ({ text, additionalStyles = "" }) => (
   <div
-    className={`text-white font-avenir-black text-[80px] ${additionalStyles}`}
+    className={`text-white font-avenir-black text-[50px] lg:text-[80px] ${additionalStyles}`}
   >
     {text}
   </div>
@@ -19,74 +20,90 @@ const NameComponent = ({ text, additionalStyles = "" }) => (
 
 export default function Home() {
   return (
-    <div>
-      <div className="mx-20 bg-red-100 ">
-        {/* Navbar Section */}
-        <div className="w-full flex justify-center mt-10">
-          <div className="w-full">
+    <div className="flex flex-col justify-center ">
+      {/* Navbar Section */}
+      {/* Hero Section */}
+      <div className="flex flex-row flex-wrap justify-center ">
+        <div className="flex flex-col mx-12">
+          <div className="mt-10">
             <Navbar />
           </div>
-        </div>
-        {/* Hero Section */}
-        <div className="flex flex-row flex-wrap bg-red-200 ">
-          {/* Left Section */}
-          <div className="h-[500px] flex bg-red-300 max-w-[50%]">
-            <div className="mt-16 z-10">
-              <NameComponent text="Artan" />
-              <NameComponent
-                text="Bajqinca."
-                additionalStyles="mt-[-40px] ml-[-4px]"
-              />
-              <div className="w-[60px] h-[8px] bg-green-800"></div>
-              {/* Linkedin Github icons */}
-              <div className="flex flex-row gap-4 mt-16 ml-[-1.5px]">
-                <FaLinkedin color="white" size={26} />
-                <FaGithub color="white" size={26} />
+          <div className=" flex flex-row flex-wrap-reverse justify-center">
+            {/* Left Section */}
+            <div className="flex pt-10">
+              <div className="mt-10 lg:mt-16 z-10">
+                <NameComponent text="Artan" />
+                <NameComponent
+                  text="Bajqinca."
+                  additionalStyles="mt-[-25px] lg:mt-[-40px] ml-[-4px]"
+                />
+                <div className="w-[60px] h-[8px] bg-green-800"></div>
+                {/* Linkedin Github icons */}
+                <div className="flex flex-row gap-4 mt-10 lg:mt-16 ml-[-1.5px]">
+                  <Link href="https://www.linkedin.com/in/artanbajqinca/">
+                    <FaLinkedin
+                      color="white"
+                      size={26}
+                      className="size-5 lg:size-7 hover:scale-[113%] transition-transform duration-300 ease-in-out"
+                    />
+                  </Link>
+                  <Link href="https://github.com/ArtanBajqinca">
+                    <FaGithub
+                      color="white"
+                      size={26}
+                      className="size-5 lg:size-7 hover:scale-[113%] transition-transform duration-300 ease-in-out"
+                    />
+                  </Link>
+                </div>
               </div>
-            </div>
-            {/* Portrait */}
-            <div className="flex flex-col justify-end ml-[-200px] z-0">
-              <Image
-                src="/_next/static/media/Portrait.png"
-                alt="Artan Bajqinca"
-                width={430}
-                height={0}
-                objectFit="contain"
-                className="self-center"
-              />
-            </div>
-          </div>
-          <div className="flex flex-row bg-red-400">
-            {/* Right Section */}
-            <div className="flex flex-col justify-center h-full  ml-20 bg-red-500">
-              <div className="text-white font-avenir-heavy text-[38px] leading-[2.5rem]">
-                Programmer and
-                <br />
-                Graphic designer
-                <br />
-                based in Sweden
-              </div>
-              <div className="text-white font-avenir-book text-[18px] my-6 leading-tight">
-                Designing by day, coding by night.
-                <br />
-                Let's bring ideas to life.
-              </div>
-              <div className="flex">
-                <Button
-                  text="GET IN TOUCH"
-                  bgColor="bg-green-800"
-                  className="lg:text-[13px] lg:py-2 "
+              {/* Portrait */}
+              <div className="flex flex-col justify-end ml-[-120px] lg:ml-[-200px] z-0 w-[240px] lg:w-[430px]">
+                <Image
+                  src="/_next/static/media/Portrait.png"
+                  alt="Artan Bajqinca"
+                  width={430}
+                  height={0}
+                  objectFit="contain"
+                  className="self-center"
                 />
               </div>
             </div>
-            <div className=" flex w-[150px] ml-[-90px]">
-              <SwedenMap />
+            {/* Right Section */}
+            <div className="flex flex-row px-0 lg:px-0 lg:pl-[80px] pt-16 lg:pt-0">
+              <div className="flex flex-col justify-center h-full ">
+                <div className="text-white font-avenir-heavy text-[30px] lg:text-[38px] leading-[2.2rem] lg:leading-[2.5rem]">
+                  Programmer and
+                  <br />
+                  Graphic designer
+                  <br />
+                  based in Sweden
+                </div>
+                <div className="text-white font-avenir-book text-[16px] lg:text-[18px] my-6 leading-tight">
+                  Designing by day, coding by night.
+                  <br />
+                  Let's bring ideas to life.
+                </div>
+                <div className="flex">
+                  <Button
+                    text="GET IN TOUCH"
+                    bgColor="bg-green-800"
+                    className="text-[12px] lg:py-1.7 "
+                  />
+                </div>
+              </div>
+              <div className="w-[100px] lg:w-[150px] flex flex-row ml-[-40px] lg:ml-[-90px]">
+                <SwedenMap />
+              </div>
             </div>
           </div>
         </div>
       </div>
       {/* Projects Section */}
-      <div className="w-screen h-screen flex justify-center items-center bg-gray-900"></div>
+      <div className="w-screen h-screen flex justify-center bg-gray-900">
+        <div className="text-white font-avenir-black text-[50px] lg:text-20 mt-20 ">
+          See my projects!
+        </div>
+      </div>
     </div>
   );
 }
