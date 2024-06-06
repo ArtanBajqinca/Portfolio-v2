@@ -17,7 +17,7 @@ export const ProjectCard = ({
         {/* Image */}
         <div className="m-3 rounded-[10px]">
           <img
-            className="rounded-[10px] border-2 border-gray-600 w-[800px] object-cover"
+            className="rounded-[10px] border-4 border-gray-600 w-[800px] object-cover"
             src={imageSrc}
             alt={`${title} project screenshot`}
           />

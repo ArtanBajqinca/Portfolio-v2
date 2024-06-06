@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Coinnect Four",
+    "description": "A multiplayer Connect Four game with a unique coin theme, developed for my Android course final project.",
+    "imageSrc": "/images/programming-projects/coinnect.png",
+    "labels": ["Android", "Kotlin", "Jetpack Compose", "Game", "Multiplayer"],
+    "link": "/",
+    "type": "app"
+  },
+  {
+    "title": "Morgon & afton",
+    "description": "A morning and evening adhkar app with Swedish translation and Arabic transliteration.",
+    "imageSrc": "/images/programming-projects/morgon_afton.png",
+    "labels": ["Android", "Kotlin", "Jetpack Compose"],
+    "link": "/",
+    "type": "app"
+  },
+  {
+    "title": "Wise Words",
+    "description": "Motivational quote app for saving and sharing favorites, developed for my iOS course final project.",
+    "imageSrc": "/images/programming-projects/wise_words.png",
+    "labels": ["iOS", "Swift", "SwiftUI", "SwiftData"],
+    "link": "/",
+    "type": "app"
+  },
+  {
+    "title": "Lite Weather",
+    "description": "A simple weather app that displays the current weather and forecast for the next 5 days.",
+    "imageSrc": "/images/programming-projects/lite_weather.png",
+    "labels": ["iOS", "Swift", "SwiftUI"],
+    "link": "/",
+    "type": "app"
+  },
+  {
+    "title": "Jkpg city rebrand",
+    "description": "A rebranding project for Jkpg city, focusing on enhancing the user interactivity.",
+    "imageSrc": "/images/programming-projects/jkpg_city_rebrand.png",
+    "labels": ["Website", "Javascript", "ReactJS", "NodeJS", "Figma"],
+    "link": "/",
+    "type": "web"
+  },
+  {
+    "title": "Portfolio v1",
+    "description": "My first Personal portfolio website, made with basic HTML, CSS and Javascript.",
+    "imageSrc": "/images/programming-projects/portfolio_v1.png",
+    "labels": ["Website", "Javascript", "HTML", "CSS"],
+    "link": "/",
+    "type": "web"
+  },
+  {
+    "title": "Portfolio v2",
+    "description": "My new Personal portfolio website, made with React and NextJS.",
+    "imageSrc": "/images/programming-projects/portfolio_v2.png",
+    "labels": ["Website", "React", "NextJS", "Javascript", "HTML", "CSS"],
+    "link": "/",
+    "type": "web"
+  }
+]

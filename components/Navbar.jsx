@@ -14,9 +14,9 @@ const Navbar = () => {
       </div>
       <div className="bg-gray-500 p-2 rounded-md">
         <div className="flex flex-row gap-5">
-          <Button text={"Projects"} />
-          <Button text={"About"} />
-          <Button text={"Contact"} link="" />
+          <Button text={"Projects"} className="font-avenir-heavy" />
+          <Button text={"About"} className="font-avenir-heavy" />
+          <Button text={"Contact"} className="font-avenir-heavy" link="" />
         </div>
       </div>
     </div>

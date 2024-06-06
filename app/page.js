@@ -1,34 +1,37 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { ProjectCard } from "@/components/ProjectCard";
-import programmingProjects from "/data/programming-projecs.json";
+import Projects from "/data/projects.json";
 import Navbar from "@/components/Navbar";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import Image from "next/image";
 import Button from "@/components/Button";
 import SwedenMap from "@/components/assets/SwedenMap";
+import Divider from "@/components/assets/Divider";
 import Link from "next/link";
 
-// move to file?
-const NameComponent = ({ text, additionalStyles = "" }) => (
-  <div
-    className={`text-white font-avenir-black text-[50px] lg:text-[80px] ${additionalStyles}`}
-  >
-    {text}
-  </div>
-);
-
 export default function Home() {
+  const [activeFilters, setActiveFilters] = useState([]);
+
+  const handleFilterClick = (filter) => {
+    setActiveFilters((prevFilters) =>
+      prevFilters.includes(filter)
+        ? prevFilters.filter((f) => f !== filter)
+        : [...prevFilters, filter]
+    );
+  };
+
   return (
-    <div className="flex flex-col justify-center ">
+    <div className="flex flex-col justify-center">
       {/* Navbar Section */}
       {/* Hero Section */}
-      <div className="flex flex-row flex-wrap justify-center ">
+      <div className="flex flex-row flex-wrap justify-center">
         <div className="flex flex-col mx-12">
           <div className="mt-10">
             <Navbar />
           </div>
-          <div className=" flex flex-row flex-wrap-reverse justify-center">
+          <div className="flex flex-row flex-wrap-reverse justify-center">
             {/* Left Section */}
             <div className="flex pt-10">
               <div className="mt-10 lg:mt-16 z-10">
@@ -39,7 +42,7 @@ export default function Home() {
                 />
                 <div className="w-[60px] h-[8px] bg-green-800"></div>
                 {/* Linkedin Github icons */}
-                <div className="flex flex-row gap-4 mt-10 lg:mt-16 ml-[-1.5px]">
+                <div className="flex flex-row gap-4 mt-8 lg:mt-16 ml-[-1.5px]">
                   <Link href="https://www.linkedin.com/in/artanbajqinca/">
                     <FaLinkedin
                       color="white"
@@ -63,16 +66,15 @@ export default function Home() {
                   alt="Artan Bajqinca"
                   width={430}
                   height={0}
-                  objectFit="contain"
                   className="self-center"
                 />
               </div>
             </div>
             {/* Right Section */}
             <div className="flex flex-row px-0 lg:px-0 lg:pl-[80px] pt-16 lg:pt-0">
-              <div className="flex flex-col justify-center h-full ">
+              <div className="flex flex-col justify-center h-full">
                 <div className="text-white font-avenir-heavy text-[30px] lg:text-[38px] leading-[2.2rem] lg:leading-[2.5rem]">
-                  Programmer and
+                  Developer and
                   <br />
                   Graphic designer
                   <br />
@@ -87,7 +89,7 @@ export default function Home() {
                   <Button
                     text="GET IN TOUCH"
                     bgColor="bg-green-800"
-                    className="text-[12px] lg:py-1.7 "
+                    className="text-[12px] lg:py-1.7 hover:bg-[#6E8F6B]"
                   />
                 </div>
               </div>
@@ -99,23 +101,41 @@ export default function Home() {
         </div>
       </div>
       {/* Projects Section */}
-      <div className="w-screen h-screen flex justify-center bg-gray-900">
-        <div className="text-white font-avenir-black text-[50px] lg:text-20 mt-20 ">
+      <div className="mt-[-2vh] lg:mt-[-4vh] z-30">
+        <Divider />
+      </div>
+      <div className="flex flex-col items-center bg-gray-900 pt-4">
+        <div className="text-white font-avenir-black text-[30px] lg:text-[50px] mt-[10px] lg:mt-[-30px] z-40">
           See my projects!
         </div>
-      </div>
-    </div>
-  );
-}
-
-{
-  /* <div className="w-screen h-screen flex justify-center items-center"> */
-}
-{
-  /* <div className="w-full m-3 flex flex-wrap gap-5 justify-center items-center"> */
-}
-{
-  /* {programmingProjects.map((project, index) => (
+        <div className="flex items-center justify-center mt-[40px] lg:mt-[80px] flex-wrap mx-6">
+          <div className="text-white font-avenir-medium text-[22px] mr-[-5px]">
+            Quick filter:
+          </div>
+          <div className="flex gap-3 scale-[90%]">
+            <FilterButton
+              text="APP"
+              isActive={activeFilters.includes("app")}
+              onClick={() => handleFilterClick("app")}
+            />
+            <FilterButton
+              text="WEBSITE"
+              isActive={activeFilters.includes("web")}
+              onClick={() => handleFilterClick("web")}
+            />
+            <FilterButton
+              text="GRAPHIC DESIGN"
+              isActive={activeFilters.includes("gd")}
+              onClick={() => handleFilterClick("gd")}
+            />
+          </div>
+        </div>
+        <div className="m-3 flex flex-row flex-wrap gap-5 justify-center items-center mt-10 mb-20 w-full px-[5vw]">
+          {Projects.filter((project) =>
+            activeFilters.length > 0
+              ? activeFilters.includes(project.type)
+              : true
+          ).map((project, index) => (
             <ProjectCard
               key={index}
               title={project.title}
@@ -123,9 +143,30 @@ export default function Home() {
               imageSrc={project.imageSrc}
               labels={project.labels}
               link={project.link}
+              type={project.type}
             />
-          ))} */
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
-{
-  /* </div> */
-}
+
+const NameComponent = ({ text, additionalStyles = "" }) => (
+  <div
+    className={`text-white font-avenir-black text-[50px] lg:text-[80px] ${additionalStyles}`}
+  >
+    {text}
+  </div>
+);
+
+const FilterButton = ({ text, isActive, onClick }) => (
+  <button
+    className={`rounded-[100px] text-[13px] font-avenir-heavy px-4 py-2 ${
+      isActive ? "bg-green-800 text-white" : "bg-gray-700 text-gray-300"
+    }`}
+    onClick={onClick}
+  >
+    {text}
+  </button>
+);
