@@ -10,6 +10,7 @@ import Button from "@/components/Button";
 import SwedenMap from "@/components/assets/SwedenMap";
 import Divider from "@/components/assets/Divider";
 import Link from "next/link";
+import Logo from "@/components/assets/Logo";
 
 export default function Home() {
   const [activeFilters, setActiveFilters] = useState([]);
@@ -148,6 +149,8 @@ export default function Home() {
           ))}
         </div>
       </div>
+      {/* Footer Section */}
+      <Component />
     </div>
   );
 }
@@ -170,3 +173,26 @@ const FilterButton = ({ text, isActive, onClick }) => (
     {text}
   </button>
 );
+
+export function Component() {
+  const currentYear = new Date().getFullYear();
+  return (
+    <footer className="bg-gray-700 rounded-lg shadow m-4 flex justify-center">
+      <div className="w-full max-w-screen-xl mx-auto p-4 py-8  flex flex-col items-center">
+        <a
+          href="#"
+          className="flex items-center mb-4 space-x-3 rtl:space-x-reverse"
+        >
+          <div className="w-[200px] mb-6">
+            <Logo />
+          </div>
+        </a>
+        <span className="block text-sm text-white dark:text-gray-400 text-center font-[100]">
+          © {currentYear}{" "}
+          <a href="https://flowbite.com/" className="hover:underline"></a>
+          Skyddad av upphovsrättslagen
+        </span>
+      </div>
+    </footer>
+  );
+}

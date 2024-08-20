@@ -35,7 +35,7 @@
     "title": "Jkpg city rebrand",
     "description": "A rebranding project for Jkpg city, focusing on enhancing the user interactivity.",
     "imageSrc": "/images/programming-projects/jkpg_city_rebrand.png",
-    "labels": ["Website", "Javascript", "ReactJS", "NodeJS", "Figma"],
+    "labels": ["Website", "Javascript", "ReactJS", "NodeJS", "Docker"],
     "link": "/",
     "type": "web"
   },
@@ -52,6 +52,14 @@
     "description": "My new Personal portfolio website, made with React and NextJS.",
     "imageSrc": "/images/programming-projects/portfolio_v2.png",
     "labels": ["Website", "React", "NextJS", "Javascript", "HTML", "CSS"],
+    "link": "/",
+    "type": "web"
+  },
+  {
+    "title": "Resume",
+    "description": "A simple website for displaying my resume, made with basic HTML, CSS and Javascript.",
+    "imageSrc": "/images/programming-projects/resume.png",
+    "labels": ["Website", "Javascript", "HTML", "CSS"],
     "link": "/",
     "type": "web"
   }
