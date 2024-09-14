@@ -4,15 +4,20 @@ import { Label } from "@/components/Label";
 import { LabelIcon } from "./LabelIcon";
 import Link from "next/link";
 
+const BASE_IMAGE_PATH = "/images/programming-projects/project-card/";
+
 export const ProjectCard = ({
+  id,
   title = "Coinnect Four",
   description = "A multiplayer Connect Four game with a unique coin theme, developed for my Android course final project.",
-  imageSrc = "/images/programming-projects/Dummy.png",
+  imageFileName = "Dummy.png",
   labels = [],
-  link = "#",
+  type = "app",
 }) => {
+  const imageSrc = `${BASE_IMAGE_PATH}${imageFileName}`;
+
   return (
-    <Link href={link} passHref>
+    <Link href={`/projects/${id}`} passHref>
       <div className="flex flex-col lg:flex-row bg-gray-700 w-[300px] lg:w-[600px] max-w-[600px] rounded-[10px] group duration-200 transform transition-transform hover:scale-[102%] cursor-pointer">
         {/* Image */}
         <div className="m-3 rounded-[10px]">
