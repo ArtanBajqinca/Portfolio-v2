@@ -18,9 +18,9 @@ export const ProjectCard = ({
 
   return (
     <Link href={`/projects/${id}`} passHref>
-      <div className="flex flex-col lg:flex-row bg-gray-700 w-[300px] lg:w-[600px] max-w-[600px] rounded-[10px] group duration-200 transform transition-transform hover:scale-[102%] cursor-pointer">
+      <div className="flex flex-col lg:flex-row bg-gray-700 w-[300px] lg:w-[600px] max-h-[600px] rounded-[10px] group duration-200 transform transition-transform hover:scale-[102%] cursor-pointer">
         {/* Image */}
-        <div className="m-3 rounded-[10px]">
+        <div className="m-3 rounded-[10px] max-w-[300px]">
           <img
             className="rounded-[10px] border-4 border-gray-600 w-[800px]"
             src={imageSrc}
@@ -42,7 +42,7 @@ export const ProjectCard = ({
             </div>
           </div>
           {/* Description */}
-          <div className=" text-white text-[14px] mt-1 mb-3 lg:mt-1 lg:text-[15px] font-avenir-light leading-[18px] lg:mb-4">
+          <div className=" text-white text-[14px] mt-1 mb-3 lg:mt-1 lg:text-[15px] font-avenir-light leading-[18px] lg:mb-4 ">
             {description}
           </div>
           {/* Labels */}
