@@ -54,7 +54,7 @@ export default function Home() {
                 </div>
               </div>
               {/* Portrait */}
-              <div className="flex flex-col justify-end ml-[-120px] lg:ml-[-200px] z-0 w-[240px] lg:w-[350px] mb-[-5px] lg:mb-[-15px]">
+              <div className="flex flex-col justify-end ml-[-120px] lg:ml-[-200px] z-0 w-[240px] lg:w-[350px] mb-[-5px] lg:mb-[-10px] xl:mb-[-20px]">
                 <Image
                   src="/images/Portrait.png"
                   alt="Artan Bajqinca"
@@ -114,7 +114,7 @@ export default function Home() {
         </div>
       </div>
       {/* Projects Section */}
-      <div className="z-30 mb-[-10px] mt-[-15px] lg:mt-[-15px] xl:mt-[-25px]">
+      <div className="z-30 mb-[-10px] mt-[-5px] md:mt-[-15px] lg:mt-[-15px] xl:mt-[-7px] 2xl:mt-[-15px]">
         <Divider />
       </div>
       <ProjectSection />

@@ -21,7 +21,7 @@ const ProjectSection = () => {
   };
 
   return (
-    <div className="flex flex-col items-center bg-gray-900 pt-4 ">
+    <div className="flex flex-col items-center bg-gray-900 sm:pt-10 md:pt-20 lg:pt-20 xl:pt-[110px] 2xl:pt-[50px] ">
       <div className="text-white gap-6 text-center font-avenir-light text-[10px] lg:text-xl z-40 mb-4 tracking-wide">
         I SPECIALIZE IN<span className="font-avenir-black"> APP</span> AND
         <br />
@@ -47,7 +47,7 @@ const ProjectSection = () => {
           color="#6082BB"
         />
       </div>
-      <div className="text-white font-avenir-heavy text-[30px] lg:text-[50px] mt-[10px] lg:mt-[40px] z-40">
+      <div className="text-white font-avenir-heavy text-[30px] lg:text-[50px] mt-[10px] lg:mt-[100px] z-40">
         Explore My Projects!
       </div>
       <div className="flex items-center justify-center mt-[40px] lg:mt-[40px] flex-wrap mx-6">
@@ -59,6 +59,11 @@ const ProjectSection = () => {
             text="APP"
             isActive={activeFilters.includes("app")}
             onClick={() => handleFilterClick("app")}
+          />
+          <FilterButton
+            text="SOFTWARE"
+            isActive={activeFilters.includes("sw")}
+            onClick={() => handleFilterClick("sw")}
           />
           <FilterButton
             text="WEBSITE"
