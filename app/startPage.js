@@ -11,8 +11,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import ProjectSection from "@/components/ProjectSection";
 import { Typewriter } from "react-simple-typewriter";
-import { LogoText } from "@/components/LogoText";
-import reactLogoAnimation from "/public/react_logo.json";
+import scrollDownAnimation from "/public/scroll_down.json";
 import Lottie from "lottie-react";
 
 export default function Home() {
@@ -114,12 +113,20 @@ export default function Home() {
         </div>
       </div>
       {/* Projects Section */}
-      <div className="z-30 mb-[-10px] mt-[-5px] md:mt-[-15px] lg:mt-[-15px] xl:mt-[-7px] 2xl:mt-[-15px]">
-        <Divider />
+      <div className="">
+        <div className="z-30 mb-[-10px] mt-[-5px] md:mt-[-15px] lg:mt-[-15px] xl:mt-[-7px] 2xl:mt-[-15px]">
+          <Divider />
+        </div>
       </div>
       <ProjectSection />
       {/* Footer Section */}
       <Footer />
+      <div className="fixed bottom-4 right-4 z-50">
+        <Lottie
+          animationData={scrollDownAnimation}
+          style={{ width: "70px", opacity: 0.3 }}
+        />
+      </div>
     </div>
   );
 }
