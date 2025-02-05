@@ -12,11 +12,23 @@ const Navbar = () => {
           <Logo />
         </Link>
       </div>
-      <div className="bg-gray-500 p-2 rounded-md">
+      <div className="bg-gray-500 p-2 rounded-[6px]">
         <div className="flex flex-row gap-4">
-          <Button text={"Projects"} className="font-avenir-heavy" />
-          <Button text={"About"} className="font-avenir-heavy" />
-          <Button text={"Contact"} className="font-avenir-heavy" link="" />
+          <Button
+            text={"Projects"}
+            className="font-avenir-black lg:font-avenir-heavy"
+            link=""
+          />
+          <Button
+            text={"About"}
+            className="font-avenir-black lg:font-avenir-heavy"
+            link=""
+          />
+          <Button
+            text={"Contact"}
+            className="font-avenir-black lg:font-avenir-heavy"
+            link=""
+          />
         </div>
       </div>
     </div>

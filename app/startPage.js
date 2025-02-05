@@ -21,12 +21,12 @@ export default function Home() {
       {/* Hero Section */}
       <div className="flex flex-row flex-wrap justify-center">
         <div className="flex flex-col mx-12">
-          <div className="mt-10">
+          <div className="lg:mt-10 mt-8">
             <Navbar />
           </div>
           <div className="flex flex-row flex-wrap-reverse justify-center mt-[10px] lg:mt-[10px]">
             {/* Left Section */}
-            <div className="flex">
+            <div className="flex mt-6 lg:mt-0">
               <div className="mt-10 lg:mt-16 z-10">
                 <NameComponent text="Artan" />
                 <NameComponent
@@ -53,7 +53,7 @@ export default function Home() {
                 </div>
               </div>
               {/* Portrait */}
-              <div className="flex flex-col justify-end ml-[-120px] lg:ml-[-200px] z-0 w-[240px] lg:w-[350px] mb-[-5px] lg:mb-[-10px] xl:mb-[-20px]">
+              <div className="flex flex-col justify-end ml-[-120px] lg:ml-[-200px] z-100 w-[240px] lg:w-[350px] mb-[-5px] lg:mb-[-10px] xl:mb-[-20px]">
                 <Image
                   src="/images/Portrait.png"
                   alt="Artan Bajqinca"
@@ -64,7 +64,7 @@ export default function Home() {
               </div>
             </div>
             {/* Right Section */}
-            <div className="flex flex-row px-0 lg:px-0 lg:pl-[80px] pt-16 lg:pt-0">
+            <div className="flex flex-row px-0 lg:px-0 lg:pl-[80px] pt-8 lg:pt-0">
               <div className="flex flex-col justify-center h-full">
                 <div className="text-white font-avenir-heavy text-[30px] lg:text-[38px] leading-[2.2rem] lg:leading-[2.5rem]">
                   App & System <br />
@@ -91,10 +91,10 @@ export default function Home() {
                   <br />
                   based in Sweden
                 </div>
-                <div className="text-white font-avenir-book text-[16px] lg:text-[18px] my-6 leading-tight">
-                  Graphic designer by day
+                <div className="text-white font-avenir-book text-[15px] lg:text-[18px] my-6 leading-tight">
+                  Developing custom software solutions,
                   <br />
-                  and developer by night
+                  tailored to meet digital demands
                   <br />
                 </div>
                 <div className="flex">

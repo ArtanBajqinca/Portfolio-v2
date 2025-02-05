@@ -1,28 +1,6 @@
 [
   {
     "id": 1,
-    "title": "Coinnect Four",
-    "coverTitle": "Coinnect Four: Multiplayer Game",
-    "subtitle": "Coin-Themed Mobile App for Android",
-    "description": "A multiplayer Connect Four game with a unique coin theme, developed for my Android course final project.",
-    "descriptionLong": "My friend and I developed Coinnect Four, a unique coin-themed version of Connect Four for Android. We designed an intuitive UI with Figma and built the game using Kotlin and Jetpack Compose for smooth, responsive gameplay. This project strengthened our app development skills and teamwork.",
-    "imageFileName": "coinnect.png",
-    "labels": ["Android", "Kotlin", "Jetpack Compose", "Game", "Multiplayer"],
-    "type": "app"
-  },
-  {
-    "id": 2,
-    "title": "Morgon & afton",
-    "coverTitle": "Morning and Evening Adhkar App",
-    "subtitle": "Morning and Evening Adhkar with Swedish Translation",
-    "description": "A morning and evening adhkar app with Swedish translation and Arabic transliteration.",
-    "descriptionLong": "This app is designed to help Muslims recite morning and evening adhkar with ease. It includes Arabic text, Swedish translation, and Arabic transliteration to assist in proper pronunciation.",
-    "imageFileName": "morgon_afton.png",
-    "labels": ["Android", "Kotlin", "Jetpack Compose"],
-    "type": "app"
-  },
-  {
-    "id": 3,
     "title": "Wise Words",
     "coverTitle": "Motivational Quotes App",
     "subtitle": "Motivational Quotes for iOS",
@@ -30,7 +8,39 @@
     "descriptionLong": "Wise Words allows users to discover, save, and share motivational quotes. Built using Swift and SwiftUI, it offers a clean and intuitive UI, making it easy to stay inspired throughout the day.",
     "imageFileName": "wise_words.png",
     "labels": ["iOS", "Swift", "SwiftUI", "SwiftData"],
-    "type": "app"
+    "type": "app",
+    "highlight": true,
+    "Released": true,
+    "AppStore": true,
+    "GooglePlay": false
+  },
+
+  {
+    "id": 2,
+    "title": "Morgon- & kvällsåminnelser",
+    "coverTitle": "Morning and Eveningsupplication",
+    "subtitle": "Morning and Eveningsupplication with Swedish Translation",
+    "description": "Morning and eveningsupplications with translation",
+    "descriptionLong": "This app is designed to help Muslims recite morning and evening adhkar with ease. It includes Arabic text, Swedish translation, and Arabic transliteration to assist in proper pronunciation.",
+    "imageFileName": "morgon_afton.png",
+    "labels": ["Cross-plattform", "TypeScript", "Expo"],
+    "type": "app",
+    "highlight": true,
+    "Released": true,
+    "Appstore": true,
+    "GooglePlay": true
+  },
+  {
+    "id": 3,
+    "title": "Coinnect Four",
+    "coverTitle": "Coinnect Four: Multiplayer Game",
+    "subtitle": "Coin-Themed Mobile App for Android",
+    "description": "A multiplayer Connect Four game with a unique coin theme, developed for my Android course final project.",
+    "descriptionLong": "My friend and I developed Coinnect Four, a unique coin-themed version of Connect Four for Android. We designed an intuitive UI with Figma and built the game using Kotlin and Jetpack Compose for smooth, responsive gameplay. This project strengthened our app development skills and teamwork.",
+    "imageFileName": "coinnect.png",
+    "labels": ["Android", "Kotlin", "Jetpack Compose", "Game", "Multiplayer"],
+    "type": "app",
+    "Repo": "https://github.com/"
   },
   {
     "id": 4,

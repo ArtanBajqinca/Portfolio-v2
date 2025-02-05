@@ -21,13 +21,13 @@ const ProjectSection = () => {
   };
 
   return (
-    <div className="flex flex-col items-center bg-gray-900 sm:pt-10 md:pt-20 lg:pt-20 xl:pt-[110px] 2xl:pt-[50px] ">
-      <div className="text-white gap-6 text-center font-avenir-light text-[10px] lg:text-xl z-40 mb-4 tracking-wide">
+    <div className="flex flex-col items-center bg-gray-900 pt-10 sm:pt-10 md:pt-20 lg:pt-20 xl:pt-[110px] 2xl:pt-[50px] ">
+      <div className="text-white gap-6 text-center font-avenir-light text-[18px] lg:text-xl z-40 mb-4 tracking-wide">
         I SPECIALIZE IN<span className="font-avenir-black"> APP</span> AND
         <br />
-        <span className="font-avenir-black">SOFTWARE </span>DEVELOPMENT USING:
+        <span className="font-avenir-black">SYSTEM </span>DEVELOPMENT USING:
       </div>
-      <div className="flex flex-row items-center gap-8 justify-center">
+      <div className="flex flex-row items-center flex-wrap gap-8 gap-y-0 lg:gap-8 justify-center mt-4 lg:mt-0 xl:mt-0">
         <LogoText
           text="React Native"
           alt="React Native Logo"
@@ -47,28 +47,23 @@ const ProjectSection = () => {
           color="#6082BB"
         />
       </div>
-      <div className="text-white font-avenir-heavy text-[30px] lg:text-[50px] mt-[10px] lg:mt-[100px] z-40">
+      <div className="text-white font-avenir-heavy text-[30px] lg:text-[50px] mt-[80px] lg:mt-[100px] z-40">
         Explore My Projects!
       </div>
-      <div className="flex items-center justify-center mt-[40px] lg:mt-[40px] flex-wrap mx-6">
-        <div className="text-white font-avenir-medium text-[22px] mr-[-5px] mb-0 sm:mb-0">
+      <div className="flex items-center justify-center mt-[20px] lg:mt-[40px] flex-wrap mx-6">
+        {/* <div className="text-white font-avenir-medium text-[22px] mr-[8px] mb-0 sm:mb-0">
           Quick filter:
-        </div>
-        <div className="flex gap-3 scale-[90%] mt-3 sm:mt-0">
+        </div> */}
+        <div className="flex gap-3 flex-wrap justify-center mt-3 sm:mt-0">
           <FilterButton
             text="APP"
             isActive={activeFilters.includes("app")}
             onClick={() => handleFilterClick("app")}
           />
           <FilterButton
-            text="SOFTWARE"
-            isActive={activeFilters.includes("sw")}
-            onClick={() => handleFilterClick("sw")}
-          />
-          <FilterButton
-            text="WEBSITE"
-            isActive={activeFilters.includes("web")}
-            onClick={() => handleFilterClick("web")}
+            text="UI / UX"
+            isActive={activeFilters.includes("ui")}
+            onClick={() => handleFilterClick("ui")}
           />
           <FilterButton
             text="GRAPHIC DESIGN"
@@ -76,9 +71,14 @@ const ProjectSection = () => {
             onClick={() => handleFilterClick("gd")}
           />
           <FilterButton
-            text="UI / UX"
-            isActive={activeFilters.includes("ui")}
-            onClick={() => handleFilterClick("ui")}
+            text="WEBSITE"
+            isActive={activeFilters.includes("web")}
+            onClick={() => handleFilterClick("web")}
+          />
+          <FilterButton
+            text="SYSTEM"
+            isActive={activeFilters.includes("sw")}
+            onClick={() => handleFilterClick("sw")}
           />
         </div>
       </div>
@@ -94,6 +94,11 @@ const ProjectSection = () => {
             imageFileName={project.imageFileName}
             labels={project.labels}
             type={project.type}
+            highlight={project.highlight}
+            Repo={project.Repo}
+            Released={project.Released}
+            AppStore={project.AppStore}
+            GooglePlay={project.GooglePlay}
           />
         ))}
       </div>

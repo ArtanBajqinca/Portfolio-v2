@@ -31,9 +31,9 @@ export const BurgerMenu = () => {
         <div className="">
           <div className="flex flex-col items-start space-y-4 mx-4">
             <Link href="/" passHref></Link>
-            <Button text="Projects" className="font-avenir-heavy" />
-            <Button text="About" className="font-avenir-heavy" />
-            <Button text="Contact" className="font-avenir-heavy mb-4" />
+            <Button text="Projects" className="font-avenir-black" />
+            <Button text="About" className="font-avenir-black" />
+            <Button text="Contact" className="font-avenir-black mb-4" />
           </div>
         </div>
       </nav>

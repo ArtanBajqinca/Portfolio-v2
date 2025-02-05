@@ -3,6 +3,8 @@ import { MdArrowOutward } from "react-icons/md";
 import { Label } from "@/components/Label";
 import { LabelIcon } from "./LabelIcon";
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
+import Image from "next/image";
 
 const BASE_IMAGE_PATH = "/images/programming-projects/project-card/";
 
@@ -13,12 +15,21 @@ export const ProjectCard = ({
   imageFileName = "Dummy.png",
   labels = [],
   type = "app",
+  highlight = false,
+  Repo,
+  Released,
+  AppStore,
+  GooglePlay,
 }) => {
   const imageSrc = `${BASE_IMAGE_PATH}${imageFileName}`;
 
   return (
     <Link href={`/projects/${id}`} passHref>
-      <div className="flex flex-col lg:flex-row bg-gray-700 w-[300px] lg:w-[600px] max-h-[600px] rounded-[10px] group duration-200 transform transition-transform hover:scale-[102%] cursor-pointer">
+      <div
+        className={`flex flex-col lg:flex-row bg-gray-700 w-[300px] lg:w-[600px] max-h-[600px] rounded-[10px] group duration-200 transform transition-transform hover:scale-[102%] cursor-pointer ${
+          highlight ? "border border-[#FFD700] border-[2px]" : ""
+        }`}
+      >
         {/* Image */}
         <div className="m-3 rounded-[10px] max-w-[300px]">
           <img
@@ -30,7 +41,7 @@ export const ProjectCard = ({
         <div className="mx-4 lg:mr-5 lg:my-5 lg:ml-2 flex flex-col justify-between">
           {/* Title and arrow */}
           <div className=" flex justify-between">
-            <div className="text-white text-[21px] lg:text-[23px] font-avenir-heavy w-full">
+            <div className="text-white text-[21px] lg:text-[23px] leading-7 font-avenir-heavy w-full">
               {title}
             </div>
             <div className="lg:group-hover:translate-x-[8px] lg:group-hover:-translate-y-2 lg:transition-transform duration-200">
@@ -51,7 +62,30 @@ export const ProjectCard = ({
               {labels.map((label, index) => (
                 <Label key={index} text={label} />
               ))}
-              <LabelIcon />
+              {Repo && (
+                <LabelIcon
+                  label={"Repository"}
+                  textColor={"text-white"}
+                  icon={FaGithub}
+                  bgColor={"bg-gray-600"}
+                />
+              )}
+              {AppStore && (
+                <LabelIcon
+                  label={"App Store"}
+                  textColor={"text-gray-600"}
+                  bgColor={"bg-white"}
+                  icon="/images/appstore.png"
+                />
+              )}
+              {GooglePlay && (
+                <LabelIcon
+                  label={"Google Play"}
+                  textColor={"text-gray-600"}
+                  bgColor={"bg-white"}
+                  icon="/images/googleplay.png"
+                />
+              )}
             </div>
           </div>
         </div>
