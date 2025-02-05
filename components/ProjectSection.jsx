@@ -22,14 +22,15 @@ const ProjectSection = () => {
 
   return (
     <div className="flex flex-col items-center bg-gray-900 pt-10 sm:pt-10 md:pt-20 lg:pt-20 xl:pt-[110px] 2xl:pt-[50px] ">
-      <div className="text-white gap-6 text-center font-avenir-light text-[18px] lg:text-xl z-40 mb-4 tracking-wide">
+      <div className="text-white gap-6 text-center font-avenir-light text-[18px] lg:text-xl text-base z-40 mb-4 tracking-wide">
         I SPECIALIZE IN
         <span className="font-avenir-black"> CROSS-PLATTFORM</span> AND
         <br />
         <span className="font-avenir-black">NATIVE </span>
         APP DEVELOPMENT USING:
       </div>
-      <div className="flex flex-row items-center flex-wrap gap-8 gap-y-0 lg:gap-8 justify-center mt-4 lg:mt-0 xl:mt-0">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-8 gap-y-6 mt-4 lg:mt-0 xl:mt-0">
         <LogoText
           text="React Native"
           alt="React Native Logo"
@@ -45,17 +46,59 @@ const ProjectSection = () => {
         <LogoText
           text="TypeScript"
           alt="TypeScript Logo"
-          logo={<img className="max-w-[54px] max-h-[54px] lg:w-[54px] w-[42px] lg:ml-2 ml-[-0px]" src={"/images/typescript.gif"} alt="Logo" />}
-          color="#007ACC"
+          logo={
+            <img
+              className="max-w-[54px] max-h-[54px] lg:w-[54px] w-[42px] lg:ml-1 ml-[-0px]"
+              src={"/images/typescript.gif"}
+              alt="Logo"
+            />
+          }
+          color="#FFFFFF"
+        />
+        <LogoText
+          text="Swift"
+          alt="Swift Logo"
+          logo={
+            <img
+              className="lg:max-w-[50px] max-w-[40px] lg:ml-0 ml-[0px]"
+              src={"/images/swift.png"}
+              alt="Logo"
+            />
+          }
+          color="#E16643"
+        />
+        <LogoText
+          text="Kotlin"
+          alt="Kotlin Logo"
+          logo={
+            <img
+              className="lg:max-w-[42px] max-w-[35px] lg:ml-4 ml-[6px]"
+              src={"/images/kotlin.png"}
+              alt="Logo"
+            />
+          }
+          color="#6576E0"
+        />
+        <LogoText
+          text="Expo"
+          alt="Expo Logo"
+          logo={
+            <img
+              className="lg:max-w-[46px] max-w-[42px] lg:ml-2 ml-[0px]"
+              src={"/images/expo.png"}
+              alt="Logo"
+              style={{ filter: "invert(100%)" }}
+            />
+          }
+          color="#FFFFFF"
         />
       </div>
+
       <div className="text-white font-avenir-heavy text-[30px] lg:text-[50px] mt-[80px] lg:mt-[100px] z-40">
         Explore My Projects!
       </div>
+
       <div className="flex items-center justify-center mt-[20px] lg:mt-[40px] flex-wrap mx-6">
-        {/* <div className="text-white font-avenir-medium text-[22px] mr-[8px] mb-0 sm:mb-0">
-          Quick filter:
-        </div> */}
         <div className="flex gap-3 flex-wrap justify-center mt-3 sm:mt-0">
           <FilterButton
             text="APP"
@@ -109,8 +152,8 @@ const ProjectSection = () => {
 
 const FilterButton = ({ text, isActive, onClick }) => (
   <button
-    className={`rounded-[100px] text-[13px] font-avenir-heavy px-4 py-2 ${
-      isActive ? "bg-green-800 text-white" : "bg-gray-700 text-gray-300"
+    className={`rounded-[100px] text-[13px] font-avenir-heavy px-4 py-[6px] ${
+      isActive ? "bg-green-800 text-white" : "bg-[#2D2D2D] text-gray-300"
     }`}
     onClick={onClick}
   >
