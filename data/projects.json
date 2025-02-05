@@ -10,7 +10,6 @@
     "labels": ["iOS", "Swift", "SwiftUI", "SwiftData"],
     "type": "app",
     "highlight": true,
-    "Released": true,
     "AppStore": true,
     "GooglePlay": false
   },
@@ -20,14 +19,13 @@
     "title": "Morgon- & kvällsåminnelser",
     "coverTitle": "Morning and Eveningsupplication",
     "subtitle": "Morning and Eveningsupplication with Swedish Translation",
-    "description": "Morning and eveningsupplications with translation",
-    "descriptionLong": "This app is designed to help Muslims recite morning and evening adhkar with ease. It includes Arabic text, Swedish translation, and Arabic transliteration to assist in proper pronunciation.",
+    "description": "Morning and eveningsupplications in Swedish, Arabic & Transliteration.",
+    "descriptionLong": "This app is designed to help Muslims read morning and eveningsupplications with ease. It includes Arabic text, Swedish translation, and Arabic transliteration to assist in proper pronunciation.",
     "imageFileName": "morgon_afton.png",
-    "labels": ["Cross-plattform", "TypeScript", "Expo"],
+    "labels": ["Cross-plattform", "React Native", "TypeScript"],
     "type": "app",
     "highlight": true,
-    "Released": true,
-    "Appstore": true,
+    "AppStore": true,
     "GooglePlay": true
   },
   {
@@ -51,7 +49,8 @@
     "descriptionLong": "Lite Weather provides accurate weather forecasts for up to five days. Developed with SwiftUI, it presents the forecast in a minimal and user-friendly layout for quick weather updates.",
     "imageFileName": "lite_weather.png",
     "labels": ["iOS", "Swift", "SwiftUI"],
-    "type": "app"
+    "type": "app",
+    "Repo": "https://github.com/"
   },
   {
     "id": 5,
@@ -62,7 +61,8 @@
     "descriptionLong": "This project involved rebranding the Jkpg city website to improve user interaction and accessibility. Using modern web technologies such as ReactJS and Docker, we transformed the website into a more interactive and dynamic experience.",
     "imageFileName": "jkpg_city_rebrand.png",
     "labels": ["Website", "Javascript", "ReactJS", "NodeJS", "Docker"],
-    "type": "web"
+    "type": "web",
+    "Repo": "https://github.com/"
   },
   {
     "id": 6,
@@ -73,7 +73,8 @@
     "descriptionLong": "This was the initial version of my personal portfolio, where I showcased my skills and projects. It was a simple static website, built using fundamental web technologies such as HTML, CSS, and Javascript.",
     "imageFileName": "portfolio_v1.png",
     "labels": ["Website", "Javascript", "HTML", "CSS"],
-    "type": "web"
+    "type": "web",
+    "Repo": "https://github.com/"
   },
   {
     "id": 7,
@@ -84,7 +85,8 @@
     "descriptionLong": "This is the second version of my portfolio, utilizing modern web technologies like ReactJS and Next.js. The site showcases my latest projects and skills in a more dynamic and interactive manner.",
     "imageFileName": "portfolio_v2.png",
     "labels": ["Website", "React", "NextJS", "Javascript", "HTML", "CSS"],
-    "type": "web"
+    "type": "web",
+    "Repo": "https://github.com/"
   },
   {
     "id": 8,
@@ -95,6 +97,7 @@
     "descriptionLong": "This website was created to showcase my resume in an accessible and interactive way. The design is minimal yet functional, with all the essential information presented cleanly.",
     "imageFileName": "resume.png",
     "labels": ["Website", "Javascript", "HTML", "CSS"],
-    "type": "web"
+    "type": "web",
+    "Repo": "https://github.com/"
   }
 ]

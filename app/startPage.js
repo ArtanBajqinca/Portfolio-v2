@@ -17,7 +17,6 @@ import Lottie from "lottie-react";
 export default function Home() {
   return (
     <div className="flex flex-col justify-center">
-      {/* Navbar Section */}
       {/* Hero Section */}
       <div className="flex flex-row flex-wrap justify-center">
         <div className="flex flex-col mx-12">
@@ -67,8 +66,8 @@ export default function Home() {
             <div className="flex flex-row px-0 lg:px-0 lg:pl-[80px] pt-8 lg:pt-0">
               <div className="flex flex-col justify-center h-full">
                 <div className="text-white font-avenir-heavy text-[30px] lg:text-[38px] leading-[2.2rem] lg:leading-[2.5rem]">
-                  App & System <br />
-                  Developer{" "}
+                  App Developer
+                  {" "}
                   <div
                     style={{
                       width: "100px",
@@ -92,7 +91,7 @@ export default function Home() {
                   based in Sweden
                 </div>
                 <div className="text-white font-avenir-book text-[15px] lg:text-[18px] my-6 leading-tight">
-                  Developing custom software solutions,
+                  I design and develop Apps,
                   <br />
                   tailored to meet digital demands
                   <br />
@@ -105,7 +104,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="w-[100px] lg:w-[150px] flex flex-row ml-[-40px] lg:ml-[-60px]">
+              <div className="w-[100px] lg:w-[150px] flex flex-row ml-[-100px] lg:ml-[-60px]">
                 <SwedenMap />
               </div>
             </div>

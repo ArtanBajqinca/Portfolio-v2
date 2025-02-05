@@ -23,9 +23,11 @@ const ProjectSection = () => {
   return (
     <div className="flex flex-col items-center bg-gray-900 pt-10 sm:pt-10 md:pt-20 lg:pt-20 xl:pt-[110px] 2xl:pt-[50px] ">
       <div className="text-white gap-6 text-center font-avenir-light text-[18px] lg:text-xl z-40 mb-4 tracking-wide">
-        I SPECIALIZE IN<span className="font-avenir-black"> APP</span> AND
+        I SPECIALIZE IN
+        <span className="font-avenir-black"> CROSS-PLATTFORM</span> AND
         <br />
-        <span className="font-avenir-black">SYSTEM </span>DEVELOPMENT USING:
+        <span className="font-avenir-black">NATIVE </span>
+        APP DEVELOPMENT USING:
       </div>
       <div className="flex flex-row items-center flex-wrap gap-8 gap-y-0 lg:gap-8 justify-center mt-4 lg:mt-0 xl:mt-0">
         <LogoText
@@ -41,10 +43,10 @@ const ProjectSection = () => {
           color="#f7E01D"
         />
         <LogoText
-          text="PHP"
-          alt="PHP Logo"
-          logo={<img src={"/images/php_logo.gif"} alt="Logo" />}
-          color="#6082BB"
+          text="TypeScript"
+          alt="TypeScript Logo"
+          logo={<img className="max-w-[54px] max-h-[54px] lg:w-[54px] w-[42px] lg:ml-2 ml-[-0px]" src={"/images/typescript.gif"} alt="Logo" />}
+          color="#007ACC"
         />
       </div>
       <div className="text-white font-avenir-heavy text-[30px] lg:text-[50px] mt-[80px] lg:mt-[100px] z-40">
@@ -96,7 +98,6 @@ const ProjectSection = () => {
             type={project.type}
             highlight={project.highlight}
             Repo={project.Repo}
-            Released={project.Released}
             AppStore={project.AppStore}
             GooglePlay={project.GooglePlay}
           />

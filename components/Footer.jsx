@@ -15,7 +15,7 @@ const Footer = () => {
             <Logo />
           </div>
         </a>
-        <span className="block text-sm text-white dark:text-gray-400 text-center font-[100]">
+        <span className="block text-sm text-white dark:text-gray-400 font-avenir-light text-center font-[100]">
           © {currentYear}{" "}
           <a href="https://flowbite.com/" className="hover:underline"></a>
           All rights reserved

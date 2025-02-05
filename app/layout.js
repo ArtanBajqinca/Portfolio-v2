@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Artan Bajqinca - App & System Developer",
+  title: "Artan Bajqinca - App Developer",
   description:
     "App & system developer based in Sweden. I have a passion for creating beautiful and functional websites and applications.",
 };

@@ -17,7 +17,6 @@ export const ProjectCard = ({
   type = "app",
   highlight = false,
   Repo,
-  Released,
   AppStore,
   GooglePlay,
 }) => {
@@ -27,7 +26,7 @@ export const ProjectCard = ({
     <Link href={`/projects/${id}`} passHref>
       <div
         className={`flex flex-col lg:flex-row bg-gray-700 w-[300px] lg:w-[600px] max-h-[600px] rounded-[10px] group duration-200 transform transition-transform hover:scale-[102%] cursor-pointer ${
-          highlight ? "border border-[#FFD700] border-[2px]" : ""
+          highlight ? "border-[#FFD700] border-[2px]" : ""
         }`}
       >
         {/* Image */}
@@ -41,7 +40,7 @@ export const ProjectCard = ({
         <div className="mx-4 lg:mr-5 lg:my-5 lg:ml-2 flex flex-col justify-between">
           {/* Title and arrow */}
           <div className=" flex justify-between">
-            <div className="text-white text-[21px] lg:text-[23px] leading-7 font-avenir-heavy w-full">
+            <div className="text-white text-[21px] lg:text-[23px] leading-[28px] font-avenir-heavy w-full">
               {title}
             </div>
             <div className="lg:group-hover:translate-x-[8px] lg:group-hover:-translate-y-2 lg:transition-transform duration-200">

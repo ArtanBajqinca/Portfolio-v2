@@ -5,7 +5,6 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import { LabelBig } from "@/components/LabelBig";
 import { BurgerMenu } from "@/components/BurgerMenu";
@@ -52,7 +51,7 @@ export default function ProjectDetails({ params }) {
         {/* Navbar Section */}
         <div className="absolute top-0 left-0 w-full z-20">
           <div className="flex justify-center mt-10">
-            <div className="w-[928.75px]">
+            <div className="justify-between w-full max-w-[1037px]">
               {/* Full Navbar for larger screens */}
               <div className="hidden md:block">
                 <Navbar />
