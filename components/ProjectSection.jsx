@@ -3,10 +3,15 @@
 import React, { useState } from "react";
 import { ProjectCard } from "@/components/ProjectCard";
 import Projects from "/data/projects.json";
-import reactLogoAnimation from "/public/react_logo.json";
-import javascriptLogoAnimation from "/public/javascript_logo.json";
-import Lottie from "lottie-react";
 import { LogoText } from "@/components/LogoText";
+import dynamic from 'next/dynamic';
+
+// Dynamically import Lottie with SSR disabled
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+
+// Import animations
+const reactLogoAnimation = require("/public/react_logo.json");
+const javascriptLogoAnimation = require("/public/javascript_logo.json");
 
 const ProjectSection = () => {
   const [activeFilters, setActiveFilters] = useState([]);

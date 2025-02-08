@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import dynamic from 'next/dynamic';
 import Navbar from "@/components/Navbar";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import Image from "next/image";
@@ -11,8 +12,12 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import ProjectSection from "@/components/ProjectSection";
 import { Typewriter } from "react-simple-typewriter";
-import scrollDownAnimation from "/public/scroll_down.json";
-import Lottie from "lottie-react";
+
+// Import the scroll animation
+const scrollDownAnimation = require("/public/scroll_down.json");
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+const ScrollDownLottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function Home() {
   return (
