@@ -7,11 +7,18 @@
     "description": "Motivational quote app for saving and sharing favorites, developed for my iOS course final project.",
     "descriptionLong": "Wise Words allows users to discover, save, and share motivational quotes. Built using Swift and SwiftUI, it offers a clean and intuitive UI, making it easy to stay inspired throughout the day.",
     "imageFileName": "wise_words.png",
+    "videoFileName": "wise_words_video.mp4",
     "labels": ["iOS", "Swift", "SwiftUI", "SwiftData"],
     "type": "app",
     "highlight": true,
     "AppStore": true,
-    "GooglePlay": false
+    "AppStoreLink": "https://apps.apple.com/se/app/wise-words-quotes-wisdom/id6741334539",
+    "GooglePlay": false,
+    "images": [
+      "wise_words_1.png",
+      "wise_words_2.png",
+      "dummy-image.png"
+    ]
   },
 
   {
@@ -26,7 +33,10 @@
     "type": "app",
     "highlight": true,
     "AppStore": true,
-    "GooglePlay": true
+    "AppStoreLink": "https://apps.apple.com/se/app/morgon-kv%C3%A4lls%C3%A5minnelser/id6740466037?uo=2",
+    "GooglePlay": true,
+    "GooglePlayLink": "https://play.google.com/store/apps/details?id=com.anonymous.morgonaftonsadhkarreact&hl=sv"
+
   },
   {
     "id": 3,
@@ -66,18 +76,6 @@
   },
   {
     "id": 6,
-    "title": "Portfolio v1",
-    "coverTitle": "First Personal Portfolio",
-    "subtitle": "Initial Version of My Personal Portfolio",
-    "description": "My first Personal portfolio website, made with basic HTML, CSS and Javascript.",
-    "descriptionLong": "This was the initial version of my personal portfolio, where I showcased my skills and projects. It was a simple static website, built using fundamental web technologies such as HTML, CSS, and Javascript.",
-    "imageFileName": "portfolio_v1.png",
-    "labels": ["Website", "Javascript", "HTML", "CSS"],
-    "type": "web",
-    "Repo": "https://github.com/"
-  },
-  {
-    "id": 7,
     "title": "Portfolio v2",
     "coverTitle": "Updated Personal Portfolio",
     "subtitle": "Modern Personal Portfolio with React and NextJS",
@@ -85,6 +83,18 @@
     "descriptionLong": "This is the second version of my portfolio, utilizing modern web technologies like ReactJS and Next.js. The site showcases my latest projects and skills in a more dynamic and interactive manner.",
     "imageFileName": "portfolio_v2.png",
     "labels": ["Website", "React", "NextJS", "Javascript", "HTML", "CSS"],
+    "type": "web",
+    "Repo": "https://github.com/"
+  },
+  {
+    "id": 7,
+    "title": "Portfolio v1",
+    "coverTitle": "First Personal Portfolio",
+    "subtitle": "Initial Version of My Personal Portfolio",
+    "description": "My first Personal portfolio website, made with basic HTML, CSS and Javascript.",
+    "descriptionLong": "This was the initial version of my personal portfolio, where I showcased my skills and projects. It was a simple static website, built using fundamental web technologies such as HTML, CSS, and Javascript.",
+    "imageFileName": "portfolio_v1.png",
+    "labels": ["Website", "Javascript", "HTML", "CSS"],
     "type": "web",
     "Repo": "https://github.com/"
   },

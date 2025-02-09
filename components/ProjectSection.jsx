@@ -132,7 +132,7 @@ const ProjectSection = () => {
           />
         </div>
       </div>
-      <div className="m-3 flex flex-row flex-wrap gap-5 justify-center items-center mt-10 mb-20 w-full px-[5vw]">
+      <div className="m-3 flex flex-row flex-wrap gap-5 justify-center items-center mt-10 mb-20 w-full 4xl:px-[20vw] px-[5vw]">
         {Projects.filter((project) =>
           activeFilters.length > 0 ? activeFilters.includes(project.type) : true
         ).map((project, index) => (
@@ -157,7 +157,7 @@ const ProjectSection = () => {
 
 const FilterButton = ({ text, isActive, onClick }) => (
   <button
-    className={`rounded-[100px] text-[13px] font-avenir-heavy px-4 py-[6px] ${
+    className={`rounded-[100px] text-[13px] font-avenir-medium px-4 py-[6px] ${
       isActive ? "bg-green-800 text-white" : "bg-[#2D2D2D] text-gray-300"
     }`}
     onClick={onClick}

@@ -25,8 +25,7 @@ export const ProjectCard = ({
   return (
     <Link href={`/projects/${id}`} passHref>
       <div
-        className={`flex flex-col lg:flex-row bg-gray-700 w-[300px] lg:w-[600px] max-h-[600px] rounded-[10px] group duration-200 transform transition-transform hover:scale-[102%] cursor-pointer ${
-          highlight ? "border-[#FFD700] border-[2px]" : ""
+        className={`flex flex-col lg:flex-row bg-gray-700 w-[300px] lg:w-[600px] max-h-[600px] rounded-[10px] group duration-200 transform transition-transform hover:scale-[102%] cursor-pointer
         }`}
       >
         {/* Image */}
