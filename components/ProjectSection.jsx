@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import { ProjectCard } from "@/components/ProjectCard";
-import Projects from "/data/projects.json";
-import { LogoText } from "@/components/LogoText";
+import React, { useState } from 'react';
+import { ProjectCard } from '@/components/ProjectCard';
+import Projects from '/data/projects.json';
+import { LogoText } from '@/components/LogoText';
 import dynamic from 'next/dynamic';
 
 // Dynamically import Lottie with SSR disabled
-const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 // Import animations
-const reactLogoAnimation = require("/public/react_logo.json");
-const javascriptLogoAnimation = require("/public/javascript_logo.json");
+const reactLogoAnimation = require('/public/react_logo.json');
+const javascriptLogoAnimation = require('/public/javascript_logo.json');
 
 const ProjectSection = () => {
   const [activeFilters, setActiveFilters] = useState([]);
@@ -27,23 +27,52 @@ const ProjectSection = () => {
 
   return (
     <div className="flex flex-col items-center bg-gray-900 pt-10 sm:pt-10 md:pt-20 lg:pt-20 xl:pt-[110px] 2xl:pt-[50px] ">
-      <div className="text-white gap-6 text-center font-avenir-light text-[18px] lg:text-xl text-base z-40 mb-4 tracking-wide">
+      <div className="text-white leading-0 lg:leading-8 gap-6 text-center font-avenir-light text-[18px] lg:text-[26px] text-base z-40 mb-8 tracking-wide">
         I SPECIALIZE IN
-        <span className="font-avenir-black"> CROSS-PLATTFORM</span> AND
+        <span className="font-avenir-black"> CROSS-PLATTFORM</span>
         <br />
+        <span className="">AND </span>
         <span className="font-avenir-black">NATIVE </span>
-        APP DEVELOPMENT USING:
+        APP DEVELOPMENT
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-8 gap-y-6 mt-4 lg:mt-0 xl:mt-0">
+      {/* make 3x3 cols then 2x3 than 1x3 on mobile */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-2 mt-4 lg:mt-0 xl:mt-0 justify-items-evenly">
+        <LogoText
+          text="iOS"
+          alt="iOS Logo"
+          logo={
+            <img
+              className="lg:max-w-[50px] max-w-[40px] lg:ml-0 ml-[0px]"
+              src={'/images/ios.png'}
+              alt="Logo"
+            />
+          }
+          color="#FFFFFF"
+        />
+        <LogoText
+          text="Android"
+          className={'ml-[-10px]'}
+          alt="Android Logo"
+          logo={
+            <img
+              className="lg:max-w-[42px] max-w-[35px]"
+              src={'/images/android.png'}
+              alt="Logo"
+            />
+          }
+          color="#3DDC84"
+        />
         <LogoText
           text="React Native"
+          classNameIcon={'ml-[-6px]'}
           alt="React Native Logo"
           logo={<Lottie animationData={reactLogoAnimation} />}
           color="#61DBFB"
         />
         <LogoText
           text="JavaScript"
+          classNameIcon={'ml-[-8px]'}
           alt="JavaScript Logo"
           logo={<Lottie animationData={javascriptLogoAnimation} />}
           color="#f7E01D"
@@ -51,48 +80,27 @@ const ProjectSection = () => {
         <LogoText
           text="TypeScript"
           alt="TypeScript Logo"
+          className={'ml-[-10px]'}
           logo={
             <img
-              className="max-w-[54px] max-h-[54px] lg:w-[54px] w-[42px] lg:ml-1 ml-[-0px]"
-              src={"/images/typescript.gif"}
+              className="max-w-[54px] max-h-[54px] lg:w-[54px] w-[42px] ml-[-3px]"
+              src={'/images/typescript.gif'}
               alt="Logo"
             />
           }
           color="#FFFFFF"
         />
-        <LogoText
-          text="Swift"
-          alt="Swift Logo"
-          logo={
-            <img
-              className="lg:max-w-[50px] max-w-[40px] lg:ml-0 ml-[0px]"
-              src={"/images/swift.png"}
-              alt="Logo"
-            />
-          }
-          color="#E16643"
-        />
-        <LogoText
-          text="Kotlin"
-          alt="Kotlin Logo"
-          logo={
-            <img
-              className="lg:max-w-[42px] max-w-[35px] lg:ml-4 ml-[6px]"
-              src={"/images/kotlin.png"}
-              alt="Logo"
-            />
-          }
-          color="#6576E0"
-        />
+
         <LogoText
           text="Expo"
           alt="Expo Logo"
+          classNameIcon={'ml-[-12px]'}
           logo={
             <img
               className="lg:max-w-[46px] max-w-[42px] lg:ml-2 ml-[0px]"
-              src={"/images/expo.png"}
+              src={'/images/expo.png'}
               alt="Logo"
-              style={{ filter: "invert(100%)" }}
+              style={{ filter: 'invert(100%)' }}
             />
           }
           color="#FFFFFF"
@@ -107,28 +115,28 @@ const ProjectSection = () => {
         <div className="flex gap-3 flex-wrap justify-center mt-3 sm:mt-0">
           <FilterButton
             text="APP"
-            isActive={activeFilters.includes("app")}
-            onClick={() => handleFilterClick("app")}
+            isActive={activeFilters.includes('app')}
+            onClick={() => handleFilterClick('app')}
           />
           <FilterButton
             text="UI / UX"
-            isActive={activeFilters.includes("ui")}
-            onClick={() => handleFilterClick("ui")}
+            isActive={activeFilters.includes('ui')}
+            onClick={() => handleFilterClick('ui')}
           />
           <FilterButton
             text="GRAPHIC DESIGN"
-            isActive={activeFilters.includes("gd")}
-            onClick={() => handleFilterClick("gd")}
+            isActive={activeFilters.includes('gd')}
+            onClick={() => handleFilterClick('gd')}
           />
           <FilterButton
             text="WEBSITE"
-            isActive={activeFilters.includes("web")}
-            onClick={() => handleFilterClick("web")}
+            isActive={activeFilters.includes('web')}
+            onClick={() => handleFilterClick('web')}
           />
           <FilterButton
             text="SYSTEM"
-            isActive={activeFilters.includes("sw")}
-            onClick={() => handleFilterClick("sw")}
+            isActive={activeFilters.includes('sw')}
+            onClick={() => handleFilterClick('sw')}
           />
         </div>
       </div>
@@ -158,7 +166,7 @@ const ProjectSection = () => {
 const FilterButton = ({ text, isActive, onClick }) => (
   <button
     className={`rounded-[100px] text-[13px] font-avenir-medium px-4 py-[6px] ${
-      isActive ? "bg-green-800 text-white" : "bg-[#2D2D2D] text-gray-300"
+      isActive ? 'bg-green-800 text-white' : 'bg-[#2D2D2D] text-gray-300'
     }`}
     onClick={onClick}
   >
