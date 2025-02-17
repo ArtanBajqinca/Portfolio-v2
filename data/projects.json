@@ -4,7 +4,7 @@
     "title": "Wise Words",
     "coverTitle": "Motivational Quotes App",
     "subtitle": "Motivational Quotes for iOS",
-    "description": "Motivational quote app for saving and sharing favorites, developed for my iOS course final project.",
+    "description":"A motivational quote app for saving and sharing favorites, built as my final school project for the iOS course.",
     "descriptionLong": "Wise Words allows users to discover, save, and share motivational quotes. Built using Swift and SwiftUI, it offers a clean and intuitive UI, making it easy to stay inspired throughout the day.",
     "imageFileName": "wise_words.png",
     "videoFileName": "wise_words_video.mp4",
@@ -17,7 +17,7 @@
     "images": [
       "wise_words_1.png",
       "wise_words_2.png",
-      "dummy-image.png"
+      "wise_words_3.png"
     ]
   },
 
