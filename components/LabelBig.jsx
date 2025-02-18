@@ -17,7 +17,7 @@ export const LabelBig = ({
         (typeof icon === 'function' ? (
           <icon className="mr-2" size={16} />
         ) : (
-          <div className="mr-2">
+          <div className="mr-2 lg:mt-0 mt-[-2px]">
             <Image src={icon} alt={text} width={16} height={16} />
           </div>
         ))}

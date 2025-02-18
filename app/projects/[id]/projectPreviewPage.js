@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import Projects from "@/data/projects.json";
-import React from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import Image from "next/image";
-import Link from "next/link";
-import { LabelBig } from "@/components/LabelBig";
-import { BurgerMenu } from "@/components/BurgerMenu";
-import Logo from "@/components/assets/Logo";
-import { useEffect, useState } from "react";
+import Projects from '@/data/projects.json';
+import React from 'react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import Image from 'next/image';
+import Link from 'next/link';
+import { LabelBig } from '@/components/LabelBig';
+import { BurgerMenu } from '@/components/BurgerMenu';
+import Logo from '@/components/assets/Logo';
+import { useEffect, useState } from 'react';
 
 export default function ProjectDetails({ params }) {
   const { id } = params;
@@ -18,12 +18,14 @@ export default function ProjectDetails({ params }) {
   if (!project) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <div className="text-white text-2xl font-avenir-medium font-bold">Project not found</div>
+        <div className="text-white text-2xl font-avenir-medium font-bold">
+          Project not found
+        </div>
       </div>
     );
   }
 
-  const [mediaType, setMediaType] = useState("image");
+  const [mediaType, setMediaType] = useState('image');
   const [mediaSrc, setMediaSrc] = useState(
     `/images/programming-projects/project-cover/${project?.imageFileName}`
   );
@@ -31,10 +33,10 @@ export default function ProjectDetails({ params }) {
   useEffect(() => {
     // Check if project has video
     if (project?.videoFileName) {
-      setMediaType("video");
+      setMediaType('video');
       setMediaSrc(`/videos/${project.videoFileName}`);
     } else {
-      setMediaType("image");
+      setMediaType('image');
       setMediaSrc(
         `/images/programming-projects/project-cover/${project.imageFileName}`
       );
@@ -42,14 +44,14 @@ export default function ProjectDetails({ params }) {
   }, [project]);
 
   const handleImageError = () => {
-    setMediaSrc("/images/dummy-image.png");
+    setMediaSrc('/images/dummy-image.png');
   };
 
   return (
     <div className="flex flex-col justify-center min-h-screen bg-gray-900">
       {/* Full-Screen Cover Image */}
       <div className="relative w-full h-[110vw] md:h-[80vh] mt-4 lg:h-screen sm:my-0">
-        {mediaType === "video" ? (
+        {mediaType === 'video' ? (
           <video
             src={mediaSrc}
             autoPlay
@@ -104,7 +106,7 @@ export default function ProjectDetails({ params }) {
         <h2 className="text-2xl lg:text-3xl mt-6 font-avenir-light">
           {project.subtitle}
         </h2>
-        <p className="mt-6 text-lg lg:text-xl leading-relaxed font-avenir-light max-w-3xl">
+        <p className="mt-6 text-[16spx] lg:text-xl leading-relaxed font-avenir-light max-w-3xl">
           {project.descriptionLong}
         </p>
         {/* Labels Section */}
@@ -118,7 +120,7 @@ export default function ProjectDetails({ params }) {
           <div className="flex flex-wrap gap-2 justify-start">
             {project.AppStore && (
               <LabelBig
-                text="View on App Store"
+                text="App Store"
                 icon="/images/appstore.png"
                 link={project.AppStoreLink}
                 bgColor="bg-white"
@@ -150,22 +152,20 @@ export default function ProjectDetails({ params }) {
       </div>
       {/* Project pictures */}
       <div className="mb-10">
-          {project.images && project.images.length > 0 && (
-            <div className="grid grid-cols-1 gap-8 sm:mx-[10%]">
-              {project.images.map((image, index) => (
-                <div key={index} className="relative w-full">
-                  {" "}
-                  <img
-                    src={`/images/project-preview-images/${image}`}
-                    alt={`${project.title} screenshot ${index + 1}`}
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
+        {project.images && project.images.length > 0 && (
+          <div className="grid grid-cols-1 gap-8 sm:mx-[10%]">
+            {project.images.map((image, index) => (
+              <div key={index} className="relative w-full flex justify-center">
+                <img
+                  src={`/images/project-preview-images/${image}`}
+                  alt={`${project.title} screenshot ${index + 1}`}
+                  className="object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
 
       {/* Footer Section */}
       <Footer />

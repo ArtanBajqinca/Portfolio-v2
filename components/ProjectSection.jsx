@@ -37,7 +37,7 @@ const ProjectSection = () => {
       </div>
 
       {/* make 3x3 cols then 2x3 than 1x3 on mobile */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-2 mt-4 lg:mt-0 xl:mt-0 justify-items-evenly">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-4 lg:gap-y-2 mt-0 lg:mt-0 xl:mt-0 justify-items-evenly">
         <LogoText
           text="iOS"
           alt="iOS Logo"

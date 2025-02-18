@@ -5,7 +5,7 @@
     "coverTitle": "Motivational Quotes App",
     "subtitle": "Motivational Quotes for iOS",
     "description":"A motivational quote app for saving and sharing favorites, built as my final school project for the iOS course.",
-    "descriptionLong": "Wise Words allows users to discover, save, and share motivational quotes. Built using Swift and SwiftUI, it offers a clean and intuitive UI, making it easy to stay inspired throughout the day.",
+    "descriptionLong": "Wise Words is a motivational quotes app developed using Swift and SwiftUI. It features a clean and intuitive interface, allowing users to discover, save, and share their favorite quotes effortlessly. Key technical highlights include MVVM architecture for maintainability, SwiftData for efficient data storage, asynchronous programming for smooth user experience, custom animations for transitions, comprehensive unit and UI testing, widget support for home screen quotes, swipe gestures for navigation, and SwiftUI's environment and state management for dynamic updates.",
     "imageFileName": "wise_words.png",
     "videoFileName": "wise_words_video.mp4",
     "labels": ["iOS", "Swift", "SwiftUI", "SwiftData"],
@@ -16,8 +16,8 @@
     "GooglePlay": false,
     "images": [
       "wise_words_1.png",
-      "wise_words_2.png",
-      "wise_words_3.png"
+      "wise_words_3.png",
+      "wise_words_2.png"
     ]
   },
 
@@ -27,7 +27,7 @@
     "coverTitle": "Morning and Eveningsupplication",
     "subtitle": "Morning and Eveningsupplication with Swedish Translation",
     "description": "Morning and eveningsupplications in Swedish, Arabic & Transliteration.",
-    "descriptionLong": "This app is designed to help Muslims read morning and eveningsupplications with ease. It includes Arabic text, Swedish translation, and Arabic transliteration to assist in proper pronunciation.",
+    "descriptionLong": "Morgon & Kvällsåminnelser is a React Native app developed with Expo, offering morning and evening reminders through a user-friendly interface. It uses MVVM architecture for maintainability and AsyncStorage for efficient data storage. Navigation is simplified with Expo Router, and custom animations enhance user experience. The app features drawer navigation with @react-navigation/drawer, haptic feedback with expo-haptics, and real-time updates using React's state and effect hooks. Tailwind CSS provides consistent and responsive design. The app prioritizes simplicity and user privacy, collecting no personal information.",
     "imageFileName": "morgon_afton.png",
     "labels": ["Cross-plattform", "React Native", "TypeScript"],
     "type": "app",

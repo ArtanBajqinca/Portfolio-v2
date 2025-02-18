@@ -1,23 +1,23 @@
-"use client";
+'use client';
 
-import React from "react";
+import React from 'react';
 import dynamic from 'next/dynamic';
-import Navbar from "@/components/Navbar";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import Image from "next/image";
-import Button from "@/components/Button";
-import SwedenMap from "@/components/assets/SwedenMap";
-import Divider from "@/components/assets/Divider";
-import Link from "next/link";
-import Footer from "@/components/Footer";
-import ProjectSection from "@/components/ProjectSection";
-import { Typewriter } from "react-simple-typewriter";
+import Navbar from '@/components/Navbar';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import Image from 'next/image';
+import Button from '@/components/Button';
+import SwedenMap from '@/components/assets/SwedenMap';
+import Divider from '@/components/assets/Divider';
+import Link from 'next/link';
+import Footer from '@/components/Footer';
+import ProjectSection from '@/components/ProjectSection';
+import { Typewriter } from 'react-simple-typewriter';
 
 // Import the scroll animation
-const scrollDownAnimation = require("/public/scroll_down.json");
+const scrollDownAnimation = require('/public/scroll_down.json');
 
-const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
-const ScrollDownLottie = dynamic(() => import("lottie-react"), { ssr: false });
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+const ScrollDownLottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 export default function Home() {
   return (
@@ -57,7 +57,7 @@ export default function Home() {
                 </div>
               </div>
               {/* Portrait */}
-              <div className="flex flex-col justify-end ml-[-120px] lg:ml-[-200px] z-100 w-[240px] lg:w-[350px] mb-[-5px] lg:mb-[-10px] xl:mb-[-20px]">
+              <div className="flex flex-col justify-end ml-[-120px] lg:ml-[-200px] z-100 w-[240px] lg:w-[350px] mb-[-5px] lg:mb-[-10px] xl:mb-[-40px]">
                 <Image
                   src="/images/Portrait.png"
                   alt="Artan Bajqinca"
@@ -71,19 +71,18 @@ export default function Home() {
             <div className="flex flex-row px-0 lg:px-0 lg:pl-[80px] pt-8 lg:pt-0">
               <div className="flex flex-col justify-center h-full">
                 <div className="text-white font-avenir-heavy text-[30px] lg:text-[38px] leading-[2.2rem] lg:leading-[2.5rem]">
-                  App Developer
-                  {" "}
+                  App Developer{' '}
                   <div
                     style={{
-                      width: "100px",
-                      display: "inline-block",
-                      color: "#6E8F6B",
-                      fontSize: "1.8rem",
-                      fontFamily: "Avenir-Heavy",
+                      width: '100px',
+                      display: 'inline-block',
+                      color: '#6E8F6B',
+                      fontSize: '1.8rem',
+                      fontFamily: 'Avenir-Heavy',
                     }}
                   >
                     <Typewriter
-                      words={["</>", "{ / }"]}
+                      words={['</>', '{ / }']}
                       loop={false}
                       cursor
                       cursorStyle="_"
@@ -128,14 +127,14 @@ export default function Home() {
       <div className="fixed bottom-4 right-4 z-50">
         <Lottie
           animationData={scrollDownAnimation}
-          style={{ width: "70px", opacity: 0.3 }}
+          style={{ width: '70px', opacity: 0.3 }}
         />
       </div>
     </div>
   );
 }
 
-const NameComponent = ({ text, additionalStyles = "" }) => (
+const NameComponent = ({ text, additionalStyles = '' }) => (
   <div
     className={`text-white font-avenir-black text-[50px] lg:text-[80px] ${additionalStyles}`}
   >
