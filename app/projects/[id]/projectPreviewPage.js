@@ -10,6 +10,7 @@ import { LabelBig } from '@/components/LabelBig';
 import { BurgerMenu } from '@/components/BurgerMenu';
 import Logo from '@/components/assets/Logo';
 import { useEffect, useState } from 'react';
+import { FaGithub } from 'react-icons/fa';
 
 export default function ProjectDetails({ params }) {
   const { id } = params;
@@ -121,28 +122,40 @@ export default function ProjectDetails({ params }) {
             {project.AppStore && (
               <LabelBig
                 text="App Store"
-                icon="/images/appstore.png"
+                icon="/images/appstore.svg"
                 link={project.AppStoreLink}
                 bgColor="bg-white"
                 textColor="text-black"
+                fontSize="font-avenir-heavy"
               />
             )}
             {project.GooglePlay && (
               <LabelBig
                 text="Google Play"
-                icon="/images/googleplay.png"
+                icon="/images/googleplay.svg"
                 link={project.GooglePlayLink}
                 bgColor="bg-white"
                 textColor="text-black"
+                fontSize="font-avenir-heavy"
               />
             )}
             {project.Repo && (
               <LabelBig
-                text="GitHub"
-                icon="/icons/github.svg"
+                text="GitHub Repository"
+                icon="/images/github.svg"
                 link={project.Repo}
                 bgColor="bg-zinc-800"
                 textColor="text-white"
+              />
+            )}
+            {project.Figma && (
+              <LabelBig
+                text="Figma"
+                icon="/images/figma.svg"
+                link={project.Figma}
+                bgColor="bg-white"
+                textColor="text-black"
+                fontSize="font-avenir-heavy"
               />
             )}
           </div>

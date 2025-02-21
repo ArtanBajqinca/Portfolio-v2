@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export const LabelBig = ({
@@ -8,17 +7,18 @@ export const LabelBig = ({
   link,
   bgColor = 'bg-green-900',
   textColor = 'text-green-600',
+  fontSize = 'font-avenir-medium',
 }) => {
   const LabelContent = () => (
     <div
-      className={`inline-flex px-3 py-1 pt-[6px] sm:pt-1 ${bgColor} ${textColor} font-avenir-medium rounded-full text-[14px] justify-center items-center`}
+      className={`inline-flex px-3 py-1 pt-[6px] sm:pt-1 ${bgColor} ${textColor} ${fontSize} rounded-full text-[14px] justify-center items-center`}
     >
       {icon &&
         (typeof icon === 'function' ? (
           <icon className="mr-2" size={16} />
         ) : (
           <div className="mr-2 lg:mt-0 mt-[-2px]">
-            <Image src={icon} alt={text} width={16} height={16} />
+            <img src={icon} alt={text} width={16} className="max-h-5" />
           </div>
         ))}
       {text}

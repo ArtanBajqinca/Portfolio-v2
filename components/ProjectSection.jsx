@@ -27,7 +27,7 @@ const ProjectSection = () => {
 
   return (
     <div className="flex flex-col items-center bg-gray-900 pt-10 sm:pt-10 md:pt-20 lg:pt-20 xl:pt-[110px] 2xl:pt-[50px] ">
-      <div className="text-white leading-0 lg:leading-8 gap-6 text-center font-avenir-light text-[18px] lg:text-[26px] text-base z-40 mb-8 tracking-wide">
+      <div className="text-white leading-0 lg:leading-8 gap-6 text-center font-avenir-book text-[18px] lg:text-[26px] text-base z-40 mb-8 tracking-wide">
         I SPECIALIZE IN
         <span className="font-avenir-black"> CROSS-PLATTFORM</span>
         <br />
@@ -165,7 +165,7 @@ const ProjectSection = () => {
 
 const FilterButton = ({ text, isActive, onClick }) => (
   <button
-    className={`rounded-[100px] text-[13px] font-avenir-medium px-4 py-[6px] ${
+    className={`rounded-[100px] text-[13px] font-avenir-heavy px-4 py-[6px] ${
       isActive ? 'bg-green-800 text-white' : 'bg-[#2D2D2D] text-gray-300'
     }`}
     onClick={onClick}

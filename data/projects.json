@@ -14,6 +14,7 @@
     "AppStore": true,
     "AppStoreLink": "https://apps.apple.com/se/app/wise-words-quotes-wisdom/id6741334539",
     "GooglePlay": false,
+    "Figma": "https://www.figma.com/design/PAbFdgcphVYk5i7Xt94kjt/App-UI%2FUX-designs?node-id=0-1&t=PlDLVQznCuizIluc-1",
     "images": [
       "wise_words_1.png",
       "wise_words_3.png",
@@ -27,7 +28,7 @@
     "coverTitle": "Morning and Eveningsupplication",
     "subtitle": "Morning and Eveningsupplication with Swedish Translation",
     "description": "Morning and eveningsupplications in Swedish, Arabic & Transliteration.",
-    "descriptionLong": "Morgon & Kvällsåminnelser is a React Native app developed with Expo, offering morning and evening reminders through a user-friendly interface. It uses MVVM architecture for maintainability and AsyncStorage for efficient data storage. Navigation is simplified with Expo Router, and custom animations enhance user experience. The app features drawer navigation with @react-navigation/drawer, haptic feedback with expo-haptics, and real-time updates using React's state and effect hooks. Tailwind CSS provides consistent and responsive design. The app prioritizes simplicity and user privacy, collecting no personal information.",
+    "descriptionLong": "Morgon & Kvällsåminnelser is a React Native app built with Expo, offering morning and evening reminders through a user-friendly interface. It uses MVVM architecture, AsyncStorage for data storage, and Expo Router for navigation. Custom animations, haptic feedback (expo-haptics), and real-time updates via React hooks enhance the experience. Styled with Tailwind CSS, the app ensures simplicity and responsiveness.",
     "imageFileName": "morgon_afton.png",
     "labels": ["Cross-plattform", "React Native", "TypeScript"],
     "type": "app",
@@ -35,7 +36,12 @@
     "AppStore": true,
     "AppStoreLink": "https://apps.apple.com/se/app/morgon-kv%C3%A4lls%C3%A5minnelser/id6740466037?uo=2",
     "GooglePlay": true,
-    "GooglePlayLink": "https://play.google.com/store/apps/details?id=com.anonymous.morgonaftonsadhkarreact&hl=sv"
+    "GooglePlayLink": "https://play.google.com/store/apps/details?id=com.anonymous.morgonaftonsadhkarreact&hl=sv",
+    "Figma": "https://www.figma.com/design/PAbFdgcphVYk5i7Xt94kjt/App-UI%2FUX-designs?node-id=1170-2&t=PlDLVQznCuizIluc-1",
+    "images": [
+      "morgonkvall_1.png",
+      "morgonkvall_2.png"
+    ]
 
   },
   {
@@ -48,7 +54,8 @@
     "imageFileName": "coinnect.png",
     "labels": ["Android", "Kotlin", "Jetpack Compose", "Game", "Multiplayer"],
     "type": "app",
-    "Repo": "https://github.com/"
+    "Repo": "https://github.com/",
+    "Figma": "https://www.figma.com/design/PAbFdgcphVYk5i7Xt94kjt/App-UI%2FUX-designs?node-id=0-1&t=PlDLVQznCuizIluc-1"
   },
   {
     "id": 4,

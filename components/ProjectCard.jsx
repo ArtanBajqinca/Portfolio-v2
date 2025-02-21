@@ -1,20 +1,20 @@
-import React from "react";
-import { MdArrowOutward } from "react-icons/md";
-import { Label } from "@/components/Label";
-import { LabelIcon } from "./LabelIcon";
-import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
-import Image from "next/image";
+import React from 'react';
+import { MdArrowOutward } from 'react-icons/md';
+import { Label } from '@/components/Label';
+import { LabelIcon } from './LabelIcon';
+import Link from 'next/link';
+import { FaGithub } from 'react-icons/fa';
+import Image from 'next/image';
 
-const BASE_IMAGE_PATH = "/images/programming-projects/project-card/";
+const BASE_IMAGE_PATH = '/images/programming-projects/project-card/';
 
 export const ProjectCard = ({
   id,
-  title = "Coinnect Four",
-  description = "A multiplayer Connect Four game with a unique coin theme, developed for my Android course final project.",
-  imageFileName = "Dummy.png",
+  title = 'Coinnect Four',
+  description = 'A multiplayer Connect Four game with a unique coin theme, developed for my Android course final project.',
+  imageFileName = 'Dummy.png',
   labels = [],
-  type = "app",
+  type = 'app',
   highlight = false,
   Repo,
   AppStore,
@@ -62,26 +62,29 @@ export const ProjectCard = ({
               ))}
               {Repo && (
                 <LabelIcon
-                  label={"Repository"}
-                  textColor={"text-white"}
+                  label={'Repository'}
+                  textColor={'text-white'}
                   icon={FaGithub}
-                  bgColor={"bg-gray-600"}
+                  bgColor={'bg-gray-600'}
+                  fontWeight="font-avenir-medium"
                 />
               )}
               {AppStore && (
                 <LabelIcon
-                  label={"App Store"}
-                  textColor={"text-gray-600"}
-                  bgColor={"bg-white"}
-                  icon="/images/appstore.png"
+                  label={'App Store'}
+                  textColor={'text-gray-600'}
+                  bgColor={'bg-white'}
+                  icon="/images/appstore.svg"
+                  fontWeight="font-avenir-heavy"
                 />
               )}
               {GooglePlay && (
                 <LabelIcon
-                  label={"Google Play"}
-                  textColor={"text-gray-600"}
-                  bgColor={"bg-white"}
-                  icon="/images/googleplay.png"
+                  label={'Google Play'}
+                  textColor={'text-gray-600'}
+                  bgColor={'bg-white'}
+                  icon="/images/googleplay.svg"
+                  fontWeight="font-avenir-heavy"
                 />
               )}
             </div>
