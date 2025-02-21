@@ -1,8 +1,8 @@
-import React from "react";
-import { ProjectCard } from "./ProjectCard";
-import Button from "./Button";
-import Logo from "@/components/assets/Logo";
-import Link from "next/link";
+import React from 'react';
+import { ProjectCard } from './ProjectCard';
+import Button from './Button';
+import Logo from '@/components/assets/Logo';
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
@@ -15,17 +15,17 @@ const Navbar = () => {
       <div className="bg-gray-500 p-2 rounded-[6px]">
         <div className="flex flex-row gap-4">
           <Button
-            text={"Projects"}
+            text={'Projects'}
             className="font-avenir-black lg:font-avenir-heavy"
             link=""
           />
           <Button
-            text={"About"}
+            text={'About'}
             className="font-avenir-black lg:font-avenir-heavy"
             link=""
           />
           <Button
-            text={"Contact"}
+            text={'Contact'}
             className="font-avenir-black lg:font-avenir-heavy"
             link=""
           />

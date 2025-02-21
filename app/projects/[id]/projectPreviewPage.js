@@ -51,7 +51,7 @@ export default function ProjectDetails({ params }) {
   return (
     <div className="flex flex-col justify-center min-h-screen bg-gray-900">
       {/* Full-Screen Cover Image */}
-      <div className="relative w-full h-[110vw] md:h-[80vh] mt-4 lg:h-screen sm:my-0">
+      <div className="relative w-full h-[110vw] md:h-[80vh] lg:h-screen sm:my-0">
         {mediaType === 'video' ? (
           <video
             src={mediaSrc}
@@ -75,7 +75,7 @@ export default function ProjectDetails({ params }) {
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-900"></div>
         {/* Navbar Section */}
-        <div className="absolute top-0 left-0 w-full z-20">
+        <div className="absolute top-0 left-0 w-full z-50">
           <div className="flex justify-center mt-10">
             <div className="justify-between w-full max-w-[1037px]">
               {/* Full Navbar for larger screens */}
@@ -167,13 +167,24 @@ export default function ProjectDetails({ params }) {
       <div className="mb-10">
         {project.images && project.images.length > 0 && (
           <div className="grid grid-cols-1 gap-8 sm:mx-[10%]">
-            {project.images.map((image, index) => (
+            {project.images.map((media, index) => (
               <div key={index} className="relative w-full flex justify-center">
-                <img
-                  src={`/images/project-preview-images/${image}`}
-                  alt={`${project.title} screenshot ${index + 1}`}
-                  className="object-contain"
-                />
+                {media.endsWith('.mp4') ? (
+                  <video
+                    src={`/videos/${media}`}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="object-contain"
+                  />
+                ) : (
+                  <img
+                    src={`/images/project-preview-images/${media}`}
+                    alt={`${project.title} screenshot ${index + 1}`}
+                    className="object-contain"
+                  />
+                )}
               </div>
             ))}
           </div>
