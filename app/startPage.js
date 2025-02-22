@@ -1,6 +1,5 @@
 'use client';
-
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
@@ -20,6 +19,18 @@ const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 const ScrollDownLottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 export default function Home() {
+  const startTimeRef = useRef();
+
+  const handleImageLoad = () => {
+    const loadTime = performance.now() - startTimeRef.current;
+    console.log(`Image loaded in ${loadTime.toFixed(2)}ms`);
+  };
+
+  useEffect(() => {
+    // Mark the time before image starts loading
+    startTimeRef.current = performance.now();
+  }, []);
+
   return (
     <div className="flex flex-col justify-center">
       {/* Hero Section */}
@@ -59,11 +70,14 @@ export default function Home() {
               {/* Portrait */}
               <div className="flex flex-col justify-end ml-[-120px] lg:ml-[-200px] z-100 w-[240px] lg:w-[350px] mb-[-5px] lg:mb-[-10px] xl:mb-[-40px]">
                 <Image
+                  priority={true}
                   src="/images/Portrait.png"
                   alt="Artan Bajqinca"
                   width={430}
                   height={0}
+                  quality={100}
                   className="self-center"
+                  onLoad={handleImageLoad}
                 />
               </div>
             </div>
