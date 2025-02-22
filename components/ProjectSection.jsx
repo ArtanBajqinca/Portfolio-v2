@@ -72,7 +72,7 @@ const ProjectSection = () => {
         />
         <LogoText
           text="JavaScript"
-          classNameIcon={'ml-[-8px]'}
+          classNameIcon={'ml-[-6px]'}
           alt="JavaScript Logo"
           logo={<Lottie animationData={javascriptLogoAnimation} />}
           color="#f7E01D"
@@ -80,7 +80,7 @@ const ProjectSection = () => {
         <LogoText
           text="TypeScript"
           alt="TypeScript Logo"
-          className={'ml-[-10px]'}
+          className={'ml-[-6px]'}
           logo={
             <img
               className="lg:max-w-[45px] max-w-[35px]"
@@ -94,7 +94,7 @@ const ProjectSection = () => {
         <LogoText
           text="Expo"
           alt="Expo Logo"
-          classNameIcon={'ml-[-12px]'}
+          classNameIcon={'ml-[-4px]'}
           logo={
             <img
               className="lg:max-w-[46px] max-w-[42px] lg:ml-2 ml-[0px]"
