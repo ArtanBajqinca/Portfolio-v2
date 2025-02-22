@@ -122,7 +122,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="w-[100px] lg:w-[150px] flex flex-row ml-[-100px] lg:ml-[-60px]">
+              <div className="w-[100px] lg:w-[150px] flex flex-row ml-[-100px] lg:ml-[-140px]">
                 <SwedenMap />
               </div>
             </div>

@@ -144,7 +144,7 @@ export default function ProjectDetails({ params }) {
                 text="GitHub Repository"
                 icon="/images/github.svg"
                 link={project.Repo}
-                bgColor="bg-zinc-800"
+                bgColor="bg-gray-500"
                 textColor="text-white"
               />
             )}
