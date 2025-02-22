@@ -83,8 +83,8 @@ const ProjectSection = () => {
           className={'ml-[-10px]'}
           logo={
             <img
-              className="max-w-[54px] max-h-[54px] lg:w-[54px] w-[42px] ml-[-3px]"
-              src={'/images/typescript.gif'}
+              className="lg:max-w-[45px] max-w-[35px]"
+              src={'/images/typescript.png'}
               alt="Logo"
             />
           }
