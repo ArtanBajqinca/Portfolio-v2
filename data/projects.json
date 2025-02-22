@@ -52,12 +52,17 @@
     "coverTitle": "Coinnect Four: Multiplayer Game",
     "subtitle": "Coin-Themed Mobile App for Android",
     "description": "A multiplayer Connect Four game with a unique coin theme, developed for my Android course final project.",
-    "descriptionLong": "My friend and I developed Coinnect Four, a unique coin-themed version of Connect Four for Android. We designed an intuitive UI with Figma and built the game using Kotlin and Jetpack Compose for smooth, responsive gameplay. This project strengthened our app development skills and teamwork.",
+    "descriptionLong": "I developed Coinnect Four, a coin-themed Connect Four mobile app for Android using Kotlin and Jetpack Compose. I crafted an intuitive UI in Figma and implemented it using custom Composable functions to achieve smooth, highly responsive gameplay. The app follows an MVVM architecture, leveraging Android Architecture Components such as ViewModel and LiveData to separate concerns and manage UI state efficiently. For asynchronous tasks, Kotlin coroutines ensure that data operations and UI updates remain fluid, while custom game logic modules handle win detection and board state management. Networking components facilitate engaging multiplayer interactions, integrating secure communication protocols to sync gameplay in real time. This project advanced my skills in modular design, state management, and modern Android development practices.",
     "imageFileName": "coinnect.png",
     "labels": ["Android", "Kotlin", "Jetpack Compose", "Game", "Multiplayer"],
     "type": "app",
     "Repo": "https://github.com/",
-    "Figma": "https://www.figma.com/design/PAbFdgcphVYk5i7Xt94kjt/App-UI%2FUX-designs?node-id=0-1&t=PlDLVQznCuizIluc-1"
+    "Figma": "https://www.figma.com/design/PAbFdgcphVYk5i7Xt94kjt/App-UI%2FUX-designs?node-id=0-1&t=PlDLVQznCuizIluc-1",
+    "images": [
+      "coinnect.mp4",
+      "coinnect_1.png",
+      "coinnect_2.png"
+    ]
   },
   {
     "id": 4,
