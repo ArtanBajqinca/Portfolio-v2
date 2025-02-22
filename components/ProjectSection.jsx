@@ -77,7 +77,6 @@ const ProjectSection = () => {
           logo={<Lottie animationData={javascriptLogoAnimation} />}
           color="#f7E01D"
         />
-        {/* comment */}
         <LogoText
           text="TypeScript"
           alt="TypeScript Logo"
