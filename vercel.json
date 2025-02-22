@@ -1,9 +1,15 @@
 {
-    "rewrites": [
-      {
-        "source": "/portfolio",
-        "destination": "/"
-      }
-    ]
-  }
-  
+  "rewrites": [
+    {
+      "source": "/portfolio",
+      "destination": "/"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/404",
+      "permanent": false
+    }
+  ]
+}
