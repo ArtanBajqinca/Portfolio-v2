@@ -119,7 +119,7 @@
     "subtitle": "Interactive Resume Website",
     "description": "A simple website for displaying my resume, made with basic HTML, CSS and Javascript.",
     "descriptionLong": "This website was created to showcase my resume in an accessible and interactive way. The design is minimal yet functional, with all the essential information presented cleanly.",
-    "imageFileName": "resume.png",
+    "imageFileName": "resume1.png",
     "labels": ["Website", "Javascript", "HTML", "CSS"],
     "type": "web",
     "Repo": "https://github.com/"
