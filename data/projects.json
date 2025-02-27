@@ -4,7 +4,7 @@
     "title": "Wise Words",
     "coverTitle": "Motivational Quotes App",
     "subtitle": "Motivational Quotes for iOS",
-    "description":"A motivational quote app for saving and sharing favorites, built as my final school project for the iOS course.",
+    "description": "A motivational quote app for saving and sharing favorites, built as my final school project for the iOS course.",
     "descriptionLong": "Wise Words is a motivational quotes app developed using Swift and SwiftUI. It features a clean and intuitive interface, allowing users to discover, save, and share their favorite quotes effortlessly. Key technical highlights include MVVM architecture for maintainability, SwiftData for efficient data storage, asynchronous programming for smooth user experience, custom animations for transitions, comprehensive unit and UI testing, widget support for home screen quotes, swipe gestures for navigation, and SwiftUI's environment and state management for dynamic updates.",
     "imageFileName": "wise_words.png",
     "videoFileName": "wise_words_video.mp4",
@@ -39,12 +39,7 @@
     "GooglePlay": true,
     "GooglePlayLink": "https://play.google.com/store/apps/details?id=com.anonymous.morgonaftonsadhkarreact&hl=sv",
     "Figma": "https://www.figma.com/design/PAbFdgcphVYk5i7Xt94kjt/App-UI%2FUX-designs?node-id=1170-2&t=PlDLVQznCuizIluc-1",
-    "images": [
-      "morgonkvall_1.png",
-      "morgonkvall_2.png",
-      "morgonkvall.mp4"
-    ]
-
+    "images": ["morgonkvall_1.png", "morgonkvall_2.png", "morgonkvall.mp4"]
   },
   {
     "id": 3,
@@ -58,23 +53,19 @@
     "type": "app",
     "Repo": "https://github.com/ArtanBajqinca/Coinnect-Four",
     "Figma": "https://www.figma.com/design/PAbFdgcphVYk5i7Xt94kjt/App-UI%2FUX-designs?node-id=0-1&t=PlDLVQznCuizIluc-1",
-    "images": [
-      "coinnect.mp4",
-      "coinnect_1.png",
-      "coinnect_2.png"
-    ]
+    "images": ["coinnect.mp4", "coinnect_1.png", "coinnect_2.png"]
   },
   {
     "id": 4,
     "title": "Lite Weather",
-    "coverTitle": "Simple Weather App",
-    "subtitle": "Minimalist Weather Forecast for iOS",
-    "description": "A simple weather app that displays the current weather and forecast.",
-    "descriptionLong": "Lite Weather provides accurate weather forecasts for up to five days. Developed with SwiftUI, it presents the forecast in a minimal and user-friendly layout for quick weather updates.",
+    "coverTitle": "Lite Weather",
+    "subtitle": "Minimalist & Weather Forecasts for iOS",
+    "description": "A minimalist weather app offering precise forecasts for up to five days with real-time location tracking.",
+    "descriptionLong": "Lite Weather is a SwiftUI-based app offering precise weather forecasts for up to five days. It leverages CoreLocation for real-time location tracking and Open-Meteo API for weather data. The app features a clean, intuitive UI with dynamic weather icons and detailed daily forecasts, ensuring users receive timely and accurate weather updates.",
     "imageFileName": "lite_weather.png",
     "labels": ["iOS", "Swift", "SwiftUI"],
     "type": "app",
-    "Repo": "https://github.com/"
+    "Repo": "https://github.com/ArtanBajqinca/Lite-Weather"
   },
   {
     "id": 5,
@@ -86,31 +77,31 @@
     "imageFileName": "jkpg_city_rebrand.png",
     "labels": ["Website", "Javascript", "ReactJS", "NodeJS", "Docker"],
     "type": "web",
-    "Repo": "https://github.com/"
+    "Repo": "https://github.com/ArtanBajqinca/JkpgCity-Redesign"
   },
   {
     "id": 6,
     "title": "Portfolio v2",
-    "coverTitle": "Updated Personal Portfolio",
-    "subtitle": "Modern Personal Portfolio with React and NextJS",
-    "description": "My new Personal portfolio website, made with React and NextJS.",
-    "descriptionLong": "This is the second version of my portfolio, utilizing modern web technologies like ReactJS and Next.js. The site showcases my latest projects and skills in a more dynamic and interactive manner.",
+    "coverTitle": "Modern Portfolio",
+    "subtitle": "Showcasing Projects & Skills with React and NextJS",
+    "description": "An updated portfolio website highlighting my latest projects and skills using modern web technologies.",
+    "descriptionLong": "This second version of my portfolio leverages ReactJS and Next.js to create a dynamic and interactive experience. It features a clean design, showcasing my latest projects and skills, and includes sections for project details, skills, and contact information.",
     "imageFileName": "portfolio_v2.png",
     "labels": ["Website", "React", "NextJS", "Javascript", "HTML", "CSS"],
     "type": "web",
-    "Repo": "https://github.com/"
+    "Repo": "https://github.com/ArtanBajqinca/Portfolio-v2"
   },
   {
     "id": 7,
     "title": "Portfolio v1",
-    "coverTitle": "First Personal Portfolio",
-    "subtitle": "Initial Version of My Personal Portfolio",
-    "description": "My first Personal portfolio website, made with basic HTML, CSS and Javascript.",
-    "descriptionLong": "This was the initial version of my personal portfolio, where I showcased my skills and projects. It was a simple static website, built using fundamental web technologies such as HTML, CSS, and Javascript.",
+    "coverTitle": "Initial Portfolio",
+    "subtitle": "First Personal Portfolio with HTML, CSS, and Javascript",
+    "description": "The initial version of my personal portfolio, showcasing my skills and projects using basic web technologies.",
+    "descriptionLong": "This first iteration of my personal portfolio was built with HTML, CSS, and Javascript. It served as a simple static website to present my skills and projects, featuring a straightforward design and easy navigation.",
     "imageFileName": "portfolio_v1.png",
     "labels": ["Website", "Javascript", "HTML", "CSS"],
     "type": "web",
-    "Repo": "https://github.com/"
+    "Repo": "https://github.com/ArtanBajqinca/Portfolio-v1"
   },
   {
     "id": 8,
@@ -122,6 +113,18 @@
     "imageFileName": "resume1.png",
     "labels": ["Website", "Javascript", "HTML", "CSS"],
     "type": "web",
-    "Repo": "https://github.com/"
+    "Repo": "https://github.com/ArtanBajqinca/Resume"
+  },
+  {
+    "id": 31,
+    "title": "UI/UX Designs",
+    "coverTitle": "UI/UX Design Showcase",
+    "subtitle": "Showcasing Various UI/UX Designs Created in Figma",
+    "description": "A collection of different UI/UX designs I created using Figma.",
+    "descriptionLong": "This project showcases a variety of UI/UX designs I have created using Figma. It includes designs for mobile apps, websites, and other digital interfaces, demonstrating my skills in creating user-friendly and visually appealing designs.",
+    "imageFileName": "placeholder.jpg",
+    "labels": ["UI/UX", "Figma", "Design"],
+    "type": "ui",
+    "Figma": "https://www.figma.com/design/PAbFdgcphVYk5i7Xt94kjt/UI-UX-designs?node-id=0-1&t=PlDLVQznCuizIluc-1"
   }
 ]
