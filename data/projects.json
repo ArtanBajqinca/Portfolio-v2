@@ -116,6 +116,17 @@
     "Repo": "https://github.com/ArtanBajqinca/Resume"
   },
   {
+    "id": 9,
+    "title": "",
+    "coverTitle": "",
+    "subtitle": "",
+    "description": "",
+    "descriptionLong": "",
+    "imageFileName": "placeholder.jpg",
+    "labels": ["Website", "Javascript", "HTML", "CSS"],
+    "type": "web"
+  },
+  {
     "id": 31,
     "title": "UI/UX Designs",
     "coverTitle": "UI/UX Design Showcase",
@@ -126,5 +137,27 @@
     "labels": ["UI/UX", "Figma", "Design"],
     "type": "ui",
     "Figma": "https://www.figma.com/design/PAbFdgcphVYk5i7Xt94kjt/UI-UX-designs?node-id=0-1&t=PlDLVQznCuizIluc-1"
+  },
+  {
+    "id": 32,
+    "title": "Event Graphic Design Posters",
+    "coverTitle": "Event Posters Collection",
+    "subtitle": "Graphic Design Posters for Various Events",
+    "description": "A collection of graphic design posters created for different events.",
+    "descriptionLong": "This project features a series of graphic design posters I created for various events. Each poster is designed to capture the essence of the event, using a combination of typography, color schemes, and imagery to create visually appealing and effective promotional materials. The collection demonstrates my ability to design for different themes and audiences, ensuring each poster stands out and communicates the event's message clearly.",
+    "imageFileName": "placeholder.jpg",
+    "labels": ["Graphic Design", "Posters", "Adobe Illustrator", "Photoshop"],
+    "type": "gd"
+  },
+  {
+    "id": 33,
+    "title": "Online Course Posters",
+    "coverTitle": "Online Course Posters Collection",
+    "subtitle": "Graphic Design Posters for online courses",
+    "description": "A collection of graphic design posters created for online courses.",
+    "descriptionLong": "",
+    "imageFileName": "placeholder.jpg",
+    "labels": ["Graphic Design", "Adobe Illustrator", "Photoshop"],
+    "type": "gd"
   }
 ]
