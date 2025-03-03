@@ -22,7 +22,6 @@
       "wise_words_2.png"
     ]
   },
-
   {
     "id": 2,
     "title": "Morgon- & kvällsåminnelser",
@@ -72,6 +71,47 @@
   },
   {
     "id": 5,
+    "title": "Rentingforce Expo App",
+    "coverTitle": "Migration to Expo",
+    "subtitle": "Rebuilding an old React Native app using Expo",
+    "description": "Migrating and modernizing the RentingForce mobile app from React Native to Expo.",
+    "descriptionLong": "The RentingForce Expo App is a React Native project that I worked on as a student. My task was to assist the main developer in transitioning the existing application to Expo, replacing old, unmaintained dependencies with modern solutions. The migration aimed to improve maintainability, performance, and ease of development. Key contributions included refactoring core components, ensuring compatibility with Expo, fixing issues related to dependency conflicts, implementing a new state management strategy, and enhancing UI/UX consistency. The project also involved working with authentication flows, navigation updates, and optimizing performance for smoother user interactions.",
+    "imageFileName": "placeholder.jpg",
+    "labels": ["React Native", "Expo", "TypeScript"],
+    "type": "app"
+  },
+  {
+    "id": 6,
+    "title": "Verendus UI Library",
+    "coverTitle": "Custom UI Library for Verendus",
+    "subtitle": "Reusable Components for Modern Web Applications",
+    "description": "A comprehensive UI library developed during a seven-week internship for Verendus.",
+    "descriptionLong": "During my internship with a fellow student, we developed a modern UI library for Verendus. Built with React and TypeScript, the library leverages Storybook for interactive component documentation. Using Vite and NX for a streamlined development experience, our library features modular, reusable components designed with accessibility and scalability in mind.",
+    "imageFileName": "placeholder.jpg",
+    "labels": [
+      "React",
+      "TypeScript",
+      "Storybook",
+      "Vite",
+      "NX"
+    ],
+    "type": "ui",
+    "highlight": true
+  },
+  {
+    "id": 7,
+    "title": "UI/UX Designs",
+    "coverTitle": "UI/UX Design Showcase",
+    "subtitle": "Showcasing Various UI/UX Designs Created in Figma",
+    "description": "A collection of different UI/UX designs I created using Figma.",
+    "descriptionLong": "This project showcases a variety of UI/UX designs I have created using Figma. It includes designs for mobile apps, websites, and other digital interfaces, demonstrating my skills in creating user-friendly and visually appealing designs.",
+    "imageFileName": "placeholder.jpg",
+    "labels": ["UI/UX", "Figma", "Design"],
+    "type": "ui",
+    "Figma": "https://www.figma.com/design/PAbFdgcphVYk5i7Xt94kjt/UI-UX-designs?node-id=0-1&t=PlDLVQznCuizIluc-1"
+  },
+  {
+    "id": 8,
     "title": "Jkpg City Rebrand",
     "coverTitle": "User-Focused Website Rebranding",
     "subtitle": "Interactive Website Rebranding for Jkpg City",
@@ -87,7 +127,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 9,
     "title": "Portfolio v2",
     "coverTitle": "Modern Portfolio",
     "subtitle": "Showcasing Projects & Skills with React and NextJS",
@@ -103,7 +143,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": 10,
     "title": "Portfolio v1",
     "coverTitle": "Initial Portfolio",
     "subtitle": "First Personal Portfolio with HTML, CSS, and Javascript",
@@ -115,7 +155,7 @@
     "Repo": "https://github.com/ArtanBajqinca/Portfolio-v1"
   },
   {
-    "id": 8,
+    "id": 11,
     "title": "Resume",
     "coverTitle": "Personal Resume Website",
     "subtitle": "Interactive Resume Website",
@@ -127,31 +167,8 @@
     "Repo": "https://github.com/ArtanBajqinca/Resume"
   },
   {
-    "id": 9,
-    "title": "",
-    "coverTitle": "",
-    "subtitle": "",
-    "description": "",
-    "descriptionLong": "",
-    "imageFileName": "placeholder.jpg",
-    "labels": ["Website", "Javascript", "HTML", "CSS"],
-    "type": "web"
-  },
-  {
-    "id": 31,
-    "title": "UI/UX Designs",
-    "coverTitle": "UI/UX Design Showcase",
-    "subtitle": "Showcasing Various UI/UX Designs Created in Figma",
-    "description": "A collection of different UI/UX designs I created using Figma.",
-    "descriptionLong": "This project showcases a variety of UI/UX designs I have created using Figma. It includes designs for mobile apps, websites, and other digital interfaces, demonstrating my skills in creating user-friendly and visually appealing designs.",
-    "imageFileName": "placeholder.jpg",
-    "labels": ["UI/UX", "Figma", "Design"],
-    "type": "ui",
-    "Figma": "https://www.figma.com/design/PAbFdgcphVYk5i7Xt94kjt/UI-UX-designs?node-id=0-1&t=PlDLVQznCuizIluc-1"
-  },
-  {
-    "id": 32,
-    "title": "Event Graphic Design Posters",
+    "id": 12,
+    "title": "Event Posters",
     "coverTitle": "Event Posters Collection",
     "subtitle": "Graphic Design Posters for Various Events",
     "description": "A collection of graphic design posters created for different events.",
@@ -161,7 +178,7 @@
     "type": "gd"
   },
   {
-    "id": 33,
+    "id": 13,
     "title": "Online Course Posters",
     "coverTitle": "Online Course Posters Collection",
     "subtitle": "Graphic Design Posters for online courses",
@@ -169,6 +186,17 @@
     "descriptionLong": "",
     "imageFileName": "placeholder.jpg",
     "labels": ["Graphic Design", "Adobe Illustrator", "Photoshop"],
+    "type": "gd"
+  },
+  {
+    "id": 14,
+    "title": "Fundraising Posters",
+    "coverTitle": "Fundraising Posters Collection",
+    "subtitle": "Graphic Design Posters for Fundraising Events",
+    "description": "A collection of graphic design posters created for various fundraising events.",
+    "descriptionLong": "This project includes a series of graphic design posters I created for different fundraising events. Each poster is designed to effectively communicate the purpose and details of the event, using compelling visuals and clear messaging to encourage participation and donations. The collection showcases my ability to design for a cause, ensuring each poster is impactful and engaging.",
+    "imageFileName": "placeholder.jpg",
+    "labels": ["Graphic Design", "Fundraising", "Adobe Illustrator", "Photoshop"],
     "type": "gd"
   }
 ]
