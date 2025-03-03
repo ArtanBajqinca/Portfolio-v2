@@ -62,14 +62,10 @@
     "subtitle": "Minimalist & Weather Forecasts for iOS",
     "description": "A minimalist weather app offering precise forecasts for up to five days with real-time location tracking.",
     "descriptionLong": "Lite Weather is a SwiftUI-based app offering precise weather forecasts for up to five days. It leverages CoreLocation for real-time location tracking and Open-Meteo API for weather data. The app features a clean, intuitive UI with dynamic weather icons and detailed daily forecasts, ensuring users receive timely and accurate weather updates.",
-    "coverTitle": "Simple Weather App",
-    "subtitle": "Minimalist Weather Forecast for iOS",
-    "description": "A simple weather app that displays the current weather and forecast.",
-    "descriptionLong": "Lite Weather provides accurate weather forecasts for up to five days. Developed with SwiftUI, it presents the forecast in a minimal and user-friendly layout for quick weather updates. The UI was designed in Figma.",
     "imageFileName": "lite_weather.png",
     "labels": ["iOS", "Swift", "SwiftUI"],
     "type": "app",
-    "Repo": "https://github.com/ArtanBajqinca/Lite-WeatherArtanBajqinca/Lite-Weather",
+    "Repo": "https://github.com/ArtanBajqinca/Lite-Weather",
     "images": [
       "lite_weather_1.png"
     ]
@@ -84,7 +80,7 @@
     "imageFileName": "jkpg_city_rebrand.png",
     "labels": ["Website", "Javascript", "ReactJS", "NodeJS", "Docker"],
     "type": "web",
-    "Repo": "https://github.com/ArtanBajqinca/JkpgCity-RedesignArtanBajqinca/JkpgCity-Redesign",
+    "Repo": "https://github.com/ArtanBajqinca/JkpgCity-Redesign",
     "images": [
       "jkpg_city_rebrand_1.png",
       "jkpg_city_rebrand_2.png"
@@ -100,7 +96,11 @@
     "imageFileName": "portfolio_v2.png",
     "labels": ["Website", "React", "NextJS", "Javascript", "HTML", "CSS"],
     "type": "web",
-    "Repo": "https://github.com/ArtanBajqinca/Portfolio-v2"
+    "Repo": "https://github.com/ArtanBajqinca/Portfolio-v2",
+    "Figma": "https://www.figma.com/design/o3uSk5LiqcI1E76DwvgG4m/Figma-1?node-id=467-444&t=NeGuXwg6aqNTo6eU-1",
+    "images": [
+      "portfolio_v2_1.png"
+    ]
   },
   {
     "id": 7,
