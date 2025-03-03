@@ -68,6 +68,7 @@ export default function ProjectDetails({ params }) {
             layout="fill"
             objectFit="cover"
             objectPosition="center"
+            quality={100}
             className="z-0"
             onError={handleImageError}
           />

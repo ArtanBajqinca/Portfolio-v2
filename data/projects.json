@@ -70,11 +70,14 @@
     "coverTitle": "Simple Weather App",
     "subtitle": "Minimalist Weather Forecast for iOS",
     "description": "A simple weather app that displays the current weather and forecast.",
-    "descriptionLong": "Lite Weather provides accurate weather forecasts for up to five days. Developed with SwiftUI, it presents the forecast in a minimal and user-friendly layout for quick weather updates.",
+    "descriptionLong": "Lite Weather provides accurate weather forecasts for up to five days. Developed with SwiftUI, it presents the forecast in a minimal and user-friendly layout for quick weather updates. The UI was designed in Figma.",
     "imageFileName": "lite_weather.png",
     "labels": ["iOS", "Swift", "SwiftUI"],
     "type": "app",
-    "Repo": "https://github.com/"
+    "Repo": "https://github.com/ArtanBajqinca/Lite-Weather",
+    "images": [
+      "lite_weather_1.png"
+    ]
   },
   {
     "id": 5,
@@ -86,7 +89,11 @@
     "imageFileName": "jkpg_city_rebrand.png",
     "labels": ["Website", "Javascript", "ReactJS", "NodeJS", "Docker"],
     "type": "web",
-    "Repo": "https://github.com/"
+    "Repo": "https://github.com/ArtanBajqinca/JkpgCity-Redesign",
+    "images": [
+      "jkpg_city_rebrand_1.png",
+      "jkpg_city_rebrand_2.png"
+    ]
   },
   {
     "id": 6,

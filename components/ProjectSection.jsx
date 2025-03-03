@@ -165,7 +165,7 @@ const ProjectSection = () => {
 
 const FilterButton = ({ text, isActive, onClick }) => (
   <button
-    className={`rounded-[100px] text-[13px] font-avenir-heavy px-4 py-[6px] ${
+    className={`rounded-[100px] text-[13px] font-avenir-heavy px-4 py-[6px] hover:bg-green-800 hover:transition-colors transition-all duration-200 ${
       isActive ? 'bg-green-800 text-white' : 'bg-[#2D2D2D] text-gray-300'
     }`}
     onClick={onClick}

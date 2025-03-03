@@ -1,10 +1,10 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 const Button = ({
   text,
-  bgColor = "bg-gray-600",
-  link = "#",
-  className = "",
+  bgColor = 'bg-gray-600',
+  link = '#',
+  className = '',
 }) => {
   return (
     <Link href={link} passHref>
