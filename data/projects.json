@@ -3,14 +3,18 @@
     "id": 1,
     "title": "Wise Words",
     "coverTitle": "Motivational Quotes App",
-    "subtitle": "Motivational Quotes for iOS",
+    "subtitle": "Wisdom and Inspiration in Your Pocket",
     "description": "A motivational quote app for saving and sharing favorites, built as my final school project for the iOS course.",
     "descriptionLong": "Wise Words is a motivational quotes app developed using Swift and SwiftUI. It features a clean and intuitive interface, allowing users to discover, save, and share their favorite quotes effortlessly. Key technical highlights include MVVM architecture for maintainability, SwiftData for efficient data storage, asynchronous programming for smooth user experience, custom animations for transitions, comprehensive unit and UI testing, widget support for home screen quotes, swipe gestures for navigation, and SwiftUI's environment and state management for dynamic updates.",
     "imageFileName": "wise_words.png",
     "videoFileName": "wise_words_video.mp4",
-    "labels": ["iOS", "Swift", "SwiftUI", "SwiftData"],
+    "labels": [
+      "iOS",
+      "Swift",
+      "SwiftUI",
+      "SwiftData"
+    ],
     "type": "app",
-    "highlight": true,
     "AppStore": true,
     "AppStoreLink": "https://apps.apple.com/se/app/wise-words-quotes-wisdom/id6741334539",
     "GooglePlay": false,
@@ -24,21 +28,28 @@
   },
   {
     "id": 2,
-    "title": "Morgon- & kvällsåminnelser",
-    "coverTitle": "Morning and Eveningsupplication",
-    "subtitle": "Morning and Eveningsupplication with Swedish Translation",
-    "description": "Morning and eveningsupplications in Swedish, Arabic & Transliteration.",
+    "title": "Morning and Evening Supplication",
+    "coverTitle": "Morning and Evening Supplication",
+    "subtitle": "In Swedish, Arabic & Transliteration",
+    "description": "Morning and evening supplications in Swedish, Arabic & Transliteration.",
     "descriptionLong": "Morgon & Kvällsåminnelser is a React Native app built with Expo, offering morning and evening reminders through a user-friendly interface. It uses MVVM architecture, AsyncStorage for data storage, and Expo Router for navigation. Custom animations, haptic feedback (expo-haptics), and real-time updates via React hooks enhance the experience. Styled with Tailwind CSS, the app ensures simplicity and responsiveness.",
     "imageFileName": "morgon_afton.png",
-    "labels": ["Cross-plattform", "React Native", "TypeScript"],
+    "labels": [
+      "Cross-Platform",
+      "React Native",
+      "TypeScript"
+    ],
     "type": "app",
-    "highlight": true,
     "AppStore": true,
     "AppStoreLink": "https://apps.apple.com/se/app/morgon-kv%C3%A4lls%C3%A5minnelser/id6740466037?uo=2",
     "GooglePlay": true,
     "GooglePlayLink": "https://play.google.com/store/apps/details?id=com.anonymous.morgonaftonsadhkarreact&hl=sv",
     "Figma": "https://www.figma.com/design/PAbFdgcphVYk5i7Xt94kjt/App-UI%2FUX-designs?node-id=1170-2&t=PlDLVQznCuizIluc-1",
-    "images": ["morgonkvall_1.png", "morgonkvall_2.png", "morgonkvall.mp4"]
+    "images": [
+      "morgonkvall_1.png",
+      "morgonkvall_2.png",
+      "morgonkvall.mp4"
+    ]
   },
   {
     "id": 3,
@@ -46,13 +57,23 @@
     "coverTitle": "Coinnect Four: Multiplayer Game",
     "subtitle": "Coin-Themed Mobile App for Android",
     "description": "A multiplayer Connect Four game with a unique coin theme, developed for my Android course final project.",
-    "descriptionLong": "Me and my friend Lavdim developed Coinnect Four, a coin-themed Connect Four mobile app for Android leveraging Kotlin and Jetpack Compose. I crafted an intuitive UI in Figma and implemented it using custom Composable functions to achieve smooth, responsive gameplay. The app follows an MVVM architecture, leveraging Android Architecture Components such as ViewModel and LiveData to separate concerns and manage UI state efficiently. For asynchronous tasks, Kotlin coroutines ensure that data operations and UI updates remain fluid, while custom game logic modules handle win detection and board state management. Networking components facilitate engaging multiplayer interactions, integrating secure communication protocols to sync gameplay in real time. This project advanced my skills in modular design, state management, and modern Android development practices.",
+    "descriptionLong": "Coinnect Four is a coin-themed Connect Four game developed in collaboration with Lavdim. This mobile app for Android leverages Kotlin and Jetpack Compose to deliver a smooth and responsive gameplay experience. The intuitive UI was designed in Figma and implemented using custom Composable functions. The app follows an MVVM architecture, utilizing Android Architecture Components such as ViewModel and LiveData for efficient state management. Kotlin coroutines handle asynchronous tasks, ensuring fluid data operations and UI updates. Custom game logic modules manage win detection and board state, while networking components enable engaging multiplayer interactions with secure communication protocols for real-time gameplay synchronization. The project improved modular design, state management, and modern Android development practices by implementing efficient architecture patterns.",
     "imageFileName": "coinnect.png",
-    "labels": ["Android", "Kotlin", "Jetpack Compose", "Game", "Multiplayer"],
+    "labels": [
+      "Android",
+      "Kotlin",
+      "Jetpack Compose",
+      "Game",
+      "Multiplayer"
+    ],
     "type": "app",
     "Repo": "https://github.com/ArtanBajqinca/Coinnect-Four",
     "Figma": "https://www.figma.com/design/PAbFdgcphVYk5i7Xt94kjt/App-UI%2FUX-designs?node-id=0-1&t=PlDLVQznCuizIluc-1",
-    "images": ["coinnect.mp4", "coinnect_1.png", "coinnect_2.png"]
+    "images": [
+      "coinnect.mp4",
+      "coinnect_1.png",
+      "coinnect_2.png"
+    ]
   },
   {
     "id": 4,
@@ -62,7 +83,11 @@
     "description": "A minimalist weather app offering precise forecasts for up to five days with real-time location tracking.",
     "descriptionLong": "Lite Weather is a SwiftUI-based app offering precise weather forecasts for up to five days. It leverages CoreLocation for real-time location tracking and Open-Meteo API for weather data. The app features a clean, intuitive UI with dynamic weather icons and detailed daily forecasts, ensuring users receive timely and accurate weather updates.",
     "imageFileName": "lite_weather.png",
-    "labels": ["iOS", "Swift", "SwiftUI"],
+    "labels": [
+      "iOS",
+      "Swift",
+      "SwiftUI"
+    ],
     "type": "app",
     "Repo": "https://github.com/ArtanBajqinca/Lite-Weather",
     "images": [
@@ -71,17 +96,40 @@
   },
   {
     "id": 5,
-    "title": "Rentingforce Expo App",
-    "coverTitle": "Migration to Expo",
-    "subtitle": "Rebuilding an old React Native app using Expo",
+    "title": "Rentingforce Expo App Migration",
+    "coverTitle": "RentingForce Expo App Migration",
+    "subtitle": "Modernizing the RentingForce App with Expo",
     "description": "Migrating and modernizing the RentingForce mobile app from React Native to Expo.",
-    "descriptionLong": "The RentingForce Expo App is a React Native project that I worked on as a student. My task was to assist the main developer in transitioning the existing application to Expo, replacing old, unmaintained dependencies with modern solutions. The migration aimed to improve maintainability, performance, and ease of development. Key contributions included refactoring core components, ensuring compatibility with Expo, fixing issues related to dependency conflicts, implementing a new state management strategy, and enhancing UI/UX consistency. The project also involved working with authentication flows, navigation updates, and optimizing performance for smoother user interactions.",
+    "descriptionLong": "The RentingForce Expo App is a React Native project focused on modernizing the existing application by transitioning to Expo. The project replaced outdated dependencies, improved maintainability, and optimized performance for smoother user interactions.",
     "imageFileName": "placeholder.jpg",
-    "labels": ["React Native", "Expo", "TypeScript"],
+    "labels": [
+      "React Native",
+      "Expo",
+      "TypeScript"
+    ],
     "type": "app"
   },
   {
     "id": 6,
+    "title": "RentingForce Software System",
+    "coverTitle": "Enterprise Rental Management Platform",
+    "subtitle": "Comprehensive Web-Based Rental Software",
+    "description": "Enterprise rental management platform for various businesses.",
+    "descriptionLong": "RentingForce is an enterprise-grade rental management platform built with PHP and Zend Framework that serves various industries including car, yacht, aircraft, and equipment rentals. The system features a comprehensive booking management system, customer relationship management, document generation, multi-language support, and advanced pricing capabilities. The architecture uses Docker for containerization, MySQL for data storage, and MongoDB for document management. The platform provides specialized modules for different rental verticals, with features like damage management, multi-location support, and extensive reporting. Working on this system improved my understanding of large-scale enterprise applications, internationalization practices, and modular software design principles.",
+    "imageFileName": "placeholder.jpg",
+    "labels": [
+      "PHP",
+      "Zend",
+      "MySQL",
+      "MongoDB",
+      "Docker",
+      "JavaScript",
+      "Internationalization"
+    ],
+    "type": "sw"
+  },
+  {
+    "id": 7,
     "title": "Verendus UI Library",
     "coverTitle": "Custom UI Library for Verendus",
     "subtitle": "Reusable Components for Modern Web Applications",
@@ -96,29 +144,41 @@
       "NX"
     ],
     "type": "ui",
-    "highlight": true
+    "images": [
+      "verendus_ui_1.png"
+    ]
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "UI/UX Designs",
     "coverTitle": "UI/UX Design Showcase",
     "subtitle": "Showcasing Various UI/UX Designs Created in Figma",
     "description": "A collection of different UI/UX designs I created using Figma.",
     "descriptionLong": "This project showcases a variety of UI/UX designs I have created using Figma. It includes designs for mobile apps, websites, and other digital interfaces, demonstrating my skills in creating user-friendly and visually appealing designs.",
     "imageFileName": "placeholder.jpg",
-    "labels": ["UI/UX", "Figma", "Design"],
+    "labels": [
+      "UI/UX",
+      "Figma",
+      "Design"
+    ],
     "type": "ui",
     "Figma": "https://www.figma.com/design/PAbFdgcphVYk5i7Xt94kjt/UI-UX-designs?node-id=0-1&t=PlDLVQznCuizIluc-1"
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "Jkpg City Rebrand",
     "coverTitle": "User-Focused Website Rebranding",
     "subtitle": "Interactive Website Rebranding for Jkpg City",
     "description": "A rebranding project for Jkpg city, focusing on enhancing the user interactivity.",
-    "descriptionLong": "This project involved rebranding the Jkpg city website to improve user interaction and accessibility. Using modern web technologies such as ReactJS and Docker, we transformed the website into a more interactive and dynamic experience.",
+    "descriptionLong": "This project involved rebranding the Jkpg city website to improve user interaction and accessibility. Using modern web technologies such as React and Docker, we transformed the website into a more interactive and dynamic experience.",
     "imageFileName": "jkpg_city_rebrand.png",
-    "labels": ["Website", "Javascript", "ReactJS", "NodeJS", "Docker"],
+    "labels": [
+      "Website",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Docker"
+    ],
     "type": "web",
     "Repo": "https://github.com/ArtanBajqinca/JkpgCity-Redesign",
     "images": [
@@ -127,14 +187,21 @@
     ]
   },
   {
-    "id": 9,
+    "id": 10,
     "title": "Portfolio v2",
     "coverTitle": "Modern Portfolio",
     "subtitle": "Showcasing Projects & Skills with React and NextJS",
     "description": "An updated portfolio website highlighting my latest projects and skills using modern web technologies.",
-    "descriptionLong": "This second version of my portfolio leverages ReactJS and Next.js to create a dynamic and interactive experience. It features a clean design, showcasing my latest projects and skills, and includes sections for project details, skills, and contact information.",
+    "descriptionLong": "This second version of my portfolio leverages React and Next.js to create a dynamic and interactive experience. It features a clean design, showcasing my latest projects and skills, and includes sections for project details, skills, and contact information.",
     "imageFileName": "portfolio_v2.png",
-    "labels": ["Website", "React", "NextJS", "Javascript", "HTML", "CSS"],
+    "labels": [
+      "Website",
+      "React",
+      "NextJS",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
     "type": "web",
     "Repo": "https://github.com/ArtanBajqinca/Portfolio-v2",
     "Figma": "https://www.figma.com/design/o3uSk5LiqcI1E76DwvgG4m/Figma-1?node-id=467-444&t=NeGuXwg6aqNTo6eU-1",
@@ -143,60 +210,84 @@
     ]
   },
   {
-    "id": 10,
+    "id": 11,
     "title": "Portfolio v1",
     "coverTitle": "Initial Portfolio",
-    "subtitle": "First Personal Portfolio with HTML, CSS, and Javascript",
+    "subtitle": "First Personal Portfolio with HTML, CSS, and JavaScript",
     "description": "The initial version of my personal portfolio, showcasing my skills and projects using basic web technologies.",
-    "descriptionLong": "This first iteration of my personal portfolio was built with HTML, CSS, and Javascript. It served as a simple static website to present my skills and projects, featuring a straightforward design and easy navigation.",
+    "descriptionLong": "This first iteration of my personal portfolio was built with HTML, CSS, and JavaScript. It served as a simple static website to present my skills and projects, featuring a straightforward design and easy navigation.",
     "imageFileName": "portfolio_v1.png",
-    "labels": ["Website", "Javascript", "HTML", "CSS"],
+    "labels": [
+      "Website",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
     "type": "web",
     "Repo": "https://github.com/ArtanBajqinca/Portfolio-v1"
   },
   {
-    "id": 11,
+    "id": 12,
     "title": "Resume",
     "coverTitle": "Personal Resume Website",
     "subtitle": "Interactive Resume Website",
-    "description": "A simple website for displaying my resume, made with basic HTML, CSS and Javascript.",
+    "description": "A simple website for displaying my resume, made with basic HTML, CSS and JavaScript.",
     "descriptionLong": "This website was created to showcase my resume in an accessible and interactive way. The design is minimal yet functional, with all the essential information presented cleanly.",
     "imageFileName": "resume1.png",
-    "labels": ["Website", "Javascript", "HTML", "CSS"],
+    "labels": [
+      "Website",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
     "type": "web",
     "Repo": "https://github.com/ArtanBajqinca/Resume"
   },
   {
-    "id": 12,
+    "id": 13,
     "title": "Event Posters",
     "coverTitle": "Event Posters Collection",
     "subtitle": "Graphic Design Posters for Various Events",
     "description": "A collection of graphic design posters created for different events.",
     "descriptionLong": "This project features a series of graphic design posters I created for various events. Each poster is designed to capture the essence of the event, using a combination of typography, color schemes, and imagery to create visually appealing and effective promotional materials. The collection demonstrates my ability to design for different themes and audiences, ensuring each poster stands out and communicates the event's message clearly.",
     "imageFileName": "placeholder.jpg",
-    "labels": ["Graphic Design", "Posters", "Adobe Illustrator", "Photoshop"],
+    "labels": [
+      "Graphic Design",
+      "Posters",
+      "Adobe Illustrator",
+      "Photoshop"
+    ],
     "type": "gd"
   },
   {
-    "id": 13,
+    "id": 14,
     "title": "Online Course Posters",
     "coverTitle": "Online Course Posters Collection",
     "subtitle": "Graphic Design Posters for online courses",
     "description": "A collection of graphic design posters created for online courses.",
     "descriptionLong": "",
     "imageFileName": "placeholder.jpg",
-    "labels": ["Graphic Design", "Adobe Illustrator", "Photoshop"],
+    "labels": [
+      "Graphic Design",
+      "Adobe Illustrator",
+      "Photoshop"
+    ],
     "type": "gd"
   },
   {
-    "id": 14,
+    "id": 15,
     "title": "Fundraising Posters",
     "coverTitle": "Fundraising Posters Collection",
     "subtitle": "Graphic Design Posters for Fundraising Events",
     "description": "A collection of graphic design posters created for various fundraising events.",
     "descriptionLong": "This project includes a series of graphic design posters I created for different fundraising events. Each poster is designed to effectively communicate the purpose and details of the event, using compelling visuals and clear messaging to encourage participation and donations. The collection showcases my ability to design for a cause, ensuring each poster is impactful and engaging.",
     "imageFileName": "placeholder.jpg",
-    "labels": ["Graphic Design", "Fundraising", "Adobe Illustrator", "Photoshop"],
+    "labels": [
+      "Graphic Design",
+      "Fundraising",
+      "Adobe Illustrator",
+      "Photoshop"
+    ],
     "type": "gd"
   }
 ]
