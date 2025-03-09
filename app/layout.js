@@ -1,9 +1,9 @@
-import "./globals.css";
+import './globals.css';
 
 export const metadata = {
-  title: "Artan Bajqinca - App Developer",
+  title: 'Artan Bajqinca - App Developer Portfolio',
   description:
-    "App & system developer based in Sweden. I have a passion for creating beautiful and functional websites and applications.",
+    'App & system developer based in Sweden. I have a passion for creating beautiful and functional websites and applications.',
 };
 
 export default function RootLayout({ children }) {

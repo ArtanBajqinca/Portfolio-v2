@@ -57,7 +57,7 @@
     "coverTitle": "Coinnect Four: Multiplayer Game",
     "subtitle": "Coin-Themed Mobile App for Android",
     "description": "A multiplayer Connect Four game with a unique coin theme, developed for my Android course final project.",
-    "descriptionLong": "Coinnect Four is a coin-themed Connect Four game developed in collaboration with Lavdim. This mobile app for Android leverages Kotlin and Jetpack Compose to deliver a smooth and responsive gameplay experience. The intuitive UI was designed in Figma and implemented using custom Composable functions. The app follows an MVVM architecture, utilizing Android Architecture Components such as ViewModel and LiveData for efficient state management. Kotlin coroutines handle asynchronous tasks, ensuring fluid data operations and UI updates. Custom game logic modules manage win detection and board state, while networking components enable engaging multiplayer interactions with secure communication protocols for real-time gameplay synchronization. The project improved modular design, state management, and modern Android development practices by implementing efficient architecture patterns.",
+    "descriptionLong": "Coinnect Four is a coin-themed Connect Four game developed with Lavdim. This Android app uses Kotlin and Jetpack Compose for smooth gameplay. The UI, designed in Figma, is implemented with custom Composable functions. It follows MVVM architecture, using ViewModel and LiveData for state management. Kotlin coroutines handle asynchronous tasks for fluid operations. Custom modules manage game logic, while networking components enable multiplayer interactions with secure protocols for real-time synchronization. This project enhanced my skills in modular design, state management, and modern Android development.",
     "imageFileName": "coinnect.png",
     "labels": [
       "Android",
@@ -99,9 +99,9 @@
     "title": "Rentingforce Expo App Migration",
     "coverTitle": "RentingForce Expo App Migration",
     "subtitle": "Modernizing the RentingForce App with Expo",
-    "description": "Migrating and modernizing the RentingForce mobile app from React Native to Expo.",
+    "description": "Migrating and modernizing the RentingForce app from React Native CLI to Expo.",
     "descriptionLong": "The RentingForce Expo App is a React Native project focused on modernizing the existing application by transitioning to Expo. The project replaced outdated dependencies, improved maintainability, and optimized performance for smoother user interactions.",
-    "imageFileName": "placeholder.jpg",
+    "imageFileName": "rfmobil.png",
     "labels": [
       "React Native",
       "Expo",
@@ -115,16 +115,15 @@
     "coverTitle": "Enterprise Rental Management Platform",
     "subtitle": "Comprehensive Web-Based Rental Software",
     "description": "Enterprise rental management platform for various businesses.",
-    "descriptionLong": "RentingForce is an enterprise-grade rental management platform built with PHP and Zend Framework that serves various industries including car, yacht, aircraft, and equipment rentals. The system features a comprehensive booking management system, customer relationship management, document generation, multi-language support, and advanced pricing capabilities. The architecture uses Docker for containerization, MySQL for data storage, and MongoDB for document management. The platform provides specialized modules for different rental verticals, with features like damage management, multi-location support, and extensive reporting. Working on this system improved my understanding of large-scale enterprise applications, internationalization practices, and modular software design principles.",
-    "imageFileName": "placeholder.jpg",
+    "descriptionLong": "RentingForce is an enterprise rental management platform built with PHP and Zend Framework, serving car, yacht, aircraft, and equipment rentals. It features booking management, CRM, document generation, multi-language support, and advanced pricing. Using Docker for containerization, MySQL for data storage, and MongoDB for document management, the platform includes modules for damage management, multi-location support, and reporting. This project enhanced my skills in enterprise applications, internationalization, and modular design.",
+    "imageFileName": "rfsystem.png",
     "labels": [
       "PHP",
       "Zend",
       "MySQL",
       "MongoDB",
       "Docker",
-      "JavaScript",
-      "Internationalization"
+      "JavaScript"
     ],
     "type": "sw"
   },
