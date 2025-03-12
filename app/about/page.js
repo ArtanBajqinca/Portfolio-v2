@@ -164,15 +164,8 @@ export default function About() {
             >
               Verendus
             </Link>
-            , focuses on{' '}
-            <Link
-              href="https://www.linkedin.com/posts/artanbajqinca_thesisproject-graphql-security-activity-7298711886357753856-2BF4"
-              target="_blank"
-              className="text-green-400 hover:underline"
-            >
-              "Optimizing GraphQL Security: Enhancing Data Protection and System
-              Reliability."
-            </Link>
+            , focuses on "Optimizing GraphQL Security: Enhancing Data Protection
+            and System Reliability."
           </p>
         </motion.div>
       </section>
