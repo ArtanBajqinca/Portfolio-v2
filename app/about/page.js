@@ -103,15 +103,14 @@ export default function About() {
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible.text ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-white"
+          className="text-white font-avenir-medium"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-3">
+          <h1 className="text-4xl md:text-5xl font-avenir-heavy mb-3">
             About <span className="text-green-400">Me</span>
           </h1>
           <div className="w-20 h-1 bg-green-700 mb-6"></div>
-          <p className="text-lg leading-relaxed">
-            Hi, I'm{' '}
-            <span className="text-green-400 font-bold">Artan Bajqinca</span>, an
+          <p className="text-lg leading-relaxed font-avenir-medium">
+            Hi, I'm <span className="text-green-400">Artan Bajqinca</span>, an
             App & System Developer at Verendus and a software engineering
             student at Jönköping University. I am passionate about mobile
             development, software security, and designing impactful
@@ -181,13 +180,13 @@ export default function About() {
       {/* Skills Section */}
       <motion.section
         ref={sections.skills}
-        className="max-w-screen-xl mx-auto px-6 py-16 text-white text-center"
+        className="max-w-screen-xl mx-auto px-6 py-16 font-avenir-medium text-white text-center"
       >
-        <h2 className="text-3xl font-bold mb-3">
+        <h2 className="text-3xl font-avenir-black mb-3">
           Technical <span className="text-green-400">Skills</span>
         </h2>
         <div className="w-20 h-1 bg-green-700 mx-auto mb-10"></div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 text-left sm:text-center">
           {[
             { text: 'React Native', icon: <FaReact /> },
             { text: 'iOS Development', icon: <FaApple /> },
@@ -210,9 +209,9 @@ export default function About() {
       {/* Experience Section */}
       <motion.section
         ref={sections.experience}
-        className="max-w-screen-xl mx-auto px-6 py-16"
+        className="max-w-screen-xl mx-auto px-6 py-16 font-avenir-medium"
       >
-        <h2 className="text-3xl font-bold text-white text-center mb-3">
+        <h2 className="text-3xl font-avenir-black text-white text-center mb-3">
           Work <span className="text-green-400">Experience</span>
         </h2>
         <div className="w-20 h-1 bg-green-700 mx-auto mb-10"></div>
@@ -241,9 +240,9 @@ export default function About() {
       {/* Education Section */}
       <motion.section
         ref={sections.education}
-        className="max-w-screen-xl mx-auto px-6 py-16 text-white"
+        className="max-w-screen-xl mx-auto px-6 py-16 text-white font-avenir-medium"
       >
-        <h2 className="text-3xl font-bold text-center mb-3">
+        <h2 className="text-3xl font-avenir-black text-center mb-3">
           <span className="text-white">Education</span>
         </h2>
         <div className="w-20 h-1 bg-green-700 mx-auto mb-10"></div>
@@ -291,7 +290,7 @@ const ExperienceCard = ({ title, company, period, description }) => (
     whileHover={{ scale: 1.01 }}
     className="bg-gray-800 p-6 text-white border-l-4 border-green-700 shadow-lg hover:shadow-green-900/20 transition-all duration-300"
   >
-    <h3 className="text-xl font-bold">{title}</h3>
+    <h3 className="text-xl font-avenir-black">{title}</h3>
     <p className="text-green-400">{company}</p>
     <p className="text-gray-400 text-sm">{period}</p>
     <p className="text-gray-300 mt-3">{description}</p>
@@ -308,7 +307,7 @@ const EducationCard = ({ title, subtitle, school, period, description }) => (
         <FaGraduationCap className="text-green-400 text-2xl" />
       </div>
       <div>
-        <h3 className="text-white text-xl font-bold">{title}</h3>
+        <h3 className="text-white text-xl font-avenir-black">{title}</h3>
         <p className="text-green-400">{subtitle}</p>
       </div>
     </div>

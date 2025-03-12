@@ -144,7 +144,7 @@ export default function Contact() {
   };
 
   return (
-    <main className="flex flex-col min-h-screen bg-gray-900">
+    <main className="flex flex-col min-h-screen bg-gray-900 font-avenir-medium">
       <div className="flex flex-row flex-wrap justify-center">
         <div className="flex flex-col mx-12 max-w-screen-xl">
           <div className="lg:mt-10 mt-8">
@@ -163,7 +163,7 @@ export default function Contact() {
           animate={isVisible.header ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-3 text-white">
+          <h1 className="text-4xl md:text-5xl font-avenir-black mb-3 text-white">
             Get in <span className="text-green-400">Touch</span>
           </h1>
           <div className="w-20 h-1 bg-green-700 mx-auto mb-6"></div>
@@ -220,7 +220,7 @@ export default function Contact() {
           animate={isVisible.form ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-3xl font-bold text-white text-center mb-3">
+          <h2 className="text-3xl font-avenir-black text-white text-center mb-3">
             Send a <span className="text-green-400">Message</span>
           </h2>
           <div className="w-20 h-1 bg-green-700 mx-auto mb-10"></div>
@@ -228,7 +228,7 @@ export default function Contact() {
           {formStatus.submitted ? (
             <div className="bg-green-900/30 p-8 rounded-lg max-w-3xl mx-auto text-center">
               <FaCheckCircle className="mx-auto text-green-400 text-5xl mb-4" />
-              <h3 className="text-white text-2xl font-bold mb-2">
+              <h3 className="text-white text-2xl font-avenir-black mb-2">
                 Message Sent!
               </h3>
               <p className="text-gray-300">
@@ -312,11 +312,11 @@ export default function Contact() {
                 ></textarea>
               </div>
 
-              <div className="text-center">
+              <div className="text-center ">
                 <button
                   type="submit"
                   disabled={formStatus.submitting}
-                  className={`bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 ${
+                  className={`bg-green-700 text-white font-avenir-heavy py-3 px-8 rounded-lg transition-all duration-300 ${
                     formStatus.submitting ? 'opacity-70 cursor-not-allowed' : ''
                   }`}
                 >

@@ -19,7 +19,7 @@ export default function ProjectDetails({ params }) {
   if (!project) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <div className="text-white text-2xl font-avenir-medium font-bold">
+        <div className="text-white text-2xl font-avenir-medium font-avenir-black">
           Project not found
         </div>
       </div>
