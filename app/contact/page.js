@@ -188,14 +188,14 @@ export default function Contact() {
         >
           <SocialLink
             href="https://linkedin.com/in/artanbajqinca"
-            icon={<FaLinkedin className="text-[#0A66C2]" />}
+            icon={<FaLinkedin className="text-green-400" />}
             label="LinkedIn"
             subtitle="@artanbajqinca"
             description="Connect with me professionally"
           />
           <SocialLink
             href="https://github.com/ArtanBajqinca"
-            icon={<FaGithub />}
+            icon={<FaGithub className="text-green-400" />}
             label="GitHub"
             subtitle="@ArtanBajqinca"
             description="Check out my code repositories"
@@ -337,7 +337,7 @@ const SocialLink = ({ href, icon, label, subtitle, description }) => (
   <Link
     href={href}
     target="_blank"
-    className="flex flex-col items-center text-white hover:text-green-400 transition group bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-all duration-300 h-full"
+    className="flex flex-col items-center text-white transition group bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-all duration-300 h-full"
   >
     <div className="text-4xl mb-4 group-hover:scale-110 transition-all duration-300">
       {icon}

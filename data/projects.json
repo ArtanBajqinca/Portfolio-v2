@@ -100,7 +100,7 @@
     "coverTitle": "RentingForce Expo App Migration",
     "subtitle": "Modernizing the RentingForce App with Expo",
     "description": "Migrating and modernizing the RentingForce app from React Native CLI to Expo.",
-    "descriptionLong": "The RentingForce Expo App is a React Native project focused on modernizing the existing application by transitioning to Expo. The project replaced outdated dependencies, improved maintainability, and optimized performance for smoother user interactions.",
+    "descriptionLong": "The RentingForce Expo App is a React Native project focused on modernizing the existing application by transitioning to Expo. The project that i assisted replaced outdated dependencies, improved maintainability, and optimized performance for smoother user interactions.",
     "imageFileName": "rfmobil.png",
     "labels": [
       "React Native",
@@ -153,14 +153,19 @@
     "subtitle": "Showcasing Various UI/UX Designs Created in Figma",
     "description": "A collection of different UI/UX designs I created using Figma.",
     "descriptionLong": "This project showcases a variety of UI/UX designs I have created using Figma. It includes designs for mobile apps, websites, and other digital interfaces, demonstrating my skills in creating user-friendly and visually appealing designs.",
-    "imageFileName": "placeholder.jpg",
+    "imageFileName": "uiux.png",
     "labels": [
       "UI/UX",
       "Figma",
       "Design"
     ],
     "type": "ui",
-    "Figma": "https://www.figma.com/design/PAbFdgcphVYk5i7Xt94kjt/UI-UX-designs?node-id=0-1&t=PlDLVQznCuizIluc-1"
+    "Figma": "https://www.figma.com/design/PAbFdgcphVYk5i7Xt94kjt/UI-UX-designs?node-id=0-1&t=PlDLVQznCuizIluc-1",
+    "images": [
+      "uiux_1.png",
+      "uiux_2.png",
+      "uiux_3.png"
+    ]
   },
   {
     "id": 9,
