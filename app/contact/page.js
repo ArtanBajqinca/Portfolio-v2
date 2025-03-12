@@ -333,7 +333,7 @@ export default function Contact() {
   );
 }
 
-const SocialLink = ({ href, icon, label, subtitle, description }) => (s
+const SocialLink = ({ href, icon, label, subtitle, description }) => (
   <Link
     href={href}
     target="_blank"
