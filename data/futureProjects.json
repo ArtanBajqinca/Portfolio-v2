@@ -1,0 +1,49 @@
+[
+  {
+    "id": 13,
+    "title": "Event Posters",
+    "coverTitle": "Event Posters Collection",
+    "subtitle": "Graphic Design Posters for Various Events",
+    "description": "A collection of graphic design posters created for different events.",
+    "descriptionLong": "This project features a series of graphic design posters I created for various events. Each poster is designed to capture the essence of the event, using a combination of typography, color schemes, and imagery to create visually appealing and effective promotional materials. The collection demonstrates my ability to design for different themes and audiences, ensuring each poster stands out and communicates the event's message clearly.",
+    "imageFileName": "placeholder.jpg",
+    "labels": [
+      "Graphic Design",
+      "Posters",
+      "Adobe Illustrator",
+      "Photoshop"
+    ],
+    "type": "gd"
+  },
+  {
+    "id": 14,
+    "title": "Online Course Posters",
+    "coverTitle": "Online Course Posters Collection",
+    "subtitle": "Graphic Design Posters for online courses",
+    "description": "A collection of graphic design posters created for online courses.",
+    "descriptionLong": "",
+    "imageFileName": "placeholder.jpg",
+    "labels": [
+      "Graphic Design",
+      "Adobe Illustrator",
+      "Photoshop"
+    ],
+    "type": "gd"
+  },
+  {
+    "id": 15,
+    "title": "Fundraising Posters",
+    "coverTitle": "Fundraising Posters Collection",
+    "subtitle": "Graphic Design Posters for Fundraising Events",
+    "description": "A collection of graphic design posters created for various fundraising events.",
+    "descriptionLong": "This project includes a series of graphic design posters I created for different fundraising events. Each poster is designed to effectively communicate the purpose and details of the event, using compelling visuals and clear messaging to encourage participation and donations. The collection showcases my ability to design for a cause, ensuring each poster is impactful and engaging.",
+    "imageFileName": "placeholder.jpg",
+    "labels": [
+      "Graphic Design",
+      "Fundraising",
+      "Adobe Illustrator",
+      "Photoshop"
+    ],
+    "type": "gd"
+  }
+]

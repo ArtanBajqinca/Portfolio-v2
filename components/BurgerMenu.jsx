@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import Link from "next/link";
-import Button from "@/components/Button";
-import Logo from "@/components/assets/Logo";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import Button from '@/components/Button';
+import Logo from '@/components/assets/Logo';
 
 export const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,14 +25,18 @@ export const BurgerMenu = () => {
       {/* Menu Items */}
       <nav
         className={`absolute top-[65px] right-0 bg-gray-500 rounded-lg shadow-lg ${
-          isOpen ? "block" : "hidden"
+          isOpen ? 'block' : 'hidden'
         }`}
       >
         <div className="">
           <div className="flex flex-col items-start space-y-4 mx-4">
             <Link href="/" passHref></Link>
-            <Button text="Projects" className="font-avenir-black" />
-            <Button text="About" className="font-avenir-black" />
+            <Button
+              text="Projects"
+              className="font-avenir-black"
+              link="/projects"
+            />
+            <Button text="About" className="font-avenir-black" link="/about" />
             <Button text="Contact" className="font-avenir-black mb-4" />
           </div>
         </div>

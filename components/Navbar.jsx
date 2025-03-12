@@ -17,12 +17,12 @@ const Navbar = () => {
           <Button
             text={'Projects'}
             className="font-avenir-black lg:font-avenir-heavy"
-            link=""
+            link="/projects"
           />
           <Button
             text={'About'}
             className="font-avenir-black lg:font-avenir-heavy"
-            link=""
+            link="/about"
           />
           <Button
             text={'Contact'}

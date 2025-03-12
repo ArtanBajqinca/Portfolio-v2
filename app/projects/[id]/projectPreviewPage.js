@@ -78,7 +78,7 @@ export default function ProjectDetails({ params }) {
         {/* Navbar Section */}
         <div className="absolute top-0 left-0 w-full z-50">
           <div className="flex justify-center mt-10">
-            <div className="justify-between w-full max-w-[1037px]">
+            <div className="justify-between">
               {/* Full Navbar for larger screens */}
               <div className="hidden md:block">
                 <Navbar />

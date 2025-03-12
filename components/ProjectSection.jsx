@@ -5,6 +5,7 @@ import { ProjectCard } from '@/components/ProjectCard';
 import Projects from '/data/projects.json';
 import { LogoText } from '@/components/LogoText';
 import dynamic from 'next/dynamic';
+import ProjectsDisplay from '@/components/ProjectsDisplay';
 
 // Dynamically import Lottie with SSR disabled
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
@@ -107,58 +108,11 @@ const ProjectSection = () => {
         />
       </div>
 
-      <div className="text-white font-avenir-heavy text-[30px] lg:text-[50px] mt-[80px] lg:mt-[100px] z-40">
-        Explore My Projects!
-      </div>
-
-      <div className="flex items-center justify-center mt-[20px] lg:mt-[40px] flex-wrap mx-6">
-        <div className="flex gap-3 flex-wrap justify-center mt-3 sm:mt-0">
-          <FilterButton
-            text="APP"
-            isActive={activeFilters.includes('app')}
-            onClick={() => handleFilterClick('app')}
-          />
-          <FilterButton
-            text="UI / UX"
-            isActive={activeFilters.includes('ui')}
-            onClick={() => handleFilterClick('ui')}
-          />
-          <FilterButton
-            text="GRAPHIC DESIGN"
-            isActive={activeFilters.includes('gd')}
-            onClick={() => handleFilterClick('gd')}
-          />
-          <FilterButton
-            text="WEBSITE"
-            isActive={activeFilters.includes('web')}
-            onClick={() => handleFilterClick('web')}
-          />
-          <FilterButton
-            text="SYSTEM"
-            isActive={activeFilters.includes('sw')}
-            onClick={() => handleFilterClick('sw')}
-          />
-        </div>
-      </div>
-      <div className="m-3 flex flex-row flex-wrap gap-5 justify-center items-center mt-10 mb-20 w-full 4xl:px-[20vw] px-[5vw]">
-        {Projects.filter((project) =>
-          activeFilters.length > 0 ? activeFilters.includes(project.type) : true
-        ).map((project, index) => (
-          <ProjectCard
-            key={index}
-            id={project.id}
-            title={project.title}
-            description={project.description}
-            imageFileName={project.imageFileName}
-            labels={project.labels}
-            type={project.type}
-            highlight={project.highlight}
-            Repo={project.Repo}
-            AppStore={project.AppStore}
-            GooglePlay={project.GooglePlay}
-          />
-        ))}
-      </div>
+      <ProjectsDisplay
+        activeFilters={activeFilters}
+        handleFilterClick={handleFilterClick}
+        projects={Projects}
+      />
     </div>
   );
 };

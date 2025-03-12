@@ -110,12 +110,12 @@
     "type": "app"
   },
   {
-    "id": 6,
+    "id": 6, 
     "title": "RentingForce Software System",
     "coverTitle": "Enterprise Rental Management Platform",
     "subtitle": "Comprehensive Web-Based Rental Software",
     "description": "Enterprise rental management platform for various businesses.",
-    "descriptionLong": "RentingForce is an enterprise rental management platform built with PHP and Zend Framework, serving car, yacht, aircraft, and equipment rentals. It features booking management, CRM, document generation, multi-language support, and advanced pricing. Using Docker for containerization, MySQL for data storage, and MongoDB for document management, the platform includes modules for damage management, multi-location support, and reporting. This project enhanced my skills in enterprise applications, internationalization, and modular design.",
+    "descriptionLong": "RentingForce is an enterprise rental management platform designed to support various rental businesses, including car and yacht rentals. It provides features such as booking management, CRM, document generation, multi-language support, and advanced pricing. The platform is built with a scalable architecture using containerization and a combination of relational and document-based storage solutions. It also includes modules for damage management, multi-location support, and reporting. As a student, I contributed by fixing bugs and enhancing UI/UX elements, which improved my skills in enterprise applications, internationalization, and modular system design.",
     "imageFileName": "rfsystem.png",
     "labels": [
       "PHP",
@@ -131,16 +131,15 @@
     "id": 7,
     "title": "Verendus UI Library",
     "coverTitle": "Custom UI Library for Verendus",
-    "subtitle": "Reusable Components for Modern Web Applications",
-    "description": "A comprehensive UI library developed during a seven-week internship for Verendus.",
-    "descriptionLong": "During my internship with a fellow student, we developed a modern UI library for Verendus. Built with React and TypeScript, the library leverages Storybook for interactive component documentation. Using Vite and NX for a streamlined development experience, our library features modular, reusable components designed with accessibility and scalability in mind.",
-    "imageFileName": "placeholder.jpg",
+    "subtitle": "Reusable React Components for Modern Web Applications",
+    "description": "A modern UI library built with React and TypeScript, designed for Verendus' web applications.",
+    "descriptionLong": "We developed a scalable and accessible UI library for Verendus using React and TypeScript. The library is documented with Storybook, ensuring an interactive and well-structured component showcase. It features modular and reusable components tailored for modern web applications, enhancing both maintainability and development efficiency.",
+    "imageFileName": "verendus_ui.png",
     "labels": [
       "React",
       "TypeScript",
       "Storybook",
-      "Vite",
-      "NX"
+      "UI Library"
     ],
     "type": "ui",
     "images": [
@@ -241,52 +240,5 @@
     ],
     "type": "web",
     "Repo": "https://github.com/ArtanBajqinca/Resume"
-  },
-  {
-    "id": 13,
-    "title": "Event Posters",
-    "coverTitle": "Event Posters Collection",
-    "subtitle": "Graphic Design Posters for Various Events",
-    "description": "A collection of graphic design posters created for different events.",
-    "descriptionLong": "This project features a series of graphic design posters I created for various events. Each poster is designed to capture the essence of the event, using a combination of typography, color schemes, and imagery to create visually appealing and effective promotional materials. The collection demonstrates my ability to design for different themes and audiences, ensuring each poster stands out and communicates the event's message clearly.",
-    "imageFileName": "placeholder.jpg",
-    "labels": [
-      "Graphic Design",
-      "Posters",
-      "Adobe Illustrator",
-      "Photoshop"
-    ],
-    "type": "gd"
-  },
-  {
-    "id": 14,
-    "title": "Online Course Posters",
-    "coverTitle": "Online Course Posters Collection",
-    "subtitle": "Graphic Design Posters for online courses",
-    "description": "A collection of graphic design posters created for online courses.",
-    "descriptionLong": "",
-    "imageFileName": "placeholder.jpg",
-    "labels": [
-      "Graphic Design",
-      "Adobe Illustrator",
-      "Photoshop"
-    ],
-    "type": "gd"
-  },
-  {
-    "id": 15,
-    "title": "Fundraising Posters",
-    "coverTitle": "Fundraising Posters Collection",
-    "subtitle": "Graphic Design Posters for Fundraising Events",
-    "description": "A collection of graphic design posters created for various fundraising events.",
-    "descriptionLong": "This project includes a series of graphic design posters I created for different fundraising events. Each poster is designed to effectively communicate the purpose and details of the event, using compelling visuals and clear messaging to encourage participation and donations. The collection showcases my ability to design for a cause, ensuring each poster is impactful and engaging.",
-    "imageFileName": "placeholder.jpg",
-    "labels": [
-      "Graphic Design",
-      "Fundraising",
-      "Adobe Illustrator",
-      "Photoshop"
-    ],
-    "type": "gd"
   }
 ]
