@@ -119,6 +119,7 @@ export default function Home() {
                     text="Get in touch"
                     bgColor="bg-green-800"
                     className="text-[14px] lg:py-1.7 hover:bg-[#6E8F6B]"
+                    link="/contact"
                   />
                 </div>
               </div>
