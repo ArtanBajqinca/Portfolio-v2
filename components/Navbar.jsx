@@ -27,7 +27,7 @@ const Navbar = () => {
           <Button
             text={'Contact'}
             className="font-avenir-black lg:font-avenir-heavy"
-            link=""
+            link="/contact"
           />
         </div>
       </div>

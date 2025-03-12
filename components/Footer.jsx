@@ -1,5 +1,5 @@
-import React from "react";
-import Logo from "@/components/assets/Logo";
+import React from 'react';
+import Logo from '@/components/assets/Logo';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="bg-gray-700 rounded-lg flex justify-center">
       <div className="w-full max-w-screen-xl mx-auto p-4 py-16 flex flex-col items-center">
         <a
-          href="#"
+          href="/"
           className="flex items-center mb-4 space-x-3 rtl:space-x-reverse"
         >
           <div className="w-[200px] mb-6">
@@ -16,7 +16,7 @@ const Footer = () => {
           </div>
         </a>
         <span className="block text-sm text-white dark:text-gray-400 font-avenir-light text-center font-[100]">
-          © {currentYear}{" "}
+          © {currentYear}{' '}
           <a href="https://flowbite.com/" className="hover:underline"></a>
           All rights reserved
         </span>

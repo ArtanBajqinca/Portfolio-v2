@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "class-variance-authority": "^0.7.0",
     "classname": "^0.0.0",
     "classnames": "^2.5.1",
