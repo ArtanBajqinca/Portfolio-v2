@@ -181,9 +181,9 @@ export default function About() {
         <div className="w-20 h-1 bg-green-700 mx-auto mb-10"></div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 text-left sm:text-center">
           {[
-            { text: 'React Native', icon: <FaReact /> },
             { text: 'iOS Development', icon: <FaApple /> },
             { text: 'Android Development', icon: <FaAndroid /> },
+            { text: 'React Native', icon: <FaReact /> },
             { text: 'JavaScript', icon: <FaJs /> },
             { text: 'TypeScript', icon: <SiTypescript /> },
             { text: 'Expo', icon: <SiExpo /> },
