@@ -218,7 +218,7 @@
     "coverTitle": "Initial Portfolio",
     "subtitle": "First Personal Portfolio with HTML, CSS, and JavaScript",
     "description": "The initial version of my personal portfolio, showcasing my skills and projects using basic web technologies.",
-    "descriptionLong": "This first iteration of my personal portfolio was built with HTML, CSS, and JavaScript. It served as a simple static website to present my skills and projects, featuring a straightforward design and easy navigation.",
+    "descriptionLong": "This first iteration of my personal portfolio was built with HTML, CSS, and JavaScript. It served as a simple static website to present my skills and projects, featuring a straightforward design and easy navigation. The design was created in Figma.",
     "imageFileName": "portfolio_v1.png",
     "labels": [
       "Website",
@@ -227,7 +227,8 @@
       "CSS"
     ],
     "type": "web",
-    "Repo": "https://github.com/ArtanBajqinca/Portfolio-v1"
+    "Repo": "https://github.com/ArtanBajqinca/Portfolio-v1",
+    "Figma": "https://www.figma.com/design/o3uSk5LiqcI1E76DwvgG4m/Figma-1?node-id=0-1&t=MMIGhhaW6ARZMQFn-1s"
   },
   {
     "id": 12,
