@@ -11,6 +11,7 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 import ProjectSection from '@/components/ProjectSection';
 import { Typewriter } from 'react-simple-typewriter';
+import { PiReadCvLogoFill } from 'react-icons/pi';
 
 // Import the scroll animation
 const scrollDownAnimation = require('/public/scroll_down.json');
@@ -114,12 +115,19 @@ export default function Home() {
                   tailored to meet digital demands
                   <br />
                 </div>
-                <div className="flex">
+                <div className="flex gap-3">
                   <Button
                     text="Get in touch"
                     bgColor="bg-green-800"
                     className="text-[14px] lg:py-1.7 hover:bg-[#6E8F6B]"
                     link="/contact"
+                  />
+                  <Button
+                    text="View CV"
+                    bgColor="bg-gray-600"
+                    className="text-[14px] lg:py-1.7 flex items-center"
+                    icon={<PiReadCvLogoFill className="mr-1.5 text-lg" />}
+                    link="/CV_2025_ENG.pdf"
                   />
                 </div>
               </div>
