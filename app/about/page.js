@@ -89,7 +89,7 @@ export default function About() {
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden">
             <Image
-              src="/images/Portrait_3.png"
+              src="/images/Portrait_about.png"
               alt="Artan Bajqinca"
               fill
               className="object-cover object-top"
