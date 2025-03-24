@@ -187,12 +187,12 @@ export default function About() {
             { text: 'JavaScript', icon: <FaJs /> },
             { text: 'TypeScript', icon: <SiTypescript /> },
             { text: 'Expo', icon: <SiExpo /> },
+            { text: 'Swift', icon: <SiSwift /> },
+            { text: 'StoryBook', icon: <SiStorybook /> },
             { text: 'React', icon: <FaReact /> },
             { text: 'NextJS', icon: <SiNextdotjs /> },
             { text: 'PHP', icon: <FaPhp /> },
-            { text: 'StoryBook', icon: <SiStorybook /> },
             { text: 'GraphQL', icon: <SiGraphql /> },
-            { text: 'Swift', icon: <SiSwift /> },
           ].map((skill, index) => (
             <Skill key={index} text={skill.text} icon={skill.icon} />
           ))}
