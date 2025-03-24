@@ -271,10 +271,10 @@ export default function About() {
 const Skill = ({ text, icon }) => (
   <motion.div
     whileHover={{ scale: 1.05 }}
-    className="flex items-center bg-gray-800 p-4 rounded-lg gap-3 hover:bg-gray-700 transition-all duration-200 shadow-md"
+    className="flex items-center bg-gray-700 h-[50px] px-4 rounded-lg gap-3 hover:bg-gray-700 transition-all duration-200 shadow-md"
   >
     <div className="text-2xl text-green-400">{icon}</div>
-    <span className="text-white">{text}</span>
+    <span className="text-white leading-[18px]  lg:leading-md">{text}</span>
   </motion.div>
 );
 
