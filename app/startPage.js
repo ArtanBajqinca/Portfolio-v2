@@ -69,7 +69,7 @@ export default function Home() {
                 </div>
               </div>
               {/* Portrait */}
-              <div className="flex flex-col justify-end ml-[-120px] lg:ml-[-200px] z-100 w-[240px] lg:w-[350px] mb-[-5px] lg:mb-[-10px] xl:mb-[-40px]">
+              <div className="flex flex-col justify-end ml-[-120px] lg:ml-[-100px] z-100 w-[240px] lg:w-[350px] mb-[-5px] lg:mb-[-10px] xl:mb-[-40px]">
                 <Image
                   priority={true}
                   src="/images/Portrait.png"
@@ -83,10 +83,10 @@ export default function Home() {
               </div>
             </div>
             {/* Right Section */}
-            <div className="flex flex-row px-0 lg:px-0 lg:pl-[80px] pt-8 lg:pt-0">
+            <div className="flex flex-row px-0 lg:px-0 lg:pl-[30px] pt-8 lg:pt-0">
               <div className="flex flex-col justify-center h-full">
                 <div className="text-white font-avenir-heavy text-[30px] lg:text-[38px] leading-[2.2rem] lg:leading-[2.5rem]">
-                  App Developer{' '}
+                  iOS App Developer{' '}
                   <div
                     style={{
                       width: '100px',
