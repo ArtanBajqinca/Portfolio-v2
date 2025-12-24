@@ -43,7 +43,7 @@ export default function Home() {
           <div className="flex flex-row flex-wrap-reverse justify-center mt-[10px] lg:mt-[10px]">
             {/* Left Section */}
             <div className="flex mt-6 lg:mt-0">
-              <div className="mt-10 lg:mt-16 z-10">
+              <div className="mt-20 lg:mt-16 z-10">
                 <NameComponent text="Artan" />
                 <NameComponent
                   text="Bajqinca."
@@ -69,7 +69,7 @@ export default function Home() {
                 </div>
               </div>
               {/* Portrait */}
-              <div className="flex flex-col justify-end ml-[-120px] lg:ml-[-100px] z-100 w-[240px] lg:w-[350px] mb-[-5px] lg:mb-[-10px] xl:mb-[-40px]">
+              <div className="flex flex-col justify-end ml-[-90px] lg:ml-[-100px] z-100 w-[240px] lg:w-[350px] mb-[-5px] lg:mb-[-10px] xl:mb-[-40px]">
                 <Image
                   priority={true}
                   src="/images/Portrait.png"
@@ -85,7 +85,7 @@ export default function Home() {
             {/* Right Section */}
             <div className="flex flex-row px-0 lg:px-0 lg:pl-[30px] pt-8 lg:pt-0">
               <div className="flex flex-col justify-center h-full">
-                <div className="text-white font-avenir-heavy text-[30px] lg:text-[38px] leading-[2.2rem] lg:leading-[2.5rem]">
+                <div className="text-white font-avenir-heavy text-[26px] lg:text-[38px] leading-[2.2rem] lg:leading-[2.5rem]">
                   iOS App Developer{' '}
                   <div
                     style={{
