@@ -1,0 +1,6 @@
+[    1283ms] [WARNING] Image with src "/images/programming-projects/project-cover/morgon_afton.png" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13 @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[    1284ms] [WARNING] Image with src "/images/programming-projects/project-cover/morgon_afton.png" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13 @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[    1284ms] [WARNING] Image with src "/images/programming-projects/project-cover/morgon_afton.png" has legacy prop "objectPosition". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13 @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15

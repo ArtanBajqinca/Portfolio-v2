@@ -1,0 +1,8 @@
+[    4587ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fimages%2Fprogramming-projects%2Fproject-cover%2Fwise_words.png&w=1920&q=100:0
+[    5245ms] [WARNING] Image with src "/images/programming-projects/project-cover/wise_words.png" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13 @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[    5245ms] [WARNING] Image with src "/images/programming-projects/project-cover/wise_words.png" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13 @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[    5245ms] [WARNING] Image with src "/images/programming-projects/project-cover/wise_words.png" has legacy prop "objectPosition". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13 @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[    5315ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fimages%2Fprogramming-projects%2Fproject-cover%2Fwise_words.png&w=1920&q=100:0

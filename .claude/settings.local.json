@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Read(**)",
+      "Write(**)",
+      "WebSearch",
+      "WebFetch(*)",
+      "Execute(*)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_click"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "playwright"
+  ],
+  "tools": {
+    "web_search": true
+  }
+}
