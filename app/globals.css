@@ -2,6 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Theme tokens ───────────────────────────────────── */
+:root {
+  --ui-bg:         #232323;
+  --ui-section:    #1B1B1B;
+  --ui-card:       #1E1E1E;
+  --ui-raised:     #373737;
+  --ui-elevated:   #494949;
+  --ui-ink:        #FFFFFF;
+  --ui-ink-2:      #A2A2A2;
+  --ui-ink-3:      #7B7B7B;
+  --ui-card-shadow: none;
+  --label-bg:      #1C2E40;
+  --label-text:    #82CFFF;
+}
+
+html.light {
+  --ui-bg:         #FFFFFF;
+  --ui-section:    #F0F0F3;
+  --ui-card:       #FFFFFF;
+  --ui-raised:     #E3E3E8;
+  --ui-elevated:   #D0D0D5;
+  --ui-ink:        #1D1D1F;
+  --ui-ink-2:      #6E6E73;
+  --ui-ink-3:      #86868B;
+  --ui-card-shadow: none;
+  --label-bg:      #E0E7F1;
+  --label-text:    #1A56DB;
+}
+
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: ease;
+}
+
+.bg-ui-card {
+  box-shadow: var(--ui-card-shadow);
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 @import url("../public/fonts.css");
 

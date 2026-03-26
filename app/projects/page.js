@@ -26,7 +26,7 @@ export default function ProjectsPage() {
   };
 
   return (
-    <main className="flex flex-col justify-center min-h-screen bg-gray-900">
+    <main className="flex flex-col justify-center min-h-screen bg-ui-section">
       <div className="flex flex-row flex-wrap justify-center">
         <div className="flex flex-col mx-12">
           <div className="lg:mt-10 mt-8">

@@ -33,11 +33,11 @@ export const BurgerMenu = () => {
             <Link href="/" passHref></Link>
             <Button
               text="Projects"
-              className="font-avenir-black"
+              className="font-sfpro-black"
               link="/projects"
             />
-            <Button text="About" className="font-avenir-black" link="/about" />
-            <Button text="Contact" className="font-avenir-black mb-4" />
+            <Button text="About" className="font-sfpro-black" link="/about" />
+            <Button text="Contact" className="font-sfpro-black mb-4" />
           </div>
         </div>
       </nav>

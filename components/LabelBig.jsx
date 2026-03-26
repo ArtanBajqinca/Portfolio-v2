@@ -5,9 +5,9 @@ export const LabelBig = ({
   text,
   icon,
   link,
-  bgColor = 'bg-green-900',
-  textColor = 'text-green-600',
-  fontSize = 'font-avenir-medium',
+  bgColor = 'bg-[var(--label-bg)]',
+  textColor = 'text-[var(--label-text)]',
+  fontSize = 'font-sfpro-medium',
 }) => {
   const LabelContent = () => (
     <div

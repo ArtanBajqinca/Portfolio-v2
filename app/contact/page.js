@@ -144,7 +144,7 @@ export default function Contact() {
   };
 
   return (
-    <main className="flex flex-col min-h-screen bg-gray-900 font-avenir-medium">
+    <main className="flex flex-col min-h-screen bg-ui-section font-sfpro-medium">
       <div className="flex flex-row flex-wrap justify-center">
         <div className="flex flex-col mx-12 max-w-screen-xl">
           <div className="lg:mt-10 mt-8">
@@ -163,11 +163,11 @@ export default function Contact() {
           animate={isVisible.header ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h1 className="text-4xl md:text-5xl font-avenir-black mb-3 text-white">
+          <h1 className="text-4xl md:text-5xl font-sfpro-black mb-3 text-ui-ink">
             Get in <span className="text-green-400">Touch</span>
           </h1>
-          <div className="w-20 h-1 bg-green-700 mx-auto mb-6"></div>
-          <p className="text-gray-300 max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-green-800 mx-auto mb-6"></div>
+          <p className="text-ui-ink-2 max-w-2xl mx-auto">
             I'm always interested in new projects and opportunities. Whether you
             want to discuss a potential collaboration, have questions about my
             projects, or just want to say hello, feel free to reach out!
@@ -213,25 +213,25 @@ export default function Contact() {
       {/* Contact Form Section */}
       <motion.section
         ref={formRef}
-        className="max-w-screen-xl mx-auto px-6 py-16 bg-gray-700/30 rounded-lg mb-16"
+        className="max-w-screen-xl mx-auto px-6 py-16 bg-ui-bg/30 rounded-lg mb-16"
       >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible.form ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-3xl font-avenir-black text-white text-center mb-3">
+          <h2 className="text-3xl font-sfpro-black text-ui-ink text-center mb-3">
             Send a <span className="text-green-400">Message</span>
           </h2>
-          <div className="w-20 h-1 bg-green-700 mx-auto mb-10"></div>
+          <div className="w-20 h-1 bg-green-800 mx-auto mb-10"></div>
 
           {formStatus.submitted ? (
             <div className="bg-green-900/30 p-8 rounded-lg max-w-3xl mx-auto text-center">
               <FaCheckCircle className="mx-auto text-green-400 text-5xl mb-4" />
-              <h3 className="text-white text-2xl font-avenir-black mb-2">
+              <h3 className="text-ui-ink text-2xl font-sfpro-black mb-2">
                 Message Sent!
               </h3>
-              <p className="text-gray-300">
+              <p className="text-ui-ink-2">
                 Thank you for reaching out. I'll get back to you as soon as
                 possible.
               </p>
@@ -243,14 +243,14 @@ export default function Contact() {
               className="max-w-3xl mx-auto"
             >
               {formStatus.error && (
-                <div className="bg-red-900/30 text-white p-4 rounded-lg mb-6">
+                <div className="bg-red-900/30 text-ui-ink p-4 rounded-lg mb-6">
                   {formStatus.error}
                 </div>
               )}
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label htmlFor="name" className="block text-white mb-2">
+                  <label htmlFor="name" className="block text-ui-ink mb-2">
                     Name *
                   </label>
                   <input
@@ -259,13 +259,13 @@ export default function Contact() {
                     name="name"
                     value={formState.name}
                     onChange={handleInputChange}
-                    className="w-full bg-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full bg-ui-card text-ui-ink border border-ui-elevated rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-800"
                     placeholder="Your name"
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-white mb-2">
+                  <label htmlFor="email" className="block text-ui-ink mb-2">
                     Email *
                   </label>
                   <input
@@ -274,7 +274,7 @@ export default function Contact() {
                     name="email"
                     value={formState.email}
                     onChange={handleInputChange}
-                    className="w-full bg-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full bg-ui-card text-ui-ink border border-ui-elevated rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-800"
                     placeholder="Your email"
                     required
                   />
@@ -282,7 +282,7 @@ export default function Contact() {
               </div>
 
               <div className="mb-6">
-                <label htmlFor="subject" className="block text-white mb-2">
+                <label htmlFor="subject" className="block text-ui-ink mb-2">
                   Subject
                 </label>
                 <input
@@ -291,13 +291,13 @@ export default function Contact() {
                   name="subject"
                   value={formState.subject}
                   onChange={handleInputChange}
-                  className="w-full bg-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full bg-ui-card text-ui-ink border border-ui-elevated rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-800"
                   placeholder="Subject"
                 />
               </div>
 
               <div className="mb-6">
-                <label htmlFor="message" className="block text-white mb-2">
+                <label htmlFor="message" className="block text-ui-ink mb-2">
                   Message *
                 </label>
                 <textarea
@@ -306,7 +306,7 @@ export default function Contact() {
                   rows="6"
                   value={formState.message}
                   onChange={handleInputChange}
-                  className="w-full bg-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full bg-ui-card text-ui-ink border border-ui-elevated rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-800"
                   placeholder="Your message"
                   required
                 ></textarea>
@@ -316,7 +316,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={formStatus.submitting}
-                  className={`bg-green-700 text-white font-avenir-heavy py-3 px-8 rounded-lg transition-all duration-300 ${
+                  className={`bg-green-800 text-white font-sfpro-bold py-3 px-8 rounded-lg transition-all duration-300 ${
                     formStatus.submitting ? 'opacity-70 cursor-not-allowed' : ''
                   }`}
                 >
@@ -337,13 +337,13 @@ const SocialLink = ({ href, icon, label, subtitle, description }) => (
   <Link
     href={href}
     target="_blank"
-    className="flex flex-col items-center text-white transition group bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-all duration-300 h-full"
+    className="flex flex-col items-center text-ui-ink transition group bg-ui-card p-8 rounded-xl hover:bg-ui-bg transition-all duration-300 h-full"
   >
     <div className="text-4xl mb-4 group-hover:scale-110 transition-all duration-300">
       {icon}
     </div>
     <span className="font-medium text-xl mb-1">{label}</span>
-    <span className="text-gray-400 text-sm mb-3">{subtitle}</span>
-    <p className="text-gray-300 text-sm">{description}</p>
+    <span className="text-ui-ink-3 text-sm mb-3">{subtitle}</span>
+    <p className="text-ui-ink-2 text-sm">{description}</p>
   </Link>
 );

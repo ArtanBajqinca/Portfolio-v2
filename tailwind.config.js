@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -17,14 +18,34 @@ module.exports = {
         "avenir-medium": ["Avenir-Medium"],
         "avenir-heavy": ["Avenir-Heavy"],
         "avenir-black": ["Avenir-Black"],
+        "sfpro": ["SFProDisplay-Regular", "sans-serif"],
+        "sfpro-light": ["SFProDisplay-Light"],
+        "sfpro-medium": ["SFProDisplay-Medium"],
+        "sfpro-bold": ["SFProDisplay-Bold"],
+        "sfpro-semibold": ["SFProDisplay-Semibold"],
+        "sfpro-heavy": ["SFProDisplay-Heavy"],
+        "sfpro-black": ["SFProDisplay-Black"],
+        "sfpro-thin": ["SFProDisplay-Thin"],
+        "sfpro-ultralight": ["SFProDisplay-Ultralight"],
       },
       colors: {
+        ui: {
+          bg:       'var(--ui-bg)',
+          section:  'var(--ui-section)',
+          card:     'var(--ui-card)',
+          raised:   'var(--ui-raised)',
+          elevated: 'var(--ui-elevated)',
+          ink:      'var(--ui-ink)',
+          'ink-2':  'var(--ui-ink-2)',
+          'ink-3':  'var(--ui-ink-3)',
+        },
         green: {
-          50: "#30AF5B",
-          90: "#292C27",
-          600: "#A4FF9C",
-          800: "#546E52",
-          900: "#476045",
+          50: "#0071E3",
+          90: "#001D3D",
+          400: "#3395FF",
+          600: "#82CFFF",
+          800: "#007AFF",
+          900: "#004FC4",
         },
         gray: {
           10: "#EEEEEE",

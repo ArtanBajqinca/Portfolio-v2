@@ -4,8 +4,6 @@ import { Label } from '@/components/Label';
 import { LabelIcon } from './LabelIcon';
 import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
-import Image from 'next/image';
-
 const BASE_IMAGE_PATH = '/images/programming-projects/project-card/';
 
 export const ProjectCard = ({
@@ -14,8 +12,6 @@ export const ProjectCard = ({
   description = 'A multiplayer Connect Four game with a unique coin theme, developed for my Android course final project.',
   imageFileName = 'Dummy.png',
   labels = [],
-  type = 'app',
-  highlight = false,
   Repo,
   AppStore,
   GooglePlay,
@@ -25,37 +21,36 @@ export const ProjectCard = ({
   return (
     <Link href={`/projects/${id}`} passHref>
       <div
-        className={`flex flex-col lg:flex-row bg-gray-700 w-[300px] lg:w-[600px] max-h-[600px] rounded-[10px] group duration-200 transform transition-transform hover:scale-[102%] cursor-pointer
-        }`}
+        className="flex flex-col lg:flex-row bg-ui-bg w-[300px] lg:w-[600px] max-h-[600px] rounded-[10px] group duration-200 transform transition-transform hover:scale-[102%] cursor-pointer"
       >
         {/* Image */}
         <div className="m-3 rounded-[10px] max-w-[300px]">
           <img
-            className="rounded-[10px] border-4 border-gray-600 w-[800px]"
+            className="rounded-[10px] border-4 border-ui-elevated w-[800px]"
             src={imageSrc}
             alt={`${title} project screenshot`}
           />
         </div>
         <div className="mx-4 lg:mr-5 lg:my-5 lg:ml-2 flex flex-col justify-between">
           {/* Title and arrow */}
-          <div className=" flex justify-between">
-            <div className="text-white text-[21px] lg:text-[23px] leading-[28px] font-avenir-heavy w-full">
+          <div className="flex justify-between">
+            <div className="text-ui-ink text-[21px] lg:text-[23px] leading-[28px] font-sfpro-bold w-full">
               {title}
             </div>
             <div className="lg:group-hover:translate-x-[8px] lg:group-hover:-translate-y-2 lg:transition-transform duration-200">
               <MdArrowOutward
-                className="text-white"
+                className="text-ui-ink"
                 size={20}
                 aria-label={`Open project ${title}`}
               />
             </div>
           </div>
           {/* Description */}
-          <div className=" text-white text-[14px] mt-1 mb-3 lg:mt-1 lg:text-[15px] font-avenir-light leading-[18px] lg:mb-4 ">
+          <div className="text-ui-ink-2 text-[14px] mt-1 mb-3 lg:mt-1 lg:text-[15px] font-sfpro-light leading-[18px] lg:mb-4">
             {description}
           </div>
           {/* Labels */}
-          <div className="">
+          <div>
             <div className="flex flex-wrap gap-1.5 mb-4 lg:mb-0">
               {labels.map((label, index) => (
                 <Label key={index} text={label} />
@@ -63,28 +58,28 @@ export const ProjectCard = ({
               {Repo && (
                 <LabelIcon
                   label={'Repository'}
-                  textColor={'text-white'}
+                  textColor={'text-ui-ink'}
                   icon={FaGithub}
-                  bgColor={'bg-gray-600'}
-                  fontWeight="font-avenir-medium"
+                  bgColor={'bg-ui-elevated'}
+                  fontWeight="font-sfpro-medium"
                 />
               )}
               {AppStore && (
                 <LabelIcon
                   label={'App Store'}
-                  textColor={'text-gray-600'}
-                  bgColor={'bg-white'}
+                  textColor={'text-ui-ink'}
+                  bgColor={'bg-ui-elevated'}
                   icon="/images/appstore.svg"
-                  fontWeight="font-avenir-heavy"
+                  fontWeight="font-sfpro-bold"
                 />
               )}
               {GooglePlay && (
                 <LabelIcon
                   label={'Google Play'}
-                  textColor={'text-gray-600'}
-                  bgColor={'bg-white'}
+                  textColor={'text-ui-ink'}
+                  bgColor={'bg-ui-elevated'}
                   icon="/images/googleplay.svg"
-                  fontWeight="font-avenir-heavy"
+                  fontWeight="font-sfpro-bold"
                 />
               )}
             </div>

@@ -23,3 +23,46 @@
   font-family: "Avenir-Black";
   src: local("Avenir-Black"), url("/fonts/Avenir-Black.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "SFProDisplay-Regular";
+  src: local("SFProDisplay-Regular"), url("/fonts/SFProDisplay-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "SFProDisplay-Light";
+  src: local("SFProDisplay-Light"), url("/fonts/SFProDisplay-LightItalic.otf") format("opentype");
+  font-style: italic;
+}
+@font-face {
+  font-family: "SFProDisplay-Medium";
+  src: local("SFProDisplay-Medium"), url("/fonts/SFProDisplay-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "SFProDisplay-Bold";
+  src: local("SFProDisplay-Bold"), url("/fonts/SFProDisplay-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "SFProDisplay-Heavy";
+  src: local("SFProDisplay-Heavy"), url("/fonts/SFProDisplay-HeavyItalic.otf") format("opentype");
+  font-style: italic;
+}
+@font-face {
+  font-family: "SFProDisplay-Black";
+  src: local("SFProDisplay-Black"), url("/fonts/SFProDisplay-BlackItalic.otf") format("opentype");
+  font-style: italic;
+}
+@font-face {
+  font-family: "SFProDisplay-Semibold";
+  src: local("SFProDisplay-Semibold"), url("/fonts/SFProDisplay-SemiboldItalic.otf") format("opentype");
+  font-style: italic;
+}
+@font-face {
+  font-family: "SFProDisplay-Thin";
+  src: local("SFProDisplay-Thin"), url("/fonts/SFProDisplay-ThinItalic.otf") format("opentype");
+  font-style: italic;
+}
+@font-face {
+  font-family: "SFProDisplay-Ultralight";
+  src: local("SFProDisplay-Ultralight"), url("/fonts/SFProDisplay-UltralightItalic.otf") format("opentype");
+  font-style: italic;
+}

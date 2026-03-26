@@ -69,7 +69,7 @@ export default function About() {
   }, []);
 
   return (
-    <main className="flex flex-col min-h-screen bg-gray-900">
+    <main className="flex flex-col min-h-screen bg-ui-section">
       <div className="flex flex-row flex-wrap justify-center">
         <div className="flex flex-col mx-12  max-w-screen-xl">
           <div className="lg:mt-10 mt-8">
@@ -87,14 +87,16 @@ export default function About() {
           transition={{ duration: 0.7 }}
           className="flex justify-center"
         >
-          <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden">
-            <Image
-              src="/images/Portrait_about.png"
-              alt="Artan Bajqinca"
-              fill
-              className="object-cover object-top"
-              priority
-            />
+          <div className="rotate-[-3deg] bg-white p-3 pb-14 rounded-sm shadow-[0_8px_30px_rgba(0,0,0,0.25)] hover:rotate-0 transition-transform duration-500">
+            <div className="relative w-56 h-64 md:w-72 md:h-80 overflow-hidden">
+              <Image
+                src="/images/Portrait_about.png"
+                alt="Artan Bajqinca"
+                fill
+                className="object-cover object-top"
+                priority
+              />
+            </div>
           </div>
         </motion.div>
 
@@ -103,13 +105,13 @@ export default function About() {
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible.text ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-white font-avenir-medium"
+          className="text-ui-ink font-sfpro-medium"
         >
-          <h1 className="text-4xl md:text-5xl font-avenir-heavy mb-3">
+          <h1 className="text-4xl md:text-5xl font-sfpro-bold mb-3">
             About <span className="text-green-400">Me</span>
           </h1>
-          <div className="w-20 h-1 bg-green-700 mb-6"></div>
-          <p className="text-lg leading-relaxed font-avenir-medium">
+          <div className="w-20 h-1 bg-green-800 mb-6"></div>
+          <p className="text-lg leading-relaxed font-sfpro-medium">
             Hi, I'm <span className="text-green-400">Artan Bajqinca</span>, an
             App & System Developer at Verendus and a software engineering
             student at Jönköping University. I am passionate about mobile
@@ -173,12 +175,12 @@ export default function About() {
       {/* Skills Section */}
       <motion.section
         ref={sections.skills}
-        className="max-w-screen-xl mx-auto px-6 py-16 font-avenir-medium text-white text-center"
+        className="max-w-screen-xl mx-auto px-6 py-16 font-sfpro-medium text-ui-ink text-center"
       >
-        <h2 className="text-3xl font-avenir-black mb-3">
+        <h2 className="text-3xl font-sfpro-black mb-3">
           Technical <span className="text-green-400">Skills</span>
         </h2>
-        <div className="w-20 h-1 bg-green-700 mx-auto mb-10"></div>
+        <div className="w-20 h-1 bg-green-800 mx-auto mb-10"></div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 text-left sm:text-center">
           {[
             { text: 'iOS Development', icon: <FaApple /> },
@@ -202,12 +204,12 @@ export default function About() {
       {/* Experience Section */}
       <motion.section
         ref={sections.experience}
-        className="max-w-screen-xl mx-auto px-6 py-16 font-avenir-medium"
+        className="max-w-screen-xl mx-auto px-6 py-16 font-sfpro-medium"
       >
-        <h2 className="text-3xl font-avenir-black text-white text-center mb-3">
+        <h2 className="text-3xl font-sfpro-black text-ui-ink text-center mb-3">
           Work <span className="text-green-400">Experience</span>
         </h2>
-        <div className="w-20 h-1 bg-green-700 mx-auto mb-10"></div>
+        <div className="w-20 h-1 bg-green-800 mx-auto mb-10"></div>
         <div className="space-y-6">
           <ExperienceCard
             title="App Developer"
@@ -233,12 +235,12 @@ export default function About() {
       {/* Education Section */}
       <motion.section
         ref={sections.education}
-        className="max-w-screen-xl mx-auto px-6 py-16 text-white font-avenir-medium"
+        className="max-w-screen-xl mx-auto px-6 py-16 text-ui-ink font-sfpro-medium"
       >
-        <h2 className="text-3xl font-avenir-black text-center mb-3">
-          <span className="text-white">Education</span>
+        <h2 className="text-3xl font-sfpro-black text-center mb-3">
+          <span className="text-ui-ink">Education</span>
         </h2>
-        <div className="w-20 h-1 bg-green-700 mx-auto mb-10"></div>
+        <div className="w-20 h-1 bg-green-800 mx-auto mb-10"></div>
         <div className="grid md:grid-cols-3 gap-6">
           <div className="md:col-span-2">
             <EducationCard
@@ -271,43 +273,43 @@ export default function About() {
 const Skill = ({ text, icon }) => (
   <motion.div
     whileHover={{ scale: 1.05 }}
-    className="flex items-center bg-gray-700 h-[50px] px-4 rounded-lg gap-3 hover:bg-gray-700 transition-all duration-200 shadow-md"
+    className="flex items-center bg-ui-bg h-[50px] px-4 rounded-lg gap-3 hover:bg-ui-bg transition-all duration-200 shadow-md"
   >
     <div className="text-2xl text-green-400">{icon}</div>
-    <span className="text-white leading-[18px]  lg:leading-md">{text}</span>
+    <span className="text-ui-ink leading-[18px]  lg:leading-md">{text}</span>
   </motion.div>
 );
 
 const ExperienceCard = ({ title, company, period, description }) => (
   <motion.div
     whileHover={{ scale: 1.01 }}
-    className="bg-gray-800 p-6 text-white border-l-4 border-green-700 shadow-lg hover:shadow-green-900/20 transition-all duration-300"
+    className="bg-ui-card p-6 text-ui-ink border-l-4 border-green-800 shadow-lg hover:shadow-green-900/20 transition-all duration-300"
   >
-    <h3 className="text-xl font-avenir-black">{title}</h3>
+    <h3 className="text-xl font-sfpro-black">{title}</h3>
     <p className="text-green-400">{company}</p>
-    <p className="text-gray-400 text-sm">{period}</p>
-    <p className="text-gray-300 mt-3">{description}</p>
+    <p className="text-ui-ink-3 text-sm">{period}</p>
+    <p className="text-ui-ink-2 mt-3">{description}</p>
   </motion.div>
 );
 
 const EducationCard = ({ title, subtitle, school, period, description }) => (
   <motion.div
     whileHover={{ scale: 1.02 }}
-    className="bg-gray-800 p-6 rounded-xl h-full  shadow-lg hover:shadow-green-900/20 transition-all duration-300"
+    className="bg-ui-card p-6 rounded-xl h-full  shadow-lg hover:shadow-green-900/20 transition-all duration-300"
   >
     <div className="flex items-center gap-4 mb-4">
       <div className="bg-green-800/30 p-3 rounded-full">
         <FaGraduationCap className="text-green-400 text-2xl" />
       </div>
       <div>
-        <h3 className="text-white text-xl font-avenir-black">{title}</h3>
+        <h3 className="text-ui-ink text-xl font-sfpro-black">{title}</h3>
         <p className="text-green-400">{subtitle}</p>
       </div>
     </div>
 
-    <p className="text-gray-300 mb-2">{school}</p>
-    <p className="text-gray-400 text-sm">{period}</p>
-    <p className="text-gray-300 mt-4">{description}</p>
+    <p className="text-ui-ink-2 mb-2">{school}</p>
+    <p className="text-ui-ink-3 text-sm">{period}</p>
+    <p className="text-ui-ink-2 mt-4">{description}</p>
   </motion.div>
 );
 
@@ -315,7 +317,7 @@ const SocialLink = ({ href, icon, label }) => (
   <Link
     href={href}
     target="_blank"
-    className="flex flex-col items-center text-white hover:text-green-400 transition group bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition-all duration-300"
+    className="flex flex-col items-center text-ui-ink hover:text-green-400 transition group bg-ui-card p-6 rounded-xl hover:bg-ui-bg transition-all duration-300"
   >
     <div className="text-3xl mb-3 group-hover:scale-110 transition-all duration-300">
       {icon}

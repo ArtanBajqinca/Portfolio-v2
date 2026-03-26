@@ -12,6 +12,7 @@ import Footer from '@/components/Footer';
 import ProjectSection from '@/components/ProjectSection';
 import { Typewriter } from 'react-simple-typewriter';
 import { PiReadCvLogoFill } from 'react-icons/pi';
+import { useTheme } from '@/components/ThemeProvider';
 
 // Import the scroll animation
 const scrollDownAnimation = require('/public/scroll_down.json');
@@ -21,6 +22,7 @@ const ScrollDownLottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 export default function Home() {
   const startTimeRef = useRef();
+  const { theme } = useTheme();
 
   const handleImageLoad = () => {
     const loadTime = performance.now() - startTimeRef.current;
@@ -44,24 +46,25 @@ export default function Home() {
             {/* Left Section */}
             <div className="flex mt-6 lg:mt-0">
               <div className="mt-20 lg:mt-16 z-10">
-                <NameComponent text="Artan" />
+                <NameComponent text="Artan" isLight={theme === 'light'} />
                 <NameComponent
                   text="Bajqinca."
                   additionalStyles="mt-[-25px] lg:mt-[-40px] ml-[-4px]"
+                  isLight={theme === 'light'}
                 />
                 <div className="w-[60px] h-[8px] bg-green-800"></div>
                 {/* LinkedIn and GitHub icons */}
                 <div className="flex flex-row gap-4 mt-8 lg:mt-16 ml-[-1.5px]">
                   <Link href="https://www.linkedin.com/in/artanbajqinca/">
                     <FaLinkedin
-                      color="white"
+                      style={{ color: 'var(--ui-ink)' }}
                       size={26}
                       className="size-5 lg:size-7 hover:scale-[113%] transition-transform duration-300 ease-in-out"
                     />
                   </Link>
                   <Link href="https://github.com/ArtanBajqinca">
                     <FaGithub
-                      color="white"
+                      style={{ color: 'var(--ui-ink)' }}
                       size={26}
                       className="size-5 lg:size-7 hover:scale-[113%] transition-transform duration-300 ease-in-out"
                     />
@@ -85,15 +88,15 @@ export default function Home() {
             {/* Right Section */}
             <div className="flex flex-row px-0 lg:px-0 lg:pl-[30px] pt-8 lg:pt-0">
               <div className="flex flex-col justify-center h-full">
-                <div className="text-white font-avenir-heavy text-[26px] lg:text-[38px] leading-[2.2rem] lg:leading-[2.5rem]">
+                <div className="text-ui-ink font-sfpro-bold text-[26px] lg:text-[38px] leading-[2.2rem] lg:leading-[2.5rem]">
                   iOS App Developer{' '}
                   <div
                     style={{
                       width: '100px',
                       display: 'inline-block',
-                      color: '#6E8F6B',
+                      color: '#3395FF',
                       fontSize: '1.8rem',
-                      fontFamily: 'Avenir-Heavy',
+                      fontFamily: 'SFProDisplay-Bold',
                     }}
                   >
                     <Typewriter
@@ -109,7 +112,7 @@ export default function Home() {
                   <br />
                   based in Sweden
                 </div>
-                <div className="text-white font-avenir-book text-[15px] lg:text-[18px] my-6 leading-tight">
+                <div className="text-ui-ink font-sfpro text-[15px] lg:text-[18px] my-6 leading-tight">
                   I design and develop Apps,
                   <br />
                   tailored to meet digital demands
@@ -119,19 +122,23 @@ export default function Home() {
                   <Button
                     text="Get in touch"
                     bgColor="bg-green-800"
-                    className="text-[14px] lg:py-1.7 hover:bg-[#6E8F6B]"
+                    textColor="text-white"
+                    className="text-[14px] lg:py-1.7 hover:bg-[#3395FF]"
                     link="/contact"
                   />
                   <Button
                     text="View CV"
-                    bgColor="bg-gray-600"
+                    bgColor="bg-ui-elevated"
                     className="text-[14px] lg:py-1.7 flex items-center"
                     icon={<PiReadCvLogoFill className="mr-1.5 text-lg" />}
                     link="/CV_2025_ENG.pdf"
                   />
                 </div>
               </div>
-              <div className="w-[100px] lg:w-[150px] flex flex-row ml-[-100px] lg:ml-[-140px]">
+              <div
+                className="w-[100px] lg:w-[150px] flex flex-row ml-[-100px] lg:ml-[-140px]"
+                style={{ filter: theme === 'light' ? 'invert(1)' : 'none' }}
+              >
                 <SwedenMap />
               </div>
             </div>
@@ -147,7 +154,10 @@ export default function Home() {
       <ProjectSection />
       {/* Footer Section */}
       <Footer />
-      <div className="fixed bottom-4 right-4 z-50">
+      <div
+        className="fixed bottom-4 right-4 z-50"
+        style={{ filter: theme === 'light' ? 'invert(1)' : 'none' }}
+      >
         <Lottie
           animationData={scrollDownAnimation}
           style={{ width: '70px', opacity: 0.3 }}
@@ -157,9 +167,9 @@ export default function Home() {
   );
 }
 
-const NameComponent = ({ text, additionalStyles = '' }) => (
+const NameComponent = ({ text, additionalStyles = '', isLight = false }) => (
   <div
-    className={`text-white font-avenir-black text-[50px] lg:text-[80px] ${additionalStyles}`}
+    className={`${isLight ? 'text-green-800' : 'text-ui-ink'} font-sfpro-heavy text-[50px] lg:text-[80px] ${additionalStyles}`}
   >
     {text}
   </div>
