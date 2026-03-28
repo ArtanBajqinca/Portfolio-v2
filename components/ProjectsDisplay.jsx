@@ -33,7 +33,7 @@ const ProjectsDisplay = ({ activeFilters, handleFilterClick, projects }) => {
           />
         </div>
       </div>
-      <motion.div layout className="m-3 flex flex-row flex-wrap gap-8 lg:gap-10 justify-center items-start content-start mt-14 mb-28 w-full 4xl:px-[20vw] px-[5vw] min-h-[900px]">
+      <motion.div layout className="m-3 flex flex-row flex-wrap gap-8 lg:gap-10 justify-center items-start content-start mt-14 mb-40 w-full 4xl:px-[20vw] px-[5vw] min-h-[900px]">
         <AnimatePresence mode="popLayout">
           {projects
             .filter((project) =>

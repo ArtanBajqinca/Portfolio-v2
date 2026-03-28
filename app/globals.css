@@ -19,48 +19,6 @@
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "SFProDisplay-Light";
-  src: url("/fonts/SFProDisplay-LightItalic.otf") format("opentype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SFProDisplay-Semibold";
-  src: url("/fonts/SFProDisplay-SemiboldItalic.otf") format("opentype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SFProDisplay-Heavy";
-  src: url("/fonts/SFProDisplay-HeavyItalic.otf") format("opentype");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SFProDisplay-Black";
-  src: url("/fonts/SFProDisplay-BlackItalic.otf") format("opentype");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SFProDisplay-Thin";
-  src: url("/fonts/SFProDisplay-ThinItalic.otf") format("opentype");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SFProDisplay-Ultralight";
-  src: url("/fonts/SFProDisplay-UltralightItalic.otf") format("opentype");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
 
 @tailwind base;
 @tailwind components;
