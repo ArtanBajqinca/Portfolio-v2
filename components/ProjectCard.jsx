@@ -4,6 +4,7 @@ import { Label } from '@/components/Label';
 import { LabelIcon } from './LabelIcon';
 import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
+
 const BASE_IMAGE_PATH = '/images/programming-projects/project-card/';
 
 export const ProjectCard = ({
@@ -20,9 +21,7 @@ export const ProjectCard = ({
 
   return (
     <Link href={`/projects/${id}`} passHref>
-      <div
-        className="flex flex-col lg:flex-row bg-ui-bg w-[300px] lg:w-[600px] max-h-[600px] rounded-[10px] group duration-200 transform transition-transform hover:scale-[102%] cursor-pointer"
-      >
+      <div className="flex flex-col lg:flex-row bg-ui-bg w-[300px] lg:w-[600px] max-h-[600px] rounded-[10px] group duration-200 transform transition-transform hover:scale-[102%] cursor-pointer">
         {/* Image */}
         <div className="m-3 rounded-[10px] max-w-[300px]">
           <img
@@ -32,22 +31,24 @@ export const ProjectCard = ({
           />
         </div>
         <div className="mx-4 lg:mr-5 lg:my-5 lg:ml-2 flex flex-col justify-between">
-          {/* Title and arrow */}
-          <div className="flex justify-between">
-            <div className="text-ui-ink text-[21px] lg:text-[23px] leading-[28px] font-sfpro-bold w-full">
-              {title}
+          <div>
+            {/* Title and arrow */}
+            <div className="flex justify-between">
+              <div className="text-ui-ink text-[21px] lg:text-[23px] leading-[28px] font-sfpro-bold w-full">
+                {title}
+              </div>
+              <div className="lg:group-hover:translate-x-[8px] lg:group-hover:-translate-y-2 lg:transition-transform duration-200">
+                <MdArrowOutward
+                  className="text-ui-ink"
+                  size={20}
+                  aria-label={`Open project ${title}`}
+                />
+              </div>
             </div>
-            <div className="lg:group-hover:translate-x-[8px] lg:group-hover:-translate-y-2 lg:transition-transform duration-200">
-              <MdArrowOutward
-                className="text-ui-ink"
-                size={20}
-                aria-label={`Open project ${title}`}
-              />
+            {/* Description */}
+            <div className="text-ui-ink-2 text-[14px] mt-1 mb-3 lg:mt-1 lg:text-[15px] font-sfpro leading-[18px] lg:mb-4">
+              {description}
             </div>
-          </div>
-          {/* Description */}
-          <div className="text-ui-ink-2 text-[14px] mt-1 mb-3 lg:mt-1 lg:text-[15px] font-sfpro-light leading-[18px] lg:mb-4">
-            {description}
           </div>
           {/* Labels */}
           <div>

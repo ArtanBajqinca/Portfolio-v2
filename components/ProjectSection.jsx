@@ -42,7 +42,7 @@ const ProjectSection = () => {
           text="iOS"
           alt="iOS Logo"
           logo={
-            <img className="lg:max-w-[50px] max-w-[40px] lg:ml-0 ml-[0px]" src="/images/ios.png" alt="Logo" />
+            <img className="lg:max-w-[50px] max-w-[40px] lg:ml-0 ml-[0px] drop-shadow-md" src="/images/ios.png" alt="Logo" />
           }
           color={whiteText}
         />

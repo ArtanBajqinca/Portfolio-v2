@@ -11,14 +11,10 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 import ProjectSection from '@/components/ProjectSection';
 import { Typewriter } from 'react-simple-typewriter';
-import { PiReadCvLogoFill } from 'react-icons/pi';
 import { useTheme } from '@/components/ThemeProvider';
 
-// Import the scroll animation
 const scrollDownAnimation = require('/public/scroll_down.json');
-
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
-const ScrollDownLottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 export default function Home() {
   const startTimeRef = useRef();
@@ -30,27 +26,31 @@ export default function Home() {
   };
 
   useEffect(() => {
-    // Mark the time before image starts loading
     startTimeRef.current = performance.now();
   }, []);
 
   return (
     <div className="flex flex-col justify-center">
-      {/* Hero Section */}
+      {/* Navbar */}
       <div className="flex flex-row flex-wrap justify-center">
         <div className="flex flex-col mx-12">
           <div className="lg:mt-10 mt-8">
             <Navbar />
           </div>
-          <div className="flex flex-row flex-wrap-reverse justify-center mt-[10px] lg:mt-[10px]">
+        </div>
+      </div>
+      {/* Hero Section */}
+      <div className="flex flex-row flex-wrap justify-center">
+        <div className="flex flex-col mx-12">
+          <div className="flex flex-row flex-wrap-reverse justify-center mt-[10px] lg:mt-[20px]">
             {/* Left Section */}
             <div className="flex mt-6 lg:mt-0">
-              <div className="mt-20 lg:mt-16 z-10">
-                <NameComponent text="Artan" isLight={theme === 'light'} />
+              <div className="mt-20 lg:mt-24 z-10">
+                <NameComponent text="Artan" />
                 <NameComponent
                   text="Bajqinca."
                   additionalStyles="mt-[-25px] lg:mt-[-40px] ml-[-4px]"
-                  isLight={theme === 'light'}
+                  color="#3395FF"
                 />
                 <div className="w-[60px] h-[8px] bg-green-800"></div>
                 {/* LinkedIn and GitHub icons */}
@@ -72,7 +72,7 @@ export default function Home() {
                 </div>
               </div>
               {/* Portrait */}
-              <div className="flex flex-col justify-end ml-[-90px] lg:ml-[-100px] z-100 w-[240px] lg:w-[350px] mb-[-5px] lg:mb-[-10px] xl:mb-[-40px]">
+              <div className="flex flex-col justify-end ml-[-90px] lg:ml-[-50px] z-100 w-[240px] lg:w-[350px] mb-[-5px] lg:mb-[-10px] xl:mb-[-40px]">
                 <Image
                   priority={true}
                   src="/images/Portrait.png"
@@ -112,7 +112,7 @@ export default function Home() {
                   <br />
                   based in Sweden
                 </div>
-                <div className="text-ui-ink font-sfpro text-[15px] lg:text-[18px] my-6 leading-tight">
+                <div className="text-ui-ink font-sfpro text-[15px] lg:text-[18px] my-6 leading-tight tracking-wide">
                   I design and develop Apps,
                   <br />
                   tailored to meet digital demands
@@ -125,13 +125,6 @@ export default function Home() {
                     textColor="text-white"
                     className="text-[14px] lg:py-1.7 hover:bg-[#3395FF]"
                     link="/contact"
-                  />
-                  <Button
-                    text="View CV"
-                    bgColor="bg-ui-elevated"
-                    className="text-[14px] lg:py-1.7 flex items-center"
-                    icon={<PiReadCvLogoFill className="mr-1.5 text-lg" />}
-                    link="/CV_2025_ENG.pdf"
                   />
                 </div>
               </div>
@@ -167,9 +160,10 @@ export default function Home() {
   );
 }
 
-const NameComponent = ({ text, additionalStyles = '', isLight = false }) => (
+const NameComponent = ({ text, additionalStyles = '', color }) => (
   <div
-    className={`${isLight ? 'text-green-800' : 'text-ui-ink'} font-sfpro-heavy text-[50px] lg:text-[80px] ${additionalStyles}`}
+    className={`font-sfpro-bold text-[50px] lg:text-[80px] ${additionalStyles}`}
+    style={{ color: color || 'var(--ui-ink)' }}
   >
     {text}
   </div>

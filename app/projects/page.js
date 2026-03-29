@@ -26,7 +26,7 @@ export default function ProjectsPage() {
   };
 
   return (
-    <main className="flex flex-col justify-center min-h-screen bg-ui-section">
+    <main className="flex flex-col min-h-screen bg-ui-section">
       <div className="flex flex-row flex-wrap justify-center">
         <div className="flex flex-col mx-12">
           <div className="lg:mt-10 mt-8">
@@ -34,14 +34,12 @@ export default function ProjectsPage() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center">
-        <ProjectsDisplay
-          activeFilters={activeFilters}
-          handleFilterClick={handleFilterClick}
-          projects={Projects}
-          onProjectClick={handleProjectClick}
-        />
-      </div>
+      <ProjectsDisplay
+        activeFilters={activeFilters}
+        handleFilterClick={handleFilterClick}
+        projects={Projects}
+        onProjectClick={handleProjectClick}
+      />
       <Footer />
     </main>
   );

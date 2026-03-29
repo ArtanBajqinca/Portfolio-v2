@@ -1,349 +1,193 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
-import {
-  FaLinkedin,
-  FaGithub,
-  FaEnvelope,
-  FaPhoneAlt,
-  FaMapMarkerAlt,
-  FaCheckCircle,
-} from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaArrowRight } from 'react-icons/fa';
+import { Icon } from '@iconify/react';
 import Link from 'next/link';
 import emailjs from '@emailjs/browser';
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (i = 0) => ({
+    opacity: 1, y: 0,
+    transition: { duration: 0.55, delay: i * 0.1, ease: 'easeOut' },
+  }),
+};
+
 export default function Contact() {
-  const [isVisible, setIsVisible] = useState({
-    header: false,
-    connect: false,
-    form: false,
-  });
-
-  const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-
-  const [formStatus, setFormStatus] = useState({
-    submitting: false,
-    submitted: false,
-    error: null,
-  });
-
-  const headerRef = useRef(null);
-  const connectRef = useRef(null);
-  const formRef = useRef(null);
+  const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+  const [formStatus, setFormStatus] = useState({ submitting: false, submitted: false, error: null });
   const formElementRef = useRef(null);
 
-  useEffect(() => {
-    const observers = [];
-    const observerOptions = { threshold: 0.2, rootMargin: '0px' };
-
-    const createObserver = (ref, key) => {
-      const observer = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible((prev) => ({ ...prev, [key]: true }));
-          observer.disconnect();
-        }
-      }, observerOptions);
-
-      if (ref.current) {
-        observer.observe(ref.current);
-        observers.push(observer);
-      }
-    };
-
-    createObserver(headerRef, 'header');
-    createObserver(connectRef, 'connect');
-    createObserver(formRef, 'form');
-
-    // Initialize EmailJS with your public key
-    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
-
-    return () => observers.forEach((observer) => observer.disconnect());
-  }, []);
-
-  // Add the handleInputChange function here
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormState((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (
-      formState.name.trim() === '' ||
-      formState.email.trim() === '' ||
-      formState.message.trim() === ''
-    ) {
-      setFormStatus({
-        submitting: false,
-        submitted: false,
-        error: 'Please fill out all required fields.',
-      });
+    if (!formState.name.trim() || !formState.email.trim() || !formState.message.trim()) {
+      setFormStatus({ submitting: false, submitted: false, error: 'Please fill in all fields.' });
       return;
     }
-
-    setFormStatus({
-      submitting: true,
-      submitted: false,
-      error: null,
-    });
-
-    const templateParams = {
-      from_name: formState.name,
-      reply_to: formState.email,
-      subject: formState.subject || 'Contact Form Submission',
-      message: formState.message,
-      to_email: 'artan.bajqinca@gmail.com',
-    };
-
+    setFormStatus({ submitting: true, submitted: false, error: null });
     try {
-      // Send email using your service ID and template ID
+      emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
       await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        templateParams
+        { from_name: formState.name, reply_to: formState.email, message: formState.message, to_email: 'artan.bajqinca@gmail.com' }
       );
-
-      setFormStatus({
-        submitting: false,
-        submitted: true,
-        error: null,
-      });
-
-      // Reset form inputs
-      setFormState({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-      });
-
-      // Reset the form after 5 seconds
-      setTimeout(() => {
-        setFormStatus((prev) => ({ ...prev, submitted: false }));
-      }, 5000);
-    } catch (error) {
-      console.error('Error sending email:', error);
-      setFormStatus({
-        submitting: false,
-        submitted: false,
-        error: 'Failed to send your message. Please try again later.',
-      });
+      setFormStatus({ submitting: false, submitted: true, error: null });
+      setFormState({ name: '', email: '', message: '' });
+      setTimeout(() => setFormStatus((p) => ({ ...p, submitted: false })), 5000);
+    } catch {
+      setFormStatus({ submitting: false, submitted: false, error: 'Something went wrong. Try emailing me directly.' });
     }
   };
 
   return (
-    <main className="flex flex-col min-h-screen bg-ui-section font-sfpro-medium">
+    <main className="flex flex-col min-h-screen bg-ui-section">
       <div className="flex flex-row flex-wrap justify-center">
-        <div className="flex flex-col mx-12 max-w-screen-xl">
-          <div className="lg:mt-10 mt-8">
-            <Navbar />
-          </div>
+        <div className="flex flex-col mx-12">
+          <div className="lg:mt-10 mt-8"><Navbar /></div>
         </div>
       </div>
 
-      {/* Header Section */}
-      <div
-        ref={headerRef}
-        className="max-w-screen-xl mx-auto px-6 py-16 text-center"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible.header ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-        >
-          <h1 className="text-4xl md:text-5xl font-sfpro-black mb-3 text-ui-ink">
-            Get in <span className="text-green-400">Touch</span>
+      {/* ── Hero ─────────────────────────────────────────────── */}
+      <section className="max-w-screen-xl mx-auto w-full px-6 lg:px-16 pt-16 pb-16">
+        <motion.div variants={fadeUp} initial="hidden" animate="visible">
+          <p className="text-green-800 font-sfpro-medium text-[12px] tracking-[0.2em] uppercase mb-5">
+            Contact
+          </p>
+          <h1 className="text-[58px] lg:text-[88px] font-sfpro-bold text-ui-ink leading-[0.95] tracking-tight mb-6">
+            Let's talk.
           </h1>
-          <div className="w-20 h-1 bg-green-800 mx-auto mb-6"></div>
-          <p className="text-ui-ink-2 max-w-2xl mx-auto">
-            I'm always interested in new projects and opportunities. Whether you
-            want to discuss a potential collaboration, have questions about my
-            projects, or just want to say hello, feel free to reach out!
+          <p className="text-ui-ink-2 font-sfpro text-[17px] leading-[1.75] max-w-lg">
+            Got a project in mind, a question, or just want to say hello? I'm always open to new conversations.
           </p>
         </motion.div>
-      </div>
+      </section>
 
-      {/* Connect Section */}
-      <motion.section
-        ref={connectRef}
-        className="max-w-screen-xl mx-auto px-6 pb-16 text-center"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible.connect ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
-        >
-          <SocialLink
-            href="https://linkedin.com/in/artanbajqinca"
-            icon={<FaLinkedin className="text-green-400" />}
-            label="LinkedIn"
-            subtitle="@artanbajqinca"
-            description="Connect with me professionally"
-          />
-          <SocialLink
-            href="https://github.com/ArtanBajqinca"
-            icon={<FaGithub className="text-green-400" />}
-            label="GitHub"
-            subtitle="@ArtanBajqinca"
-            description="Check out my code repositories"
-          />
-          <SocialLink
-            href="mailto:artan.bajqinca@gmail.com"
-            icon={<FaEnvelope className="text-green-400" />}
-            label="Email"
-            subtitle="artan.bajqinca@gmail.com"
-            description="Send me an email directly"
-          />
+      {/* ── Main content ─────────────────────────────────────── */}
+      <section className="max-w-screen-xl mx-auto w-full px-6 lg:px-16 pb-24 grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-16 lg:gap-24 items-start">
+
+        {/* Left — contact info */}
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-10">
+
+          {/* Links */}
+          <div>
+            <p className="text-[12px] font-sfpro-medium text-ui-ink-3 uppercase tracking-[0.18em] mb-5">Find me</p>
+            <div className="space-y-4">
+              {[
+                { href: 'mailto:artan.bajqinca@gmail.com', icon: <FaEnvelope size={15} />, label: 'artan.bajqinca@gmail.com' },
+                { href: 'https://linkedin.com/in/artanbajqinca', icon: <FaLinkedin size={15} />, label: 'linkedin.com/in/artanbajqinca' },
+                { href: 'https://github.com/ArtanBajqinca', icon: <FaGithub size={15} />, label: 'github.com/ArtanBajqinca' },
+              ].map((item, i) => (
+                <Link key={i} href={item.href} target="_blank"
+                  className="flex items-center gap-3 text-ui-ink-2 hover:text-ui-ink transition-colors duration-200 group font-sfpro text-[15px]">
+                  <span className="text-ui-ink-3 group-hover:text-green-800 transition-colors">{item.icon}</span>
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Availability */}
+          <div>
+            <p className="text-[12px] font-sfpro-medium text-ui-ink-3 uppercase tracking-[0.18em] mb-4">Availability</p>
+            <div className="flex items-center gap-2 mb-2">
+              <span className="w-2 h-2 rounded-full bg-green-800 animate-pulse" />
+              <p className="text-ui-ink font-sfpro-medium text-[15px]">Open to opportunities</p>
+            </div>
+            <p className="text-ui-ink-2 font-sfpro text-[14px] leading-[1.7]">
+              Available for freelance projects and collaborations.
+            </p>
+          </div>
+
+          {/* Location */}
+          <div>
+            <p className="text-[12px] font-sfpro-medium text-ui-ink-3 uppercase tracking-[0.18em] mb-3">Based in</p>
+            <div className="flex items-center gap-2 text-ui-ink font-sfpro text-[15px]">
+              <Icon icon="ph:map-pin-bold" className="text-green-800 text-[18px]" />
+              Jönköping, Sweden
+            </div>
+          </div>
+
         </motion.div>
-      </motion.section>
 
-      {/* Contact Form Section */}
-      <motion.section
-        ref={formRef}
-        className="max-w-screen-xl mx-auto px-6 py-16 bg-ui-bg/30 rounded-lg mb-16"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible.form ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-        >
-          <h2 className="text-3xl font-sfpro-black text-ui-ink text-center mb-3">
-            Send a <span className="text-green-400">Message</span>
-          </h2>
-          <div className="w-20 h-1 bg-green-800 mx-auto mb-10"></div>
+        {/* Right — form */}
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={1}>
 
           {formStatus.submitted ? (
-            <div className="bg-green-900/30 p-8 rounded-lg max-w-3xl mx-auto text-center">
-              <FaCheckCircle className="mx-auto text-green-400 text-5xl mb-4" />
-              <h3 className="text-ui-ink text-2xl font-sfpro-black mb-2">
-                Message Sent!
-              </h3>
-              <p className="text-ui-ink-2">
-                Thank you for reaching out. I'll get back to you as soon as
-                possible.
-              </p>
-            </div>
-          ) : (
-            <form
-              ref={formElementRef}
-              onSubmit={handleSubmit}
-              className="max-w-3xl mx-auto"
+            <motion.div
+              initial={{ opacity: 0, scale: 0.97 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="flex flex-col items-start gap-4 py-16"
             >
+              <Icon icon="ph:check-circle-bold" className="text-green-800 text-[48px]" />
+              <h3 className="text-ui-ink font-sfpro-bold text-[24px]">Message sent.</h3>
+              <p className="text-ui-ink-2 font-sfpro text-[16px]">I'll get back to you as soon as possible.</p>
+            </motion.div>
+          ) : (
+            <form ref={formElementRef} onSubmit={handleSubmit} className="space-y-6">
               {formStatus.error && (
-                <div className="bg-red-900/30 text-ui-ink p-4 rounded-lg mb-6">
+                <div className="text-[14px] font-sfpro text-red-400 bg-red-900/10 border border-red-900/20 rounded-xl px-4 py-3">
                   {formStatus.error}
                 </div>
               )}
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="name" className="block text-ui-ink mb-2">
-                    Name *
-                  </label>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="name" className="text-[12px] font-sfpro-medium text-ui-ink-3 uppercase tracking-widest">Name</label>
                   <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formState.name}
-                    onChange={handleInputChange}
-                    className="w-full bg-ui-card text-ui-ink border border-ui-elevated rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-800"
-                    placeholder="Your name"
-                    required
+                    id="name" name="name" type="text"
+                    value={formState.name} onChange={handleInputChange}
+                    placeholder="Your name" required
+                    className="bg-ui-card text-ui-ink font-sfpro text-[15px] border border-ui-elevated rounded-xl px-4 py-3 focus:outline-none focus:border-green-800 transition-colors placeholder:text-ui-ink-3"
                   />
                 </div>
-                <div>
-                  <label htmlFor="email" className="block text-ui-ink mb-2">
-                    Email *
-                  </label>
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="email" className="text-[12px] font-sfpro-medium text-ui-ink-3 uppercase tracking-widest">Email</label>
                   <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formState.email}
-                    onChange={handleInputChange}
-                    className="w-full bg-ui-card text-ui-ink border border-ui-elevated rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-800"
-                    placeholder="Your email"
-                    required
+                    id="email" name="email" type="email"
+                    value={formState.email} onChange={handleInputChange}
+                    placeholder="your@email.com" required
+                    className="bg-ui-card text-ui-ink font-sfpro text-[15px] border border-ui-elevated rounded-xl px-4 py-3 focus:outline-none focus:border-green-800 transition-colors placeholder:text-ui-ink-3"
                   />
                 </div>
               </div>
 
-              <div className="mb-6">
-                <label htmlFor="subject" className="block text-ui-ink mb-2">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formState.subject}
-                  onChange={handleInputChange}
-                  className="w-full bg-ui-card text-ui-ink border border-ui-elevated rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-800"
-                  placeholder="Subject"
+              <div className="flex flex-col gap-2">
+                <label htmlFor="message" className="text-[12px] font-sfpro-medium text-ui-ink-3 uppercase tracking-widest">Message</label>
+                <textarea
+                  id="message" name="message" rows={6}
+                  value={formState.message} onChange={handleInputChange}
+                  placeholder="What's on your mind?" required
+                  className="bg-ui-card text-ui-ink font-sfpro text-[15px] border border-ui-elevated rounded-xl px-4 py-3 focus:outline-none focus:border-green-800 transition-colors placeholder:text-ui-ink-3 resize-none"
                 />
               </div>
 
-              <div className="mb-6">
-                <label htmlFor="message" className="block text-ui-ink mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="6"
-                  value={formState.message}
-                  onChange={handleInputChange}
-                  className="w-full bg-ui-card text-ui-ink border border-ui-elevated rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-800"
-                  placeholder="Your message"
-                  required
-                ></textarea>
-              </div>
-
-              <div className="text-center ">
+              <div className="flex justify-end">
                 <button
                   type="submit"
                   disabled={formStatus.submitting}
-                  className={`bg-green-800 text-white font-sfpro-bold py-3 px-8 rounded-lg transition-all duration-300 ${
-                    formStatus.submitting ? 'opacity-70 cursor-not-allowed' : ''
-                  }`}
+                  className="flex items-center gap-2 bg-green-800 hover:bg-green-900 text-white font-sfpro-bold text-[14px] tracking-wide px-7 py-3 rounded-xl transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  {formStatus.submitting ? 'Sending...' : 'Send Message'}
+                  {formStatus.submitting ? 'Sending…' : 'Send message'}
+                  {!formStatus.submitting && <FaArrowRight size={13} />}
                 </button>
               </div>
             </form>
           )}
         </motion.div>
-      </motion.section>
+
+      </section>
 
       <Footer />
     </main>
   );
 }
-
-const SocialLink = ({ href, icon, label, subtitle, description }) => (
-  <Link
-    href={href}
-    target="_blank"
-    className="flex flex-col items-center text-ui-ink transition group bg-ui-card p-8 rounded-xl hover:bg-ui-bg transition-all duration-300 h-full"
-  >
-    <div className="text-4xl mb-4 group-hover:scale-110 transition-all duration-300">
-      {icon}
-    </div>
-    <span className="font-medium text-xl mb-1">{label}</span>
-    <span className="text-ui-ink-3 text-sm mb-3">{subtitle}</span>
-    <p className="text-ui-ink-2 text-sm">{description}</p>
-  </Link>
-);

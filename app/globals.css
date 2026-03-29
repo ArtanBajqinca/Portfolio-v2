@@ -69,6 +69,11 @@ html.light {
   box-sizing: border-box;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
+
 body {
   font-family: "SFProDisplay-Regular", -apple-system, BlinkMacSystemFont, sans-serif;
 }

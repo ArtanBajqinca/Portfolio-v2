@@ -7,10 +7,12 @@ import Button from './Button';
 import Logo from '@/components/assets/Logo';
 import Link from 'next/link';
 import { useTheme } from './ThemeProvider';
+import { usePathname } from 'next/navigation';
 
 const Navbar = ({ overlay = false }) => {
   const { theme, toggleTheme } = useTheme();
   const isLight = theme === 'light';
+  const pathname = usePathname();
 
   const logoColor = overlay ? 'text-white' : 'text-ui-ink';
   const pillBg = overlay ? 'bg-white/15 backdrop-blur-md' : 'bg-ui-raised';
@@ -27,29 +29,25 @@ const Navbar = ({ overlay = false }) => {
         </Link>
       </div>
       <div className="flex items-center gap-3">
-        <div className={`${pillBg} p-2 rounded-[6px]`}>
-          <div className="flex flex-row gap-4">
-            <Button
-              text={'Projects'}
-              className="font-sfpro-black lg:font-sfpro-bold"
-              link="/projects"
-              bgColor={btnBg}
-              textColor={btnText}
-            />
-            <Button
-              text={'About'}
-              className="font-sfpro-black lg:font-sfpro-bold"
-              link="/about"
-              bgColor={btnBg}
-              textColor={btnText}
-            />
-            <Button
-              text={'Contact'}
-              className="font-sfpro-black lg:font-sfpro-bold"
-              link="/contact"
-              bgColor={btnBg}
-              textColor={btnText}
-            />
+        <div className={`${pillBg} p-1.5 rounded-2xl border border-ui-elevated`}>
+          <div className="flex flex-row gap-1">
+            {[
+              { text: 'Projects', link: '/projects' },
+              { text: 'About',    link: '/about'    },
+              { text: 'Contact',  link: '/contact'  },
+            ].map(({ text, link }) => {
+              const active = pathname === link;
+              return (
+                <Button
+                  key={link}
+                  text={text}
+                  className="font-sfpro-black lg:font-sfpro-bold"
+                  link={link}
+                  bgColor={active ? 'bg-[#3395FF]' : btnBg}
+                  textColor={active ? 'text-white' : btnText}
+                />
+              );
+            })}
           </div>
         </div>
 
