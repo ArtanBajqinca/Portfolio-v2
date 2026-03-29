@@ -5,10 +5,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
-import Link from 'next/link';
 import { LabelBig } from '@/components/LabelBig';
-import { BurgerMenu } from '@/components/BurgerMenu';
-import Logo from '@/components/assets/Logo';
 import { useEffect, useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
 
@@ -77,26 +74,8 @@ export default function ProjectDetails({ params }) {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[var(--ui-section)]"></div>
         {/* Navbar Section */}
         <div className="absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-black/60 via-black/20 to-transparent pb-16">
-          <div className="flex justify-center mt-10">
-            <div className="justify-between">
-              {/* Full Navbar for larger screens */}
-              <div className="hidden md:block">
-                <Navbar overlay />
-              </div>
-              {/* Sticky Logo and Burger Menu for mobile screens */}
-              <div className="md:hidden flex items-center justify-between px-4">
-                {/* Centered Logo */}
-                <div className="fixed left-1/2 transform -translate-x-1/2 top-7 z-30 w-[190px] py-4 text-white">
-                  <Link href="/" passHref>
-                    <Logo />
-                  </Link>
-                </div>
-                {/* Right-aligned Burger Menu */}
-                <div className="fixed top-4 right-8 z-30 py-4">
-                  <BurgerMenu />
-                </div>
-              </div>
-            </div>
+          <div className="px-6 lg:px-16 mt-8 lg:mt-10">
+            <Navbar overlay />
           </div>
         </div>
       </div>
@@ -143,7 +122,7 @@ export default function ProjectDetails({ params }) {
             {project.Repo && (
               <LabelBig
                 text="GitHub Repository"
-                icon="/images/github.svg"
+                icon={FaGithub}
                 link={project.Repo}
                 bgColor="bg-ui-raised"
                 textColor="text-ui-ink"

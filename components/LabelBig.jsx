@@ -15,7 +15,7 @@ export const LabelBig = ({
     >
       {icon &&
         (typeof icon === 'function' ? (
-          <icon className="mr-2" size={16} />
+          (() => { const Icon = icon; return <Icon className="mr-2" size={16} />; })()
         ) : (
           <div className="mr-2 lg:mt-0 mt-[-2px]">
             <img src={icon} alt={text} width={16} className="max-h-5" />
