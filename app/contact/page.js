@@ -17,22 +17,41 @@ const fadeUp = {
   }),
 };
 
+const INPUT_BASE = 'bg-ui-card text-ui-ink font-sfpro text-[15px] rounded-xl px-4 py-3 focus:outline-none transition-colors placeholder:text-ui-ink-3 border';
+const INPUT_NORMAL = 'border-[var(--ui-input-border)] focus:border-green-800';
+const INPUT_ERROR = 'border-red-500 focus:border-red-500';
+
+const MESSAGE_MAX = 600;
+
 export default function Contact() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+  const [touched, setTouched] = useState({ name: false, email: false, message: false });
   const [formStatus, setFormStatus] = useState({ submitting: false, submitted: false, error: null });
   const formElementRef = useRef(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    if (name === 'message' && value.length > MESSAGE_MAX) return;
     setFormState((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleBlur = (e) => {
+    const { name } = e.target;
+    setTouched((prev) => ({ ...prev, [name]: true }));
+  };
+
+  const emailValid = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+
+  const errors = {
+    name: touched.name && !formState.name.trim() ? 'Name is required.' : null,
+    email: touched.email && (!formState.email.trim() ? 'Email is required.' : !emailValid(formState.email) ? 'Enter a valid email address.' : null),
+    message: touched.message && !formState.message.trim() ? 'Message is required.' : null,
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formState.name.trim() || !formState.email.trim() || !formState.message.trim()) {
-      setFormStatus({ submitting: false, submitted: false, error: 'Please fill in all fields.' });
-      return;
-    }
+    setTouched({ name: true, email: true, message: true });
+    if (!formState.name.trim() || !formState.email.trim() || !emailValid(formState.email) || !formState.message.trim()) return;
     setFormStatus({ submitting: true, submitted: false, error: null });
     try {
       emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
@@ -43,6 +62,7 @@ export default function Contact() {
       );
       setFormStatus({ submitting: false, submitted: true, error: null });
       setFormState({ name: '', email: '', message: '' });
+      setTouched({ name: false, email: false, message: false });
       setTimeout(() => setFormStatus((p) => ({ ...p, submitted: false })), 5000);
     } catch {
       setFormStatus({ submitting: false, submitted: false, error: 'Something went wrong. Try emailing me directly.' });
@@ -58,7 +78,7 @@ export default function Contact() {
       </div>
 
       {/* ── Hero ─────────────────────────────────────────────── */}
-      <section className="max-w-screen-xl mx-auto w-full px-6 lg:px-16 pt-16 pb-16">
+      <section className="max-w-screen-xl mx-auto w-full px-6 lg:px-16 pt-16 pb-8">
         <motion.div variants={fadeUp} initial="hidden" animate="visible">
           <p className="text-green-800 font-sfpro-medium text-[12px] tracking-[0.2em] uppercase mb-5">
             Contact
@@ -73,24 +93,27 @@ export default function Contact() {
       </section>
 
       {/* ── Main content ─────────────────────────────────────── */}
-      <section className="max-w-screen-xl mx-auto w-full px-6 lg:px-16 pb-24 grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-16 lg:gap-24 items-start">
+      <section className="max-w-screen-xl mx-auto w-full px-6 lg:px-16 pb-16 grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-10 lg:gap-16 items-start">
 
         {/* Left — contact info */}
-        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-10">
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-8">
 
           {/* Links */}
           <div>
-            <p className="text-[12px] font-sfpro-medium text-ui-ink-3 uppercase tracking-[0.18em] mb-5">Find me</p>
-            <div className="space-y-4">
+            <p className="text-[12px] font-sfpro-medium text-ui-ink-3 uppercase tracking-[0.18em] mb-3">Find me</p>
+            <div className="flex flex-col -mx-3">
               {[
-                { href: 'mailto:artan.bajqinca@gmail.com', icon: <FaEnvelope size={15} />, label: 'artan.bajqinca@gmail.com' },
-                { href: 'https://linkedin.com/in/artanbajqinca', icon: <FaLinkedin size={15} />, label: 'linkedin.com/in/artanbajqinca' },
-                { href: 'https://github.com/ArtanBajqinca', icon: <FaGithub size={15} />, label: 'github.com/ArtanBajqinca' },
+                { href: 'mailto:artan.bajqinca@gmail.com', icon: <FaEnvelope size={14} />, label: 'artan.bajqinca@gmail.com' },
+                { href: 'https://linkedin.com/in/artanbajqinca', icon: <FaLinkedin size={14} />, label: 'linkedin.com/in/artanbajqinca' },
+                { href: 'https://github.com/ArtanBajqinca', icon: <FaGithub size={14} />, label: 'github.com/ArtanBajqinca' },
               ].map((item, i) => (
                 <Link key={i} href={item.href} target="_blank"
-                  className="flex items-center gap-3 text-ui-ink-2 hover:text-ui-ink transition-colors duration-200 group font-sfpro text-[15px]">
-                  <span className="text-ui-ink-3 group-hover:text-green-800 transition-colors">{item.icon}</span>
-                  {item.label}
+                  className="flex items-center gap-3 text-ui-ink-2 hover:text-ui-ink font-sfpro text-[14px] px-3 py-2.5 rounded-xl hover:bg-ui-raised transition-all duration-200 group">
+                  <span className="w-7 h-7 flex items-center justify-center rounded-full bg-ui-raised group-hover:bg-ui-elevated transition-colors text-ui-ink-3 group-hover:text-green-800 flex-shrink-0">
+                    {item.icon}
+                  </span>
+                  <span className="flex-1 truncate">{item.label}</span>
+                  <FaArrowRight size={10} className="opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all duration-200 text-ui-ink-3 flex-shrink-0" />
                 </Link>
               ))}
             </div>
@@ -98,9 +121,9 @@ export default function Contact() {
 
           {/* Availability */}
           <div>
-            <p className="text-[12px] font-sfpro-medium text-ui-ink-3 uppercase tracking-[0.18em] mb-4">Availability</p>
-            <div className="flex items-center gap-2 mb-2">
-              <span className="w-2 h-2 rounded-full bg-green-800 animate-pulse" />
+            <p className="text-[12px] font-sfpro-medium text-ui-ink-3 uppercase tracking-[0.18em] mb-3">Availability</p>
+            <div className="flex items-center gap-2 mb-1.5">
+              <span className="w-2 h-2 rounded-full bg-green-800 animate-pulse flex-shrink-0" />
               <p className="text-ui-ink font-sfpro-medium text-[15px]">Open to opportunities</p>
             </div>
             <p className="text-ui-ink-2 font-sfpro text-[14px] leading-[1.7]">
@@ -112,7 +135,7 @@ export default function Contact() {
           <div>
             <p className="text-[12px] font-sfpro-medium text-ui-ink-3 uppercase tracking-[0.18em] mb-3">Based in</p>
             <div className="flex items-center gap-2 text-ui-ink font-sfpro text-[15px]">
-              <Icon icon="ph:map-pin-bold" className="text-green-800 text-[18px]" />
+              <Icon icon="ph:map-pin-bold" className="text-green-800 text-[18px] flex-shrink-0" />
               Jönköping, Sweden
             </div>
           </div>
@@ -133,42 +156,54 @@ export default function Contact() {
               <p className="text-ui-ink-2 font-sfpro text-[16px]">I'll get back to you as soon as possible.</p>
             </motion.div>
           ) : (
-            <form ref={formElementRef} onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formElementRef} onSubmit={handleSubmit} noValidate className="space-y-5">
               {formStatus.error && (
                 <div className="text-[14px] font-sfpro text-red-400 bg-red-900/10 border border-red-900/20 rounded-xl px-4 py-3">
                   {formStatus.error}
                 </div>
               )}
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="flex flex-col gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {/* Name */}
+                <div className="flex flex-col gap-1.5">
                   <label htmlFor="name" className="text-[12px] font-sfpro-medium text-ui-ink-3 uppercase tracking-widest">Name</label>
                   <input
                     id="name" name="name" type="text"
-                    value={formState.name} onChange={handleInputChange}
-                    placeholder="Your name" required
-                    className="bg-ui-card text-ui-ink font-sfpro text-[15px] border border-ui-elevated rounded-xl px-4 py-3 focus:outline-none focus:border-green-800 transition-colors placeholder:text-ui-ink-3"
+                    value={formState.name} onChange={handleInputChange} onBlur={handleBlur}
+                    placeholder="Your name"
+                    className={`${INPUT_BASE} ${errors.name ? INPUT_ERROR : INPUT_NORMAL}`}
                   />
+                  {errors.name && <p className="text-[12px] font-sfpro text-red-400">{errors.name}</p>}
                 </div>
-                <div className="flex flex-col gap-2">
+
+                {/* Email */}
+                <div className="flex flex-col gap-1.5">
                   <label htmlFor="email" className="text-[12px] font-sfpro-medium text-ui-ink-3 uppercase tracking-widest">Email</label>
                   <input
                     id="email" name="email" type="email"
-                    value={formState.email} onChange={handleInputChange}
-                    placeholder="your@email.com" required
-                    className="bg-ui-card text-ui-ink font-sfpro text-[15px] border border-ui-elevated rounded-xl px-4 py-3 focus:outline-none focus:border-green-800 transition-colors placeholder:text-ui-ink-3"
+                    value={formState.email} onChange={handleInputChange} onBlur={handleBlur}
+                    placeholder="your@email.com"
+                    className={`${INPUT_BASE} ${errors.email ? INPUT_ERROR : INPUT_NORMAL}`}
                   />
+                  {errors.email && <p className="text-[12px] font-sfpro text-red-400">{errors.email}</p>}
                 </div>
               </div>
 
-              <div className="flex flex-col gap-2">
-                <label htmlFor="message" className="text-[12px] font-sfpro-medium text-ui-ink-3 uppercase tracking-widest">Message</label>
+              {/* Message */}
+              <div className="flex flex-col gap-1.5">
+                <div className="flex items-center justify-between">
+                  <label htmlFor="message" className="text-[12px] font-sfpro-medium text-ui-ink-3 uppercase tracking-widest">Message</label>
+                  <span className={`text-[12px] font-sfpro tabular-nums ${formState.message.length >= MESSAGE_MAX ? 'text-red-400' : 'text-ui-ink-3'}`}>
+                    {formState.message.length} / {MESSAGE_MAX}
+                  </span>
+                </div>
                 <textarea
                   id="message" name="message" rows={6}
-                  value={formState.message} onChange={handleInputChange}
-                  placeholder="What's on your mind?" required
-                  className="bg-ui-card text-ui-ink font-sfpro text-[15px] border border-ui-elevated rounded-xl px-4 py-3 focus:outline-none focus:border-green-800 transition-colors placeholder:text-ui-ink-3 resize-none"
+                  value={formState.message} onChange={handleInputChange} onBlur={handleBlur}
+                  placeholder="What's on your mind?"
+                  className={`${INPUT_BASE} ${errors.message ? INPUT_ERROR : INPUT_NORMAL} resize-none`}
                 />
+                {errors.message && <p className="text-[12px] font-sfpro text-red-400">{errors.message}</p>}
               </div>
 
               <div className="flex justify-end">

@@ -37,6 +37,7 @@
   --ui-card-shadow: none;
   --label-bg:      #1C2E40;
   --label-text:    #82CFFF;
+  --ui-input-border: #525252;
 }
 
 html.light {
@@ -51,6 +52,7 @@ html.light {
   --ui-card-shadow: none;
   --label-bg:      #E0E7F1;
   --label-text:    #1A56DB;
+  --ui-input-border: #AEAEB2;
 }
 
 *, *::before, *::after {

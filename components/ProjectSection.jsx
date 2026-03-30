@@ -28,12 +28,12 @@ const ProjectSection = () => {
 
   return (
     <div className="flex flex-col items-center bg-ui-section pt-10 sm:pt-10 md:pt-20 lg:pt-20 xl:pt-[110px] 2xl:pt-[50px]">
-      <div className="text-ui-ink leading-0 lg:leading-8 gap-6 text-center font-sfpro text-[18px] lg:text-[26px] text-base z-40 mb-8 tracking-wide">
+      <div className="text-ui-ink leading-0 lg:leading-8 gap-6 text-center font-sfpro-medium text-[18px] lg:text-[26px] text-base z-40 mb-8 tracking-wide">
         I SPECIALIZE IN
-        <span className="font-sfpro-black"> CROSS-PLATFORM</span>
+        <span className="font-sfpro-bold"> CROSS-PLATFORM</span>
         <br />
         <span>AND </span>
-        <span className="font-sfpro-black">NATIVE </span>
+        <span className="font-sfpro-bold">NATIVE </span>
         APP DEVELOPMENT
       </div>
 

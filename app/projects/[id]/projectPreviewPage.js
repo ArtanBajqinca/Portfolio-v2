@@ -7,7 +7,8 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 import { LabelBig } from '@/components/LabelBig';
 import { useEffect, useState } from 'react';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaChevronLeft } from 'react-icons/fa';
+import Link from 'next/link';
 
 export default function ProjectDetails({ params }) {
   const { id } = params;
@@ -84,15 +85,28 @@ export default function ProjectDetails({ params }) {
       </div>
       {/* Project Content Section */}
       <div className="flex flex-col items-start text-left text-ui-ink max-w-screen-lg mx-4 lg:mx-auto -mt-[60px] lg:-mt-20 z-30 px-4">
+        <Link href="/projects"
+          className="flex items-center gap-1.5 text-ui-ink-3 hover:text-ui-ink font-sfpro text-[14px] mb-6 transition-colors duration-200 group">
+          <FaChevronLeft size={11} className="group-hover:-translate-x-0.5 transition-transform duration-150" />
+          All projects
+        </Link>
         <h1 className="text-4xl lg:text-6xl font-sfpro-bold">
           {project.coverTitle}
         </h1>
         <h2 className="text-2xl lg:text-3xl mt-6 font-sfpro-light">
           {project.subtitle}
         </h2>
-        <p className="mt-6 text-[16spx] lg:text-xl leading-relaxed font-sfpro-light max-w-3xl">
-          {project.descriptionLong}
-        </p>
+        <div className="mt-6 space-y-4 max-w-3xl">
+          {(project.descriptionLong || '').split(/(?<=\. )(?=[A-Z])/).reduce((acc, s, i) => {
+            const chunk = Math.floor(i / 2);
+            acc[chunk] = (acc[chunk] || '') + s;
+            return acc;
+          }, []).map((para, i) => (
+            <p key={i} className="text-[16px] lg:text-xl leading-relaxed font-sfpro-light">
+              {para}
+            </p>
+          ))}
+        </div>
         {/* Labels Section */}
         <div className="mt-10">
           <div className="flex flex-wrap gap-2 mb-3 justify-start">
