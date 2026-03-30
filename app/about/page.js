@@ -41,18 +41,18 @@ export default function About() {
 
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="max-w-screen-xl mx-auto w-full px-6 lg:px-16 pt-16 pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-8 lg:gap-16 items-end">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-8 lg:gap-16 items-start">
 
           {/* Left — text, always left-aligned */}
           <motion.div variants={fadeUp} initial="hidden" animate="visible">
             <p className="text-green-800 font-sfpro-medium text-[12px] tracking-[0.2em] uppercase mb-5">
               iOS Developer · Sweden
             </p>
-            <h1 className="text-[62px] lg:text-[88px] font-sfpro-bold text-ui-ink leading-[0.95] tracking-tight mb-7">
-              Artan<br />Bajqinca.
+            <h1 className="text-[58px] lg:text-[88px] font-sfpro-bold text-ui-ink leading-[0.95] tracking-tight mb-7">
+              About me.
             </h1>
             <p className="text-ui-ink-2 font-sfpro text-[17px] leading-[1.75] max-w-[420px] mb-8">
-              Building fast, scalable iOS apps with SwiftUI & Firebase. Driven by clean architecture, refined UX, and features that feel seamless.
+              I build iOS apps, ship them to the App Store, and lose sleep over the details most don't notice.
             </p>
             <div className="flex gap-5">
               <Link href="https://github.com/artanbajqinca" target="_blank" className="text-ui-ink-2 hover:text-ui-ink transition-colors duration-200" aria-label="GitHub">

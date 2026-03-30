@@ -10,6 +10,11 @@ const FILTERS = [
   { label: 'System',  value: 'sw'  },
 ];
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: 'easeOut' } },
+};
+
 const ProjectsDisplay = ({ activeFilters, handleFilterClick, projects }) => {
   const filtered = projects.filter((p) =>
     activeFilters.length > 0 ? activeFilters.includes(p.type) : true
@@ -26,12 +31,17 @@ const ProjectsDisplay = ({ activeFilters, handleFilterClick, projects }) => {
     <>
       {/* ── Header ─────────────────────────────────────────── */}
       <div className="w-full max-w-screen-xl mx-auto px-6 lg:px-16">
-        <div className="pt-16 lg:pt-24 pb-10 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          className="pt-16 pb-10 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6"
+        >
           <div>
             <p className="text-green-800 font-sfpro-medium text-[12px] tracking-[0.2em] uppercase mb-3">
               Work
             </p>
-            <h1 className="text-[40px] lg:text-[64px] font-sfpro-bold text-ui-ink leading-[0.95] tracking-tight">
+            <h1 className="text-[58px] lg:text-[88px] font-sfpro-bold text-ui-ink leading-[0.95] tracking-tight">
               My Projects.
             </h1>
           </div>
@@ -62,7 +72,7 @@ const ProjectsDisplay = ({ activeFilters, handleFilterClick, projects }) => {
               </button>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* ── Result count ───────────────────────────────────── */}
         <div className="pb-6 border-b border-ui-elevated">

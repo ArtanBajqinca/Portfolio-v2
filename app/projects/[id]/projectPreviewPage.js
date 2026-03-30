@@ -47,8 +47,17 @@ export default function ProjectDetails({ params }) {
 
   return (
     <div className="flex flex-col justify-center min-h-screen bg-ui-section">
-      {/* Full-Screen Cover Image */}
-      <div className="relative w-full h-[110vw] md:h-[80vh] lg:h-screen sm:my-0">
+      {/* Navbar — same pattern as all other pages */}
+      <div className="flex flex-row flex-wrap justify-center">
+        <div className="flex flex-col mx-12">
+          <div className="lg:mt-10 mt-8">
+            <Navbar />
+          </div>
+        </div>
+      </div>
+
+      {/* Cover Image */}
+      <div className="relative w-full h-[60vw] md:h-[70vh] lg:h-[80vh] mt-6">
         {mediaType === 'video' ? (
           <video
             src={mediaSrc}
@@ -72,12 +81,6 @@ export default function ProjectDetails({ params }) {
         )}
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[var(--ui-section)]"></div>
-        {/* Navbar Section */}
-        <div className="absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-black/60 via-black/20 to-transparent pb-16">
-          <div className="px-6 lg:px-16 mt-8 lg:mt-10">
-            <Navbar overlay />
-          </div>
-        </div>
       </div>
       {/* Project Content Section */}
       <div className="flex flex-col items-start text-left text-ui-ink max-w-screen-lg mx-4 lg:mx-auto -mt-[60px] lg:-mt-20 z-30 px-4">
